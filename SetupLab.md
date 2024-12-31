@@ -11,8 +11,11 @@ Watch Demos
 
 ---
 
-## Prerequisites
-### 1. Hugging Face Account Setup
+## Lab Setup 
+
+### Hugging Face Access to run Gated Models
+
+#### 1. Hugging Face Account Setup
 1. Visit [huggingface.co](https://huggingface.co).
 2. Register or log in to your account.
 3. Access tokens:
@@ -27,7 +30,23 @@ Watch Demos
      - Provide your name, date of birth, organization, and title.
      - Approval typically takes ~24 hours.
 
-### 2. Kaggle Account Setup
+
+### Ability to run Run Model
+
+
+#### Ollama - On your local lab 
+
+[Setup Using Ollama](./SetupOllama.md)
+
+
+#### Llama Stack - on your local lab 
+
+[Llama Stack Guide](https://llama-stack.readthedocs.io/en/latest/getting_started/index.html)
+
+
+### Run Models using Kaggle/Google Collab
+
+#### 2. Kaggle Account Setup
 1. Visit [Kaggle](https://www.kaggle.com) and register/log in using your Google account.
 2. Verify your account by providing your phone number.
 3. Create a notebook:
@@ -38,30 +57,25 @@ Watch Demos
    - Ensure GPU is enabled in the settings.
    - Execute the notebook to verify the GPU setup.
 
-### 3. Grok Cloud Account Setup (Optional)
+
+
+### Access Remote Models
+
+
+#### Grok Cloud
 1. Visit [Groq Cloud](https://console.groq.com/playground) and sign up.
 2. Access models hosted on Groq Cloud (e.g., 70B parameter models like LLaMA and Mistral).
 3. Generate API keys:
    - Note the API key for later use.
 
-### 4. Detox API Key Setup
-1. Visit the Detox API website.
-2. Request an API key:
-   - Provide your email and organization name.
-   - Approval usually takes 1–2 hours.
 
-### 5. Enterprise Cloud (Optional)
-For running models on enterprise cloud platforms, consider the following:
-- **AWS Bedrock**
-- **Google Cloud Vortex AI**
-- **Azure AI**
+### OpenAI APIs
 
----
+https://openai.com/index/openai-api/
 
-## Summary
-This setup guide includes:
-- Hugging Face account registration and access token generation.
-- Kaggle setup for utilizing GPUs.
-- Optional Grok Cloud setup for additional model access.
-- Detox API key setup.
-- Enterprise cloud options for running large-scale models.
+### Anthropic APIs
+
+TBD
+
+
+
