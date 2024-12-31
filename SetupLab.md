@@ -13,25 +13,8 @@ Watch Demos
 
 ## Lab Setup 
 
-### Hugging Face Access to run Gated Models
 
-#### 1. Hugging Face Account Setup
-1. Visit [huggingface.co](https://huggingface.co).
-2. Register or log in to your account.
-3. Access tokens:
-   - Go to your profile and navigate to **Access Tokens**.
-   - Generate a new token:
-     - Name the token (e.g., `training`).
-     - Select `Read-only` access if only accessing models.
-   - Save the token securely as it will not be shown again.
-4. Accessing Gated Models:
-   - Example: To access **Meta LLaMA 3B models** (e.g., Meta LLaMA 3.23B Instruct):
-     - Register for access.
-     - Provide your name, date of birth, organization, and title.
-     - Approval typically takes ~24 hours.
-
-
-### Ability to run Run Model
+### Run Model
 
 
 #### Ollama - On your local lab 
@@ -39,9 +22,11 @@ Watch Demos
 [Setup Using Ollama](./SetupOllama.md)
 
 
-#### Llama Stack - on your local lab 
+#### Llama Stack - on your local lab (Optional)
 
-[Llama Stack Guide](https://llama-stack.readthedocs.io/en/latest/getting_started/index.html)
+[Run LLama stack](./RunLLM_Using_Llamastack.md)
+
+[For more details, check out Llama Stack Guide](https://llama-stack.readthedocs.io/en/latest/getting_started/index.html)
 
 
 ### Run Models using Kaggle/Google Collab
@@ -57,7 +42,22 @@ Watch Demos
    - Ensure GPU is enabled in the settings.
    - Execute the notebook to verify the GPU setup.
 
+#### Hugging Face Access to run Gated Models
 
+#### 1. Hugging Face Account Setup
+1. Visit [huggingface.co](https://huggingface.co).
+2. Register or log in to your account.
+3. Access tokens:
+   - Go to your profile and navigate to **Access Tokens**.
+   - Generate a new token:
+     - Name the token (e.g., `training`).
+     - Select `Read-only` access if only accessing models.
+   - Save the token securely as it will not be shown again.
+4. Accessing Gated Models:
+   - Example: To access **Meta LLaMA 3B models** (e.g., Meta LLaMA 3.23B Instruct):
+     - Register for access.
+     - Provide your name, date of birth, organization, and title.
+     - Approval typically takes ~24 hours.
 
 ### Access Remote Models
 
@@ -76,6 +76,5 @@ https://openai.com/index/openai-api/
 ### Anthropic APIs
 
 TBD
-
 
 

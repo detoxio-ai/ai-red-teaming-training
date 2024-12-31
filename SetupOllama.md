@@ -76,6 +76,34 @@ Ollama provides an API for interacting with models programmatically.
   }
   ```
 
+
+### **3. Running a Llama Model - llama3.2:1b
+
+```
+ ollama run llama3.2:1b
+pulling manifest 
+pulling manifest 
+pulling 74701a8c35f6... 100% ▕███████████████████████████████████████████████████████████████▏ 1.3 GB                         
+pulling 966de95ca8a6... 100% ▕███████████████████████████████████████████████████████████████▏ 1.4 KB                         
+pulling fcc5a6bec9da... 100% ▕███████████████████████████████████████████████████████████████▏ 7.7 KB                         
+pulling a70ff7e570d9... 100% ▕███████████████████████████████████████████████████████████████▏ 6.0 KB                         
+pulling 4f659a1e86d7... 100% ▕███████████████████████████████████████████████████████████████▏  485 B                         
+verifying sha256 digest 
+writing manifest 
+success 
+>>> hello
+Hello. Is there something I can help you with or would you like to chat?
+
+>>> Summarize following
+There is no text to summarize. This is the beginning of our conversation, and I don't have any information to work with 
+yet. What would you like to talk about or ask? I can summarize our conversation at the end if you'd like.
+
+>>> /bye
+
+
+```
+
+
 ---
 
 ### **4. Manage the Ollama Service**
