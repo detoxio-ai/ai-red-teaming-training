@@ -1,80 +1,112 @@
-# LLM Red Teaming Training - Setup Lab
+### **LLM Red Teaming Training - Lab Setup**
 
-## Overview
-Welcome to the **LLM Red Teaming Training**. This guide provides step-by-step instructions to set up the necessary environment and tools for practicing red teaming and hands-on sessions with Large Language Models (LLMs).
-
-Watch Demos
-
-* [Setup Lab](https://youtu.be/i_G6HuM5NxM)
-* [Getting Started with Langchain & OpenAI APIs](https://youtu.be/k7xn5N225_g)
-* [Run Your First LLM - Manual testing of Hugging Face Model](https://youtu.be/-MorTZoyqZ8)
+This comprehensive guide walks you through setting up a lab environment to experiment with and run models for red teaming tasks, including the installation of necessary tools, configuring environments, and choosing the appropriate platform.
 
 ---
 
-## Lab Setup 
+## **Overview**
+Welcome to the **LLM Red Teaming Training Lab Setup**.  
+This lab will allow you to:
+1. Access and run various LLMs.
+2. Install and experiment with tools like **Garak** and **Hacktor**.
+3. Utilize different environments, such as local machines, cloud platforms (Kaggle/Colab), and APIs.
 
+---
 
-### Run Model
+### **Lab Setup Components**
 
+1. **Running Models**
+   - Local environments (Linux/Mac recommended).
+   - Cloud environments (e.g., Kaggle, Google Colab).
+   - Using APIs (Groq, OpenAI, Anthropic).
 
-#### Ollama - On your local lab 
+2. **Tools Installation**
+   - Tools like **Garak**, **Hacktor**, and **Nemo Guardrails**.
+   - Install using Python environments or Docker containers.
 
-[Setup Using Ollama](./SetupOllama.md)
+---
 
+### **Run Models on Your Local Environment**
 
-#### Llama Stack - on your local lab (Optional)
+#### **Option A: Ollama**
+[Follow Ollama Setup Instructions](./SetupOllama.md)
 
-[Run LLama stack](./RunLLM_Using_Llamastack.md)
+#### **Option B: Llama Stack**
 
-[For more details, check out Llama Stack Guide](https://llama-stack.readthedocs.io/en/latest/getting_started/index.html)
+[Follow Llama Stack Instructions](./RunLLM_Using_Llamastack.md)  
 
+or 
 
-### Run Models using Kaggle/Google Collab
+[Follow up Llama Stack Documentation](https://llama-stack.readthedocs.io/en/latest/getting_started/index.html)
 
-#### 2. Kaggle Account Setup
-1. Visit [Kaggle](https://www.kaggle.com) and register/log in using your Google account.
-2. Verify your account by providing your phone number.
+---
+
+### **Run Models Using Kaggle or Google Colab**
+
+#### **1. Kaggle Account Setup**
+1. Sign up or log in at [Kaggle](https://www.kaggle.com).
+2. Verify your account with your phone number.
 3. Create a notebook:
-   - Enable internet by toggling the `Internet` setting in the notebook.
-   - Select **Accelerator**:
-     - Use GPU (e.g., `P100`) for running models like Meta LLaMA.
-4. Run the notebook:
-   - Ensure GPU is enabled in the settings.
-   - Execute the notebook to verify the GPU setup.
+   - Enable internet access in notebook settings.
+   - Select **GPU Accelerator** (e.g., `P100`).
+4. Run your notebook:
+   - Ensure GPU is enabled under settings.
+   - Install libraries and verify GPU setup.
 
-#### Hugging Face Access to run Gated Models
+#### **2. Hugging Face for Gated Models**
+1. Sign up or log in at [Hugging Face](https://huggingface.co).
+2. Generate an **Access Token**:
+   - Navigate to **Access Tokens** in your profile settings.
+   - Generate a new token (e.g., `training`) with read-only access.
+   - Save this token for later use.
+3. Request access to gated models:
+   - For **Meta LLaMA** models (e.g., LLaMA 3.23B Instruct), provide your name, DOB, organization, and title.
+   - Approval takes approximately 24 hours.
 
-#### 1. Hugging Face Account Setup
-1. Visit [huggingface.co](https://huggingface.co).
-2. Register or log in to your account.
-3. Access tokens:
-   - Go to your profile and navigate to **Access Tokens**.
-   - Generate a new token:
-     - Name the token (e.g., `training`).
-     - Select `Read-only` access if only accessing models.
-   - Save the token securely as it will not be shown again.
-4. Accessing Gated Models:
-   - Example: To access **Meta LLaMA 3B models** (e.g., Meta LLaMA 3.23B Instruct):
-     - Register for access.
-     - Provide your name, date of birth, organization, and title.
-     - Approval typically takes ~24 hours.
+---
 
-### Access Remote Models
+### **Access Remote Models**
 
+#### **Groq Cloud**
+1. Visit [Groq Cloud Playground](https://console.groq.com/playground).
+2. Register for access.
+3. Obtain API keys for accessing models, such as LLaMA or Mistral (70B parameter models).
 
-#### Grok Cloud
-1. Visit [Groq Cloud](https://console.groq.com/playground) and sign up.
-2. Access models hosted on Groq Cloud (e.g., 70B parameter models like LLaMA and Mistral).
-3. Generate API keys:
-   - Note the API key for later use.
+#### **OpenAI APIs**
+[Get started with OpenAI APIs](https://openai.com/index/openai-api/)
 
+#### **Anthropic APIs**
+Details coming soon.
 
-### OpenAI APIs
+---
 
-https://openai.com/index/openai-api/
+### **Tools Installation (Garak, Hacktor, Nemo Guardrails)**
 
-### Anthropic APIs
+#### **Option 1: Using Python Environment**
+1. Install Conda:
+   ```bash
+   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+   bash Miniconda3-latest-Linux-x86_64.sh
+   ```
+2. Create and activate a Python environment:
+   ```bash
+   conda create -n lab_env python=3.11 -y
+   conda activate lab_env
+   ```
+3. Install tools:
+   ```bash
+   pip install garak hacktor
+   ```
 
-TBD
+#### **Option 2: Using Docker**
+Install Docker:
+   Follow the [Docker Installation Guide](https://docs.docker.com/engine/install/).
 
+### **Additional Resources**
+- **Garak**: [NVIDIA Garak GitHub](https://github.com/NVIDIA/garak)  
+- **Hacktor**: [Detoxio AI Hacktor GitHub](https://github.com/detoxio-ai/hacktor)  
+- **Nemo Guardrails**: [NVIDIA NeMo Guardrails GitHub](https://github.com/NVIDIA/NeMo-Guardrails)
+- **Setting up Lab on Kaggle/Google Collab** [Setup Lab](https://youtu.be/i_G6HuM5NxM)  
+- [Getting Started with Langchain & OpenAI APIs](https://youtu.be/k7xn5N225_g)  
+- [Run Your First LLM on Kaggle/GPU- Manual Testing of Hugging Face Model](https://youtu.be/-MorTZoyqZ8)
 
