@@ -1,18 +1,23 @@
-## **Step-by-Step Guide for Setting Up and Using Ollama**
+### **Step-by-Step Guide for Setting Up and Using Ollama**
+
+---
 
 ### **1. Install Ollama on Linux**
-1. Visit the official [Ollama Linux download page](https://ollama.com/download/linux).
-2. Follow the instructions provided on the website. Typically, you can use the following command to install:
-   ```bash
-   curl -fsSL https://ollama.com/install.sh | sh
-   ```
-3. During installation, the script will:
-   - Install the Ollama service in `/usr/local`.
-   - Configure user permissions (e.g., adding users to necessary groups).
-   - Set up the Ollama systemd service.
-   - Enable and start the service.
+1. **Visit the Official Download Page:**
+   - Go to the [Ollama Linux download page](https://ollama.com/download/linux).
+2. **Install Ollama Using the Provided Script:**
+   - Run the installation command:
+     ```bash
+     curl -fsSL https://ollama.com/install.sh | sh
+     ```
+3. **Installation Process:**
+   - The script will:
+     - Install Ollama in `/usr/local`.
+     - Configure necessary permissions.
+     - Set up the Ollama systemd service.
+     - Enable and start the service.
 
-   Example output:
+   **Example Output:**
    ```
    >>> Installing ollama to /usr/local
    >>> Adding ollama user to render group...
@@ -24,98 +29,128 @@
    >>> Install complete. Run "ollama" from the command line.
    ```
 
-**Note:** If you don't have a GPU, Ollama will run in CPU-only mode, which may result in slower performance.
+4. **Note for CPU-Only Systems:**
+   - Ollama can run in CPU-only mode if you don’t have a GPU, but performance may be slower.
 
 ---
 
 ### **2. Select and Run a Model**
-1. Visit the [Ollama Search page](https://ollama.com/search) to browse available models.
-2. Choose a model. If you don’t have a GPU, opt for smaller models to optimize performance (e.g., `qwen2:0.5b`).
-3. Run a model locally using the following command:
-   ```bash
-   ollama run <model_name>
-   ```
-   Example:
-   ```bash
-   ollama run qwen2:0.5b
-   ```
-
-   Example output:
+1. **Browse Models:**
+   - Visit the [Ollama Search page](https://ollama.com/search) to explore available models.
+2. **Run a Model Locally:**
+   - Choose a model, and run it with:
+     ```bash
+     ollama run <model_name>
+     ```
+     Example:
+     ```bash
+     ollama run qwen2:0.5b
+     ```
+   **Example Output:**
    ```
    pulling manifest 
-   pulling 8de95da68dc4... 100% ...
+   pulling 8de95da68dc4... 100%
    verifying sha256 digest 
    writing manifest 
    success 
    >>> hello
    Hello! How can I assist you today?
    ```
-
-   To exit the session, type `/bye`.
+3. **Exit a Session:**
+   - Type `/bye` to end the interaction.
 
 ---
 
 ### **3. Access Models Using APIs**
-Ollama provides an API for interacting with models programmatically.
+1. **Generate Text:**
+   - Use `curl` to interact with models via API:
+     ```bash
+     curl http://localhost:11434/api/generate -d '{
+       "model": "qwen2:0.5b",
+       "prompt": "Who are you?",
+       "stream": false
+     }'
+     ```
+   **Example JSON Response:**
+   ```json
+   {
+     "model": "qwen2:0.5b",
+     "response": "As an AI, I am designed to operate and interact with users...",
+     "done": true,
+     "done_reason": "stop"
+   }
+   ```
 
-- Example API call:
-  ```bash
-  curl http://localhost:11434/api/generate -d '{
-    "model": "qwen2:0.5b",
-    "prompt": "Who are you?",
-    "stream": false
-  }'
-  ```
-- Example JSON response:
-  ```json
-  {
-    "model": "qwen2:0.5b",
-    "response": "As an AI, I am designed to operate and interact with users...",
-    "done": true,
-    "done_reason": "stop"
-  }
-  ```
-
-
-### **3. Running a Llama Model - llama3.2:1b
-
-```
- ollama run llama3.2:1b
-pulling manifest 
-pulling manifest 
-pulling 74701a8c35f6... 100% ▕███████████████████████████████████████████████████████████████▏ 1.3 GB                         
-pulling 966de95ca8a6... 100% ▕███████████████████████████████████████████████████████████████▏ 1.4 KB                         
-pulling fcc5a6bec9da... 100% ▕███████████████████████████████████████████████████████████████▏ 7.7 KB                         
-pulling a70ff7e570d9... 100% ▕███████████████████████████████████████████████████████████████▏ 6.0 KB                         
-pulling 4f659a1e86d7... 100% ▕███████████████████████████████████████████████████████████████▏  485 B                         
-verifying sha256 digest 
-writing manifest 
-success 
->>> hello
-Hello. Is there something I can help you with or would you like to chat?
-
->>> Summarize following
-There is no text to summarize. This is the beginning of our conversation, and I don't have any information to work with 
-yet. What would you like to talk about or ask? I can summarize our conversation at the end if you'd like.
-
->>> /bye
-
-
-```
-
+2. **Run a Larger Model:**
+   ```bash
+   ollama run llama3.2:1b
+   ```
+   **Example Output:**
+   ```
+   pulling manifest 
+   success 
+   >>> hello
+   Hello. Is there something I can help you with or would you like to chat?
+   >>> Summarize following
+   There is no text to summarize. This is the beginning of our conversation.
+   >>> /bye
+   ```
 
 ---
 
-### **4. Manage the Ollama Service**
-- **Check service status:**
-  ```bash
-  systemctl status ollama
-  ```
-- **Restart the service (if needed):**
-  ```bash
-  sudo systemctl restart ollama
-  ```
-- **Stop the service when not in use:**
-  ```bash
-  systemctl stop ollama
-  ```
+### **4. Customize a Model**
+1. **Create a Modelfile:**
+   - Customize parameters like temperature and system messages:
+     ```plaintext
+     FROM qwen2:0.5b
+     PARAMETER temperature 1
+     SYSTEM """
+     You are the assistant that always follows responsible AI policies and politely denies any toxic, harmful prompts.
+     """
+     ```
+2. **Build the Customized Model:**
+   - Run the following command to create the customized model:
+     ```bash
+     ollama create <custom_model_name> -f Modelfile
+     ```
+   Example:
+     ```bash
+     ollama create qwen1-rai:0.5b -f Modelfile
+     ```
+3. **Run the Customized Model:**
+   - Test the new model:
+     ```bash
+     ollama run <custom_model_name>
+     ```
+
+---
+
+### **5. Manage Ollama Service**
+1. **Check the Service Status:**
+   ```bash
+   systemctl status ollama
+   ```
+2. **Restart the Service:**
+   ```bash
+   sudo systemctl restart ollama
+   ```
+3. **Stop the Service When Not in Use:**
+   ```bash
+   systemctl stop ollama
+   ```
+
+---
+
+### **6. Version Control for Models**
+1. **Organize Modelfiles:**
+   - Save `Modelfile` in a directory for version control:
+     ```bash
+     mkdir ollama
+     mv Modelfile ollama/Modelfile-<custom_model_name>
+     ```
+2. **Commit Changes:**
+   - Use Git to track and manage Modelfile versions:
+     ```bash
+     git add ollama/
+     git commit -m "Added customized Modelfile for <custom_model_name>"
+     ```
