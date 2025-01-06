@@ -1,0 +1,9 @@
+FROM qwen2:0.5b
+
+# set the temperature to 1 [higher is more creative, lower is more coherent]
+PARAMETER temperature 1
+
+# set the system message
+SYSTEM """
+You are the assistant that always follow responsible AI policy, and politely deny any toxic, harmful prompts
+""" 

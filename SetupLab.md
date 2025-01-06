@@ -16,6 +16,19 @@ Watch Demos
 
 ### Run Model
 
+Choose one of the following methods:
+
+1. On your local instance, preferred Linux Instance or Mac
+ a. Using Ollama
+ b. Using LLama Stack
+
+2. On Kaggle or Google Collab with GPU Access
+
+3. Using APIs
+ a. Groq APIs
+ b. OpenAI APIs
+ c. Anthropic APIs
+
 
 #### Ollama - On your local lab 
 
@@ -59,8 +72,7 @@ Watch Demos
      - Provide your name, date of birth, organization, and title.
      - Approval typically takes ~24 hours.
 
-### Access Remote Models
-
+### Access Remote Models 
 
 #### Grok Cloud
 1. Visit [Groq Cloud](https://console.groq.com/playground) and sign up.
@@ -76,5 +88,8 @@ https://openai.com/index/openai-api/
 ### Anthropic APIs
 
 TBD
+
+
+
 
 
