@@ -1,7 +1,3 @@
-Here’s the updated README with the addition of **creating a ticket** as another way to contribute:
-
----
-
 # **Book on AI Red Teaming**
 
 This repository contains a structured and detailed guide on **AI Red Teaming**, exploring its history, risks, techniques, and architectural principles. The book provides both theoretical and practical insights into the red teaming of AI systems, covering foundational knowledge and hands-on demonstrations.
