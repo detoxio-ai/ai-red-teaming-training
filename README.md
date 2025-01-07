@@ -28,7 +28,7 @@ The content is divided into chapters across two main sections: **AI Red Teaming*
 - [1.5 AI Attacks Taxonomy (Part 2)](content/1_intro_ai_red_teaming/1_5_ai_attacks_taxonomy_part2.md)
 - [1.6 Jailbreaking Demo](content/1_intro_ai_red_teaming/1_6_jailbreaking_demo.md)
 
-### **2. LLM Architecture**
+### **2. LLM Architecture for Security Professionals**
 - [2.1 History of LLMs](content/2_llm_architecture/2_1_history_of_llms.md)
 - [2.2 Tokenization](content/2_llm_architecture/2_2_tokenization.md)
 - [2.3 Self-Attention](content/2_llm_architecture/2_3_self_attention.md)
