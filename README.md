@@ -20,7 +20,7 @@ Through this repository, you will:
 
 The content is divided into chapters across two main sections: **AI Red Teaming** and **LLM Architecture**. Below is the structure with direct links to the files.
 
-### **1. AI Red Teaming**
+### **1. Introduction to AI Attacks**
 - [1.1 History of AI Risks](content/1_intro_ai_red_teaming/1_1_history_of_ai_risks.md)
 - [1.2 AI Risks](content/1_intro_ai_red_teaming/1_2_ai_risks.md)
 - [1.3 What is AI Red Teaming?](content/1_intro_ai_red_teaming/1_3_ai_red_teaming.md)
