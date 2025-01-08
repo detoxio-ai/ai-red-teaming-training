@@ -1,8 +1,4 @@
-Here’s the updated README with the addition of **creating a ticket** as another way to contribute:
-
----
-
-# **Book on AI Red Teaming**
+# **AI Red Teaming**
 
 This repository contains a structured and detailed guide on **AI Red Teaming**, exploring its history, risks, techniques, and architectural principles. The book provides both theoretical and practical insights into the red teaming of AI systems, covering foundational knowledge and hands-on demonstrations.
 
@@ -24,7 +20,7 @@ Through this repository, you will:
 
 The content is divided into chapters across two main sections: **AI Red Teaming** and **LLM Architecture**. Below is the structure with direct links to the files.
 
-### **1. AI Red Teaming**
+### **1. Introduction to AI Attacks**
 - [1.1 History of AI Risks](content/1_intro_ai_red_teaming/1_1_history_of_ai_risks.md)
 - [1.2 AI Risks](content/1_intro_ai_red_teaming/1_2_ai_risks.md)
 - [1.3 What is AI Red Teaming?](content/1_intro_ai_red_teaming/1_3_ai_red_teaming.md)
@@ -32,7 +28,7 @@ The content is divided into chapters across two main sections: **AI Red Teaming*
 - [1.5 AI Attacks Taxonomy (Part 2)](content/1_intro_ai_red_teaming/1_5_ai_attacks_taxonomy_part2.md)
 - [1.6 Jailbreaking Demo](content/1_intro_ai_red_teaming/1_6_jailbreaking_demo.md)
 
-### **2. LLM Architecture**
+### **2. LLM Architecture for Security Professionals**
 - [2.1 History of LLMs](content/2_llm_architecture/2_1_history_of_llms.md)
 - [2.2 Tokenization](content/2_llm_architecture/2_2_tokenization.md)
 - [2.3 Self-Attention](content/2_llm_architecture/2_3_self_attention.md)
