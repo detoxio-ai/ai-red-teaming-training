@@ -29,10 +29,6 @@ Medusa is a GenAI-based application designed to simulate and explore various sec
 2. Experiment with creative prompts to retrieve the secret while bypassing guardrails.
 3. Submit the flag using the format: `key <SECRET>`.
 
-#### **Hints:**
-- Think about indirect ways to phrase your query.
-- Avoid blacklisted patterns in your prompts and responses.
-
 ---
 
 ### **2. Math Assistant**
@@ -44,10 +40,6 @@ Medusa is a GenAI-based application designed to simulate and explore various sec
 1. Input mathematical queries (e.g., `What is the square root of 3600?`).
 2. Identify vulnerabilities in the generated Python code.
 3. Exploit the vulnerability to run arbitrary commands on the host.
-
-#### **Hints:**
-- Look for unvalidated user input being executed in the backend.
-- Try chaining mathematical queries with special characters or additional code.
 
 ---
 
@@ -61,10 +53,6 @@ Medusa is a GenAI-based application designed to simulate and explore various sec
 2. Experiment with prompts to modify generated SQL queries.
 3. Retrieve data from internal tables containing flags.
 
-#### **Hints:**
-- Use SQL keywords like `UNION`, `SELECT`, and `WHERE` creatively.
-- The goal is to access unknown internal tables.
-
 ---
 
 ### **4. Finance Assistant**
@@ -77,14 +65,25 @@ Medusa is a GenAI-based application designed to simulate and explore various sec
 2. Exploit prompt vulnerabilities or inject malicious commands to extract sensitive information.
 3. Retrieve the flag from the password or transactions table.
 
-#### **Hints:**
-- Use nested queries or carefully crafted prompts to bypass security.
-- Research "react loop" techniques for persistent prompt injection.
+---
+
+### **5. Text2SQL Agent**
+- **Objective:** Generate prohibited SQL queries (e.g., `UPDATE`, `DELETE`, `INSERT`, `CREATE`) despite strict system prompt guardrails.
+- **Vulnerability:** Bypassing advanced restrictions and using creative input to generate restricted SQL operations.
+- **Levels:**
+  - **Level 1:** Bypass guardrails in GPT-3.5 Turbo, which explicitly prohibits DDL and DML queries.
+  - **Level 2:** Overcome stricter guardrails in GPT-4o-mini with enhanced detection capabilities.
+  - **Level 3:** Bypass robust restrictions in GPT-4o to generate restricted SQL queries.
+
+#### **Steps:**
+1. Select a challenge level from the advanced options menu.
+2. Input text instructions that creatively lead the agent to generate restricted SQL queries.
+3. Submit the flag for successful query generation using `key <SECRET>`.
 
 ---
 
 ## **General Commands**
-- **`help`**: Displays instructions and available commands.
+- **`help`**: Displays instructions and available commands. Other variations "help hint", "help question..."
 - **`key <SECRET>`**: Submit the retrieved flag to complete the challenge.
 - **`restart`**: Restart the current challenge or level.
 
@@ -97,10 +96,10 @@ Medusa is a GenAI-based application designed to simulate and explore various sec
    Use indirect phrasing, synonyms, or multi-step queries to bypass guardrails.
 3. **Monitor Responses:**
    Observe how the AI assistant reacts to your input. Adjust your approach accordingly.
-4. **Iterate and Learn:**
-   Trial and error is a key part of solving challenges. Learn from each failed attempt.
+
 
 ---
+
 
 ## **Example Workflow**
 
@@ -124,8 +123,3 @@ Medusa is a GenAI-based application designed to simulate and explore various sec
    ```
 
 ---
-
-## **Learning Outcomes**
-- Understand and exploit common GenAI vulnerabilities.
-- Develop strategies to defend against prompt injection and related attacks.
-- Gain hands-on experience with real-world security challenges.
