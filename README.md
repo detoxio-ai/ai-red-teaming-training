@@ -2,7 +2,7 @@
 
 This repository contains a structured and detailed guide on **AI Red Teaming**, exploring its history, risks, techniques, and architectural principles. The book provides both theoretical and practical insights into the red teaming of AI systems, covering foundational knowledge and hands-on demonstrations.
 
-![image](https://github.com/user-attachments/assets/dc0494ae-5297-4aa4-bac7-5ac05f5b72af)
+<img src="https://github.com/user-attachments/assets/dc0494ae-5297-4aa4-bac7-5ac05f5b72af" alt="AI Red Teaming Book Cover" width="500" />
 
 ---
 
