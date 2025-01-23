@@ -24,8 +24,8 @@ The content is divided into chapters across four main sections: **AI Red Teaming
 - [1.1 History of AI Risks](content/1_intro_ai_red_teaming/1_1_history_of_ai_risks.md)
 - [1.2 AI Risks](content/1_intro_ai_red_teaming/1_2_ai_risks.md)
 - [1.3 What is AI Red Teaming?](content/1_intro_ai_red_teaming/1_3_ai_red_teaming.md)
-- [1.4 AI Attacks Taxonomy (Part 1)](content/1_intro_ai_red_teaming/1_4_ai_attacks_taxonomy_part1.md)
-- [1.5 AI Attacks Taxonomy (Part 2)](content/1_intro_ai_red_teaming/1_5_ai_attacks_taxonomy_part2.md)
+- [1.4 AI Attacks Taxonomy (Part 1)](content/1_intro_ai_red_teaming/1_4_ai_attacks_taxonomy_part_1.md)
+- [1.5 AI Attacks Taxonomy (Part 2)](content/1_intro_ai_red_teaming/1_5_ai_attacks_taxonomy_part_2.md)
 - [1.6 Jailbreaking Demo](content/1_intro_ai_red_teaming/1_6_jailbreaking_demo.md)
 
 ### **2. LLM Architecture for Security Professionals**
@@ -38,7 +38,7 @@ The content is divided into chapters across four main sections: **AI Red Teaming
 
 ### **3. Prompt Injections**
 - [3.1 Intro to Prompt Injections](content/3_prompt_injections/3_1_intro_prompt_injections.md)
-- [3.1.1 Real-life Prompt Injection Examples](content/3_prompt_injections/3_1.1_realife_prompt_injection_examples.md)
+- [3.1.1 Real-life Prompt Injection Examples](content/3_prompt_injections/3_1_1_realife_prompt_injection_examples.md)
 - [3.2 Anatomy of a Prompt](content/3_prompt_injections/3_2_anatomy_of_a_prompt.md)
 - [3.3 Craft a Prompt Injection Prompt](content/3_prompt_injections/3_3_craft_a_prompt_injection_prompt.md)
 - [3.4 Basics of Prompt Injection Techniques](content/3_prompt_injections/3_4_basics_of_prompt_injection_techniques.md)
