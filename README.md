@@ -18,7 +18,7 @@ Through this repository, you will:
 
 ## **Structure**
 
-The content is divided into chapters across two main sections: **AI Red Teaming** and **LLM Architecture**. Below is the structure with direct links to the files.
+The content is divided into chapters across four main sections: **AI Red Teaming**, **LLM Architecture**, **Prompt Injections**, and **LLM Training**. Below is the structure with direct links to the files.
 
 ### **1. Introduction to AI Attacks**
 - [1.1 History of AI Risks](content/1_intro_ai_red_teaming/1_1_history_of_ai_risks.md)
@@ -36,7 +36,21 @@ The content is divided into chapters across two main sections: **AI Red Teaming*
 - [2.5 Hyperparameters](content/2_llm_architecture/2_5_hyperparameters.md)
 - [2.6 LLM Comparisons](content/2_llm_architecture/2_6_llm_comparisons.md)
 
-### Rest In Making ...
+### **3. Prompt Injections**
+- [3.1 Intro to Prompt Injections](content/3_prompt_injections/3_1_intro_prompt_injections.md)
+- [3.1.1 Real-life Prompt Injection Examples](content/3_prompt_injections/3_1.1_realife_prompt_injection_examples.md)
+- [3.2 Anatomy of a Prompt](content/3_prompt_injections/3_2_anatomy_of_a_prompt.md)
+- [3.3 Craft a Prompt Injection Prompt](content/3_prompt_injections/3_3_craft_a_prompt_injection_prompt.md)
+- [3.4 Basics of Prompt Injection Techniques](content/3_prompt_injections/3_4_basics_of_prompt_injection_techniques.md)
+- [3.5 Intermediate Prompt Injection Techniques](content/3_prompt_injections/3_5_intermediate_prompt_injection_techniques.md)
+- [3.7 Try Prompt Injections on Medusa Pokebot](content/3_prompt_injections/3_7_try_prompt_injections_on_medusa_pokebot.md)
+- [3.8 Advanced Prompt Injections](content/3_prompt_injections/3_8_advance_prompt_injections.md)
+
+### **4. LLM Training**
+- [4.1 Inference Advanced Parameters](content/4_llm_training/4_1_inference_advance_params.md)
+- [4.2 Foundation Model Training](content/4_llm_training/4_2_foundation_model_training.md)
+- [4.3 Fine-Tuning LLMs](content/4_llm_training/4_3_finetuing_llms.md)
+- [4.4 Retrieval-Augmented Generation (RAG)](content/4_llm_training/4_4_rag.md)
 
 ---
 
