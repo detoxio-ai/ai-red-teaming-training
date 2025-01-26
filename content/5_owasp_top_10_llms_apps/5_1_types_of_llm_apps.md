@@ -2,8 +2,6 @@
 
 The surge in Large Language Models (LLMs) has led to a proliferation of applications utilizing their capabilities. From chatbots and personal assistants to agentic AI and RAG (Retrieval-Augmented Generation) systems, these applications are transforming industries. However, the increased complexity and integration with external systems have introduced new vulnerabilities. The **OWASP Top 10 LLM Applications Vulnerabilities** provides a standardized framework to identify, understand, and mitigate security risks in LLM-based systems.
 
-This chapter explores the **OWASP Top 10 vulnerabilities**, their impacts, mitigation strategies, and real-world examples. Before diving into vulnerabilities, let's first understand the types of LLM applications.
-
 ---
 
 ## Types of LLM Applications
