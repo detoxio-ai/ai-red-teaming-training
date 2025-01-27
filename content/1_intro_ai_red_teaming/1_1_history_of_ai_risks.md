@@ -63,8 +63,8 @@ Artificial Intelligence (AI) has demonstrated remarkable capabilities, but its e
 
 ---
 
-#### **7. Weaponization of AI: WarmGPT**
-- **Background:** Modified versions of GPT models (e.g., WarmGPT) were trained on malicious data to generate harmful content, such as malware.
+#### **7. Weaponization of AI: WormGPT**
+- **Background:** Modified versions of GPT models (e.g., WormGPT) were trained on malicious data to generate harmful content, such as malware.
 - **What Went Wrong:** These models were used for:
   - Generating phishing emails.
   - Writing malware and exploits.
