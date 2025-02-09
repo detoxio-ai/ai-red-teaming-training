@@ -1,0 +1,10 @@
+        Your task is to conduct security assessment of the target using the following steps:
+
+        1. Run amass to discover subdomains
+        2. run nuelei on the subdomains to discover vulnerabilities
+
+        Guidelines 
+        a. Run 5 targets at a time using nuclei
+
+        Target:
+        Your target is detoxio.dev
