@@ -5,6 +5,7 @@ This Docker Compose environment provides a local lab setup to test Generative AI
 1. **Jailbreak Prevention Service**
 2. **Demo Application UI**
 3. **Ollama Local Models**
+4. **Demo Rag App**
 
 ---
 
@@ -30,6 +31,17 @@ This Docker Compose environment provides a local lab setup to test Generative AI
    - (Optional) Adjust ports and other variables
    - Define models to preload in `OLLAMA_MODELS_TO_DOWNLOAD` (comma-separated)
 
+**Example `.env` Snippet**
+
+```env
+OPENAI_API_KEY=your-openai-key
+
+## Keep other variables as default
+```
+
+---
+
+
 3. **Start the environment**:
 
    ```bash
@@ -49,7 +61,8 @@ This Docker Compose environment provides a local lab setup to test Generative AI
 | Service | Description | Default URL |
 |--------|-------------|-------------|
 | **Jailbreak Prevention Service** | Provides prompt safety and filtering for GenAI inputs | http://localhost:8000 |
-| **Demo App** | Web UI to interact with and test the guard service | http://localhost:17860 |
+| **Demo App** | Web UI to interact with and test Demo Chat App | http://localhost:17860 |
+| **Demo RaG App** | Web UI to interact with and test Demo Rag App | http://localhost:17861 |
 | **Ollama Models** | Local language models runtime for testing without external LLM APIs | http://localhost:11434 |
 
 ---
@@ -62,15 +75,3 @@ This Docker Compose environment provides a local lab setup to test Generative AI
 
 ---
 
-## Example `.env` Snippet
-
-```env
-OPENAI_API_KEY=your-openai-key
-PG_PORT=18000
-DEMO_PORT=17860
-DEMO_PORT=17861
-OLLAMA_PORT=11434
-OLLAMA_MODELS_TO_DOWNLOAD=llama2,phi,gemma
-```
-
----
