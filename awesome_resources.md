@@ -60,3 +60,30 @@
 - **Threat Modeling Generative AI**: [AWS Blog](https://aws.amazon.com/blogs/security/threat-modeling-your-generative-ai-workload-to-evaluate-security-risk/)
 - **Generative AI Security Matrix**: [AWS Blog](https://aws.amazon.com/blogs/security/securing-generative-ai-an-introduction-to-the-generative-ai-security-scoping-matrix/)
 - **Prompt Injections**: [EMNLP 2023](https://aclanthology.org/2023.emnlp-main.302.pdf)
+
+
+## Agents 
+
+### Agents Framework 
+
+AutoGPT
+https://github.com/Significant-Gravitas/AutoGPT
+
+
+### Agents Risks
+
+https://github.com/precize/OWASP-Agentic-AI
+
+
+## Research Papers
+
+### LLM Models
+
+[**Generative AI Misuse: A Taxonomy of Tactics and Insights from Real-World Data**](https://arxiv.org/pdf/2406.13843v2)
+[**Adversarial Misuse of Generative AI**](https://cloud.google.com/blog/topics/threat-intelligence/adversarial-misuse-generative-ai)
+[**Google/SAIF Map**](https://saif.google/secure-ai-framework/saif-map)
+[**Disrupting malicious uses of our models: an update February 2025**](https://cdn.openai.com/threat-intelligence-reports/disrupting-malicious-uses-of-our-models-february-2025-update.pdf)
+
+
+### AI in Security
+[**Awesome-LLM4Cybersecurity**](https://github.com/tmylla/Awesome-LLM4Cybersecurity)

@@ -1,0 +1,82 @@
+version: '3.4'
+
+services:
+  pg:
+    image: detoxio/dtxguard:0.2.1
+    ports:
+      - "${PG_PORT}:8000"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8000/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    environment:
+      CACHE_TTL: ${CACHE_TTL}
+      CACHE_DIR: ${CACHE_DIR}
+
+  demo:
+    image: detoxio/dtxguard-demo:0.2.0
+    ports:
+      - "${DEMO_PORT}:7860"
+    depends_on:
+      pg:
+        condition: service_healthy
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:7860/" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      DTXPROMPT_GUARD_SVC_URL: http://pg:${PG_PORT}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL}
+      ENABLE_JAILBREAK_SECURITY: ${ENABLE_JAILBREAK_SECURITY:-False}
+  ollama:
+    image: ollama/ollama
+    restart: unless-stopped
+    ports:
+      - "${OLLAMA_PORT}:11434" # Host:Container
+    volumes:
+      - ${HOME}/.ollama:/root/.ollama
+    command: [ "serve" ]
+    environment:
+      OLLAMA_FORCE_CPU: "true"
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: "4g"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:${OLLAMA_PORT}" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  ollama-model-downloader:
+    image: ollama/ollama
+    entrypoint: [ "/bin/sh", "-c" ]
+    command: >
+      'for model in $(echo "$$DOWNLOAD_OLLAMA_MODELS" | tr "," "\n"); do
+        echo "Pulling $$model...";
+        ollama pull $$model;
+        # tail -f /dev/null;
+      done'
+    environment:
+      DOWNLOAD_OLLAMA_MODELS: ${DOWNLOAD_OLLAMA_MODELS}
+      OLLAMA_HOST: ollama:11434
+    depends_on:
+      - ollama
+  demo_rag:
+    image: detoxio/dtxguard-demo-rag:1.1.0
+    ports:
+      - "${DEMO_RAG_PORT}:7860"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7860/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DTXPROMPT_GUARD_SVC_URL=${DTXPROMPT_GUARD_SVC_URL}
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL}
+
