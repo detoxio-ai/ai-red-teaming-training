@@ -79,4 +79,17 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - DTXPROMPT_GUARD_SVC_URL=${DTXPROMPT_GUARD_SVC_URL}
       - OPENAI_BASE_URL=${OPENAI_BASE_URL}
+  demo_tool_agents:
+    image: detoxio/dtxguard-demo-tool-agents:0.1.0
+    ports:
+      - "${DEMO_TOOL_AGENTS_PORT}:7860"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7860/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DTXPROMPT_GUARD_SVC_URL=${DTXPROMPT_GUARD_SVC_URL}
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL}
 
