@@ -20,7 +20,7 @@ ollama run deepseek-r1:1.5b
 
 Then enter your prompts directly.
 
-## Tough Puzzle Prompt
+#### Puzzle Prompt
 
 Here’s a challenging logic puzzle for your deep model:
 
