@@ -87,3 +87,32 @@ https://github.com/precize/OWASP-Agentic-AI
 
 ### AI in Security
 [**Awesome-LLM4Cybersecurity**](https://github.com/tmylla/Awesome-LLM4Cybersecurity)
+https://github.com/jiep/offensive-ai-compilation
+
+### Adversarial Attacks on AI Models
+
+[**adversarial-robustness-toolbox**](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
+
+https://augly.readthedocs.io/en/latest/README.html
+
+
+
+### LLM Safety Research Papers
+
+#### 2023
+[**Model evaluation for extreme risks**](https://arxiv.org/pdf/2305.15324)
+[**Universal Adversarial Attacks on Models - 2023**](https://arxiv.org/abs/2307.15043)
+
+#### 2024
+[**Generative AI Misuse: A Taxonomy of Tactics**](https://arxiv.org/pdf/2406.13843?)
+
+
+
+
+### Text to Image Models
+[**Nightshade: Prompt-Specific Poisoning Attacks on Text-to-Image Generative Models**](https://arxiv.org/abs/2310.13828) [Code](https://github.com/Shawn-Shan/nightshade-release) [Site](https://nightshade.cs.uchicago.edu/aboutus.html)
+
+
+
+
+

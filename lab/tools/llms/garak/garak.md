@@ -1,3 +1,38 @@
+### **Tools Installation**
+
+#### **Option 1: Using Python Environment**
+1. Install Conda:
+   ```bash
+   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+   bash Miniconda3-latest-Linux-x86_64.sh
+   ```
+
+    Alternatively use poetry 
+
+2. Create and activate a Python environment:
+   ```bash
+   conda create -n lab_env python=3.11 -y
+   conda activate lab_env
+   ```
+
+  Alternatively use poetry 
+
+  ```bash
+
+    poetry new garak_lab
+    cd garak_lab
+    poetry shell 
+  ```
+
+3. Install tools:
+   ```bash
+   pip install garak hacktor
+   ```
+
+#### **Option 2: Using Docker**
+Install Docker:
+   Follow the [Docker Installation Guide](https://docs.docker.com/engine/install/).
+
 
 ## Running Garak
 
