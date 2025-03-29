@@ -44,6 +44,10 @@ python main.py
 
 When exploring embeddings, you can use the following keywords to filter specific types of data in the TensorFlow Embedding Projector:
 
+![image](https://github.com/user-attachments/assets/a00cdada-8f73-4c5c-b728-166b2f98b9e2)
+
+
+
 ### **Sensitive Information:**
 
 - `password`
