@@ -1,0 +1,16 @@
+## 0.2.0 
+Releasing with DLP features
+Fixed the issue with poetry lock
+
+## 0.1.6
+Fixed an issue with jailbreak protection via API
+
+## 0.1.5
+added ENABLE_JAILBREAK_SECURITY variable to permanently enable jailbreak, in case, of automated testing
+
+## 0.1.4
+Added few env variables & resolved the issue
+
+
+## 0.1.0
+Release First Version of the demo app

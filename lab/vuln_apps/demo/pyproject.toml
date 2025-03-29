@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "demo"
+version = "0.2.0"
+description = ""
+authors = ["Mithlesh Upadhyay <mithleshupadhyay515@gmail.com>"]
+package-mode = false
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+gradio = "^5.16.0"
+openai = "^1.63.0"
+dtx-prompt-guard-client = ">=0.2.0"
+python-dotenv = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+

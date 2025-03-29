@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "pokebot"
+version = "0.3"
+description = "Damn Vulnerable GenAI Rag App"
+authors = ["jchauhan <jitendra@detoxio.ai>"]
+readme = "Readme.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain = "^0.1.13"
+langchain-openai = "^0.1.0"
+faiss-cpu = "^1.8.0"
+gradio = "^5.22.0"
+pypdf = "^4.1.0"
+beautifulsoup4 = "^4.12.3"
+tiktoken = "^0.6.0"
+detoxio = "^0.1.15"
+markdown-builder = "^0.1.2"
+retry = "^0.9.2"
+dotenv = "^0.9.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.0.2"
+tox = "*"
+
+[[tool.poetry.source]]
+name = "buf"
+url = "https://buf.build/gen/python"
+priority = "supplemental"
+
+[tox]
+requires = { tox = ">=4" }
+env_list = [
+    "py{310}",
+    "lint",
+    "type",
+    "coverage"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pokebot = "pokebot.main:main"
+
+# Add a section to include data folder 
+[tool.poetry.extras]
+data = ["data"]

@@ -1,0 +1,7 @@
+langchain 
+langchain-openai 
+faiss-cpu 
+tiktoken
+beautifulsoup4
+gradio
+pypdf
