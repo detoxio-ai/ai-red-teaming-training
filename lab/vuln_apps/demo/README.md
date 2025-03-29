@@ -105,3 +105,4 @@ http://localhost:7860
 | `chat_history` | A structured chat response, including user messages and AI responses. |
 
 ---
+
