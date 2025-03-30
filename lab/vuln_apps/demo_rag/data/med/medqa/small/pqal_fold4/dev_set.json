@@ -1,0 +1,1720 @@
+{
+    "27908583": {
+        "QUESTION": "Should lower limb fractures be treated surgically in patients with chronic spinal injuries?",
+        "CONTEXTS": [
+            "To report the outcomes of surgical treatment of lower limb fractures in patients with chronic spinal cord injuries.",
+            "A total of 37 lower limb fractures were treated from 2003 to 2010, of which 25 fractures were treated surgically and 12 orthopaedically.",
+            "Patients of the surgical group had better clinical results, range of motion, bone consolidation, and less pressure ulcers and radiological misalignment. No differences were detected between groups in terms of pain, hospital stay, and medical complications.",
+            "There is no currently consensus regarding the management of lower limb fractures in patients with chronic spinal cord injuries, but the trend has been conservative treatment due to the high rate of complications in surgical treatment."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "MATERIAL AND METHOD",
+            "RESULTS",
+            "DISCUSSION"
+        ],
+        "MESHES": [
+            "Adult",
+            "Female",
+            "Femoral Fractures",
+            "Fracture Fixation",
+            "Humans",
+            "Male",
+            "Middle Aged",
+            "Retrospective Studies",
+            "Spinal Cord Injuries",
+            "Tibial Fractures",
+            "Treatment Outcome"
+        ],
+        "YEAR": null,
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Chronic spinal cord injuries patients with lower limb fractures who are treated surgically achieved a more reliable consolidation, practically a free range of motion, low rate of cutaneous complications, and pain associated with the fracture. This allows a quick return to the previous standard of living, and should be considered as an alternative to orthopaedic treatment in these patients."
+    },
+    "19757704": {
+        "QUESTION": "Is Chaalia/Pan Masala harmful for health?",
+        "CONTEXTS": [
+            "To determine the practices and knowledge of harmful effects regarding use of Chaalia and Pan Masala in three schools of Mahmoodabad and Chanesar Goth, Jamshed Town, Karachi, Pakistan.",
+            "To achieve the objective a cross-sectional design was used in three government schools of Mahmoodabad and Chanesar Goth, Jamshed Town, Karachi. Students of either gender drawn from these schools fulfilling the inclusion and exclusion criteria were interviewed using a pre-coded structured questionnaire. Along with demographic data, questions regarding frequency of Chaalia and Pan Masala use, practices of this habit in friends and family and place of procurement of these substances, were inquired. Knowledge was assessed about harmful effects and its source of information. In addition, practices in relation to that knowledge were assessed.",
+            "A total of 370 students were interviewed over a period of six weeks, of which 205 (55.4%) were boys. The ages of the students were between 10 and 15 years. Thirty one percent of the fathers and 62% of the mothers were uneducated. The frequency of use of any brand of Chaalia was found to be 94% and that of Pan Masala was 73.8%. Eighty five percent of them were regular users. A large majority (88%) procured the substances themselves from near their homes. Ninety five percent of the children had friends with the same habits. Eighty four percent were using the substances in full knowledge of their families. Chaalia was considered harmful for health by 96% and Pan Masala by 60%. Good taste was cited as a reason for continuing the habit by 88.5% of the children and use by friends by 57%. Knowledge about established harmful effects was variable. Knowledge about harmful effects was high in both \"daily\" and \"less than daily users\"."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adolescent",
+            "Areca",
+            "Child",
+            "Confidence Intervals",
+            "Cross-Sectional Studies",
+            "Female",
+            "Health Behavior",
+            "Health Education",
+            "Health Knowledge, Attitudes, Practice",
+            "Humans",
+            "Male",
+            "Mastication",
+            "Pakistan",
+            "Psychotropic Drugs",
+            "Risk-Taking",
+            "Schools",
+            "Socioeconomic Factors",
+            "Students",
+            "Substance-Related Disorders",
+            "Surveys and Questionnaires"
+        ],
+        "YEAR": "2009",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "maybe",
+        "final_decision": "yes",
+        "LONG_ANSWER": "The frequency of habits of Chaalia and Pan Masala chewing, by school children in lower socio-economic areas is extremely high. The probable reasons for this high frequency are taste, the widespread use of these substances by family members and friends, low cost and easy availability."
+    },
+    "22301406": {
+        "QUESTION": "CYP2D6*4 allele and breast cancer risk: is there any association?",
+        "CONTEXTS": [
+            "CYP2D6 is an important cytochrome P450 enzyme. These enzymes catalyse the oxidative biotransformation of about 25% of clinically important drugs as well as the metabolism of numerous environmental chemical carcinogens. The most frequent null allele of CYP2D6 in European populations, CYP2D6*4, has been studied here in order to elucidate whether a relationship exists between this allele and the risk of developing breast cancer in a Spanish population.",
+            "Ninety-six breast cancer Spanish patients and one hundred healthy female volunteers were genotyped for the CYP2D6*4 allele using AmpliChip CYP450 Test technology.",
+            "Homozygous CYP2D6*4 frequency was significant lower in breast cancer patients than in the control group (OR=0.22, p=0.04). The heterozygous CYP2D6*4 group also displayed lower values in patients than in controls but the difference was not significant (OR=0.698, p=0.28). Therefore, the presence of the CYP2D6*4 allele seems to decrease susceptibility to breast carcinoma in the selected population."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "MATERIALS AND METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Aged",
+            "Alleles",
+            "Breast Neoplasms",
+            "Carcinoma, Ductal, Breast",
+            "Carcinoma, Intraductal, Noninfiltrating",
+            "Carcinoma, Lobular",
+            "Case-Control Studies",
+            "Cytochrome P-450 CYP2D6",
+            "DNA",
+            "Female",
+            "Heterozygote",
+            "Homozygote",
+            "Humans",
+            "Middle Aged",
+            "Phenotype",
+            "Polymerase Chain Reaction",
+            "Polymorphism, Genetic",
+            "Risk Factors",
+            "Spain"
+        ],
+        "YEAR": "2012",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "A possible decreased transformation of procarcinogens by CYP2D6*4 poor metabolisers could result in a protective effect against carcinogens."
+    },
+    "17089900": {
+        "QUESTION": "Does Paget's disease exist in India?",
+        "CONTEXTS": [
+            "Paget's disease of bone has been described as a few case reports from India. The aim of the present study is to document the existence of Paget's disease (PD) in India.",
+            "We describe demography, clinical manifestations, biochemical and radiological profile and the treatment outcome of 21 patients of PD.",
+            "Mean (+/-SD) age of these patients at presentation was 49.2 +/- 17.6 years and the male to female ratio was 2.5:1. Common clinical manifestations included backache, headache and bone pains. Others were fracture, joint pain, deafness, gait ataxia, visual impairment and difficulty in biting. Two patients presented with hydrocephalus and one had recurrent paraparesis. Fifteen (71.4%) patients had polyostotic and six (28.6%) had monoostotic Paget's disease. More commonly involved bones were skull and spine (61.9%) followed by pelvis (38.1%), femur (33.3%), tibia (9%) and ulna (9%). Mean (+/-SD) serum alkaline phosphatase at diagnosis was 1514 +/- 1168 IU/L and nine months after treatment with bisphosphonates decreased to 454 +/- 406 IU/ L(P<0.03)."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "MATERIAL AND METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Absorptiometry, Photon",
+            "Adolescent",
+            "Adult",
+            "Age Distribution",
+            "Aged",
+            "Back Pain",
+            "Bone Density Conservation Agents",
+            "Child",
+            "Diphosphonates",
+            "Female",
+            "Headache",
+            "Health Surveys",
+            "Hospitals",
+            "Humans",
+            "India",
+            "Male",
+            "Middle Aged",
+            "Osteitis Deformans",
+            "Risk Assessment",
+            "Sex Distribution"
+        ],
+        "YEAR": "2006",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "This illustrates that Paget's disease does exist in India and a high index of suspicion is required to clinch the diagnosis."
+    },
+    "17224424": {
+        "QUESTION": "Effects of exercise training on heart rate and QT interval in healthy young individuals: are there gender differences?",
+        "CONTEXTS": [
+            "The aim of the present study was to assess the effects of exercise training on heart rate, QT interval, and on the relation between ventricular repolarization and heart rate in men and women.",
+            "A 24 h Holter recording was obtained in 80 healthy subjects (40 males) who differed for the degree of physical activity. Trained individuals showed a lower heart rate and a higher heart rate variability than sedentary subjects, independent of the gender difference in basal heart rate. Mean 24 h QTc was similar in trained and non-trained men, while a significant difference was observed between trained and non-trained women. Exercise training reduced the QT/RR slope in both genders. This effect on the QT/RR relation was more marked in women; in fact, the gender difference in the ventricular repolarization duration at low heart rate observed in sedentary subjects was no longer present among trained individuals."
+        ],
+        "LABELS": [
+            "AIMS",
+            "METHODS AND RESULTS"
+        ],
+        "MESHES": [
+            "Electrocardiography",
+            "Exercise",
+            "Female",
+            "Heart Rate",
+            "Humans",
+            "Male",
+            "Rest",
+            "Sex Characteristics",
+            "Ventricular Function"
+        ],
+        "YEAR": "2007",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "The results of this study suggest that the cardiovascular response to exercise training may be different in men and women. Women may benefit more from interventions aimed to increase physical activity as a tool for prevention of cardiovascular morbidity and mortality."
+    },
+    "26298839": {
+        "QUESTION": "Is Acupuncture Efficacious for Treating Phonotraumatic Vocal Pathologies?",
+        "CONTEXTS": [
+            "To investigate the effectiveness of acupuncture in treating phonotraumatic vocal fold lesions.STUDY DESIGN/",
+            "A total of 123 dysphonic individuals with benign vocal pathologies were recruited. They were given either genuine acupuncture (n\u00a0=\u00a040), sham acupuncture (n\u00a0=\u00a044), or no treatment (n\u00a0=\u00a039) for 6\u00a0weeks (two 30-minute sessions/wk). The genuine acupuncture group received needles puncturing nine voice-related acupoints for 30\u00a0minutes, two times a week for 6\u00a0weeks, whereas the sham acupuncture group received blunted needles stimulating the skin surface of the nine acupoints for the same frequency and duration. The no-treatment group did not receive any intervention but attended just the assessment sessions. One-hundred seventeen subjects completed the study (genuine acupuncture\u00a0=\u00a040; sham acupuncture\u00a0=\u00a043; and no treatment\u00a0=\u00a034), but only 84 of them had a complete set of vocal functions and quality of life measures (genuine acupuncture\u00a0=\u00a029; sham acupuncture\u00a0=\u00a033; and no-treatment\u00a0=\u00a022) and 42 of them with a complete set of endoscopic data (genuine acupuncture\u00a0=\u00a016; sham acupuncture\u00a0=\u00a015; and no treatment\u00a0=\u00a011).",
+            "Significant improvement in vocal function, as indicated by the maximum fundamental frequency produced, and also perceived quality of life, were found in both the genuine and sham acupuncture groups, but not in the no-treatment group. Structural (morphological) improvements were, however, only noticed in the genuine acupuncture group, which demonstrated a significant reduction in the size of the vocal fold lesions."
+        ],
+        "LABELS": [
+            "OBJECTIVES",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Acoustics",
+            "Acupuncture Therapy",
+            "Adult",
+            "Dysphonia",
+            "Female",
+            "Hong Kong",
+            "Humans",
+            "Laryngoscopy",
+            "Male",
+            "Middle Aged",
+            "Quality of Life",
+            "Recovery of Function",
+            "Speech Production Measurement",
+            "Stroboscopy",
+            "Surveys and Questionnaires",
+            "Time Factors",
+            "Treatment Outcome",
+            "Video Recording",
+            "Vocal Cords",
+            "Voice Quality",
+            "Wound Healing",
+            "Young Adult"
+        ],
+        "YEAR": "2016",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "The findings showed that acupuncture of voice-related acupoints could bring about improvement in vocal function and healing of vocal fold lesions."
+    },
+    "16956164": {
+        "QUESTION": "Do all ethnic groups in New Zealand exhibit socio-economic mortality gradients?",
+        "CONTEXTS": [
+            "First, to establish whether a deprivation gradient in all-cause mortality exists for all ethnic groups within New Zealand; second, if such gradients do exist, whether their absolute slopes are the same; and third, if such gradients exist, what impact the unequal deprivation distributions of the different ethnic groups have on the observed ethnic inequalities in life expectancy at birth.",
+            "Abridged lifetables for the period 1999-2003 were constructed using standard demographic methods for each of four ethnic groups (Asian, Pacific, Maori and European) by NZDep2001 quintile and sex. Gradients were estimated by fitting generalised linear models to the quintile-specific life expectancy estimates for each ethnic group (by sex). The contribution of variation in deprivation distributions to inter-ethnic inequalities in life expectancy was estimated by re-weighting the quintile-specific mortality rates for each ethnic group using weights derived from the European deprivation distribution and recalculating the lifetable.",
+            "All four ethnic groups exhibit deprivation gradients in all-cause mortality (life expectancy). Maori show the steepest gradients, with slopes approximately 25% steeper than those of Europeans for both males and females. By contrast, gradients among Asian and Pacific peoples are shallower than those of their European counterparts."
+        ],
+        "LABELS": [
+            "OBJECTIVES",
+            "METHOD",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adolescent",
+            "Adult",
+            "Ethnic Groups",
+            "Female",
+            "Humans",
+            "Male",
+            "Middle Aged",
+            "Mortality",
+            "New Zealand",
+            "Social Class",
+            "Vital Statistics"
+        ],
+        "YEAR": "2006",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "While socio-economic gradients in health exist among all ethnic groups, they are relatively shallow among Pacific and (especially) Asian peoples. For these ethnic groups, caution should be exercised in applying deprivation or other socio-economic measures as proxy indicators of need for health services."
+    },
+    "21084567": {
+        "QUESTION": "Are stroke patients' reports of home blood pressure readings reliable?",
+        "CONTEXTS": [
+            "Home blood pressure (BP) monitoring is gaining increasing popularity among patients and may be useful in hypertension management. Little is known about the reliability of stroke patients' records of home BP monitoring.",
+            "To assess the reliability of home BP recording in hypertensive patients who had suffered a recent stroke or transient ischaemic attack.",
+            "Thirty-nine stroke patients (mean age 73 years) randomized to the intervention arm of a trial of home BP monitoring were included. Following instruction by a research nurse, patients recorded their BPs at home and documented them in a booklet over the next year. The booklet readings over a month were compared with the actual readings downloaded from the BP monitor and were checked for errors or selective bias in recording.",
+            "A total of 1027 monitor and 716 booklet readings were recorded. Ninety per cent of booklet recordings were exactly the same as the BP monitor readings. Average booklet readings were 0.6 mmHg systolic [95% confidence interval (95% CI) -0.6 to 1.8] and 0.3 mmHg diastolic (95% CI -0.3 to 0.8) lower than those on the monitor."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "OBJECTIVE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Aged",
+            "Aged, 80 and over",
+            "Blood Pressure Monitoring, Ambulatory",
+            "Cross-Sectional Studies",
+            "Female",
+            "Humans",
+            "Hypertension",
+            "Ischemic Attack, Transient",
+            "Male",
+            "Middle Aged",
+            "Reproducibility of Results",
+            "Self Care",
+            "Self Report",
+            "Stroke Rehabilitation"
+        ],
+        "YEAR": "2011",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "This group of elderly stroke patients were able to record their BPs reliably at home. Any bias was small and would be unlikely to affect management. Since BP readings in a GP surgery are often a poor indication of true BP, GPs might consider using hypertensive patients' records of home BP monitoring to help guide treatment decisions."
+    },
+    "19299238": {
+        "QUESTION": "Aromatase inhibitor-related musculoskeletal symptoms: is preventing osteoporosis the key to eliminating these symptoms?",
+        "CONTEXTS": [
+            "Aromatase inhibitors (AIs) are an effective treatment for postmenopausal women with hormone receptor-positive breast cancer. However, patients receiving AIs report a higher incidence of musculoskeletal symptoms and bone fractures; the mechanism and risk factors for this correlation are not well studied. The aim of this study was to correlate these musculoskeletal symptoms and bone fractures in patients receiving AIs with bone mineral density (BMD), previous tamoxifen use, and administration of calcium/bisphosphonate (Ca/Bis).",
+            "We reviewed charts of 856 patients with hormone receptor-positive nonmetastatic breast cancer seen at our institution between January 1999 and October 2007. A total of 316 patients met the inclusion criteria of treatment with one of the AIs for>or = 3 months and availability of a dualenergy X-ray absorptiometry (DEXA) during this treatment. Arthralgia, generalized bone pain and/or myalgia, bone fracture after beginning AIs, any tamoxifen treatment, and Ca/Bis therapy were recorded.",
+            "Our study demonstrates a significant association between symptoms and DEXA-BMD results (P<.001). Similarly, the group receiving tamoxifen before AIs had fewer patients with arthralgia or generalized bone pain/myalgia or bone fracture (P<.001). Furthermore, the group receiving AIs plus Ca/Bis had more patients without musculoskeletal symptoms and had fewer fractures. Finally, the group receiving steroidal AIs compared with nonsteroidal AIs had more patients with arthralgia or generalized bone pain and/or myalgia, and bone fractures (P<.001)."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "PATIENTS AND METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Absorptiometry, Photon",
+            "Aged",
+            "Antineoplastic Agents, Hormonal",
+            "Aromatase Inhibitors",
+            "Bone Density",
+            "Breast Neoplasms",
+            "Calcium Phosphates",
+            "Diphosphonates",
+            "Female",
+            "Humans",
+            "Middle Aged",
+            "Musculoskeletal Diseases",
+            "Osteoporosis",
+            "Retrospective Studies",
+            "Tamoxifen"
+        ],
+        "YEAR": "2009",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Patients on AIs who develop osteoporosis are at increased risk of musculoskeletal symptoms and bone fracture. Comedication with Ca/Bis reduces the likelihood for osteoporosis and musculoskeletal symptoms. Patients who received tamoxifen before AIs were less likely to develop AI-related musculoskeletal symptoms. We recommend that patients on AIs should be offered Ca/Bis to reduce the incidence of musculoskeletal symptoms and fracture, especially if patients are receiving steroidal AI and/or did not receive tamoxifen before AIs."
+    },
+    "25747932": {
+        "QUESTION": "Living in an urban environment and non-communicable disease risk in Thailand: Does timing matter?",
+        "CONTEXTS": [
+            "This paper uses a life-course approach to explore whether the timing and/or duration of urban (vs rural) exposure was associated with risk factors for NCDs.",
+            "A cross-sectional survey was conducted among health care workers in two hospitals in Thailand. Two measures of urbanicity were considered: early-life urban exposure and the proportion of urban life years. We explored four behavioral NCD risk factors, two physiological risk factors and four biological risk factors.",
+            "Both measures of urbanicity were each independently associated with increases in all behavioral and physiological risk factors. For some biological risk factors, people spending their early life in an urban area may be more susceptible to the effect of increasing proportion of urban life years than those growing up in rural areas."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Child, Preschool",
+            "Chronic Disease",
+            "Cross-Sectional Studies",
+            "Humans",
+            "Middle Aged",
+            "Prevalence",
+            "Risk Factors",
+            "Thailand",
+            "Time Factors",
+            "Urban Health"
+        ],
+        "YEAR": "2015",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Urbanicity was associated with increases in behavioral and physiological risk factors. However, these associations may not translate directly into increases in biological risk factors. It is likely that these biological risk factors were results of a complex interaction between both long term accumulation of exposure and early life exposures."
+    },
+    "14713788": {
+        "QUESTION": "Is year of radical prostatectomy a predictor of outcome in prostate cancer?",
+        "CONTEXTS": [
+            "We examined whether the year in which radical prostatectomy (RP) was performed is a predictor of treatment outcome after controlling for standard prognostic factors.",
+            "We examined the association between RP year and outcome in 6,556 patients from 7 centers using preoperative and pathological features. Patients underwent surgery between 1985 and 2000. The variables analyzed were RP year, clinical stage, pretreatment prostate specific antigen, biopsy Gleason sum, RP Gleason sum, margin status, level of extracapsular extension, seminal vesicle status, lymph node status, neoadjuvant hormones and adjuvant therapy. Median followup was 23 months (maximum 166). Separate Cox multivariate regression analyses were performed to analyze preoperative and postoperative factors.",
+            "RP year was a predictor of outcome on preoperative analysis (p = 0.006) but not on postoperative analysis (p = 0.130). Patient outcome steadily improved with surgery through the mid 1990s and then it appeared to level off."
+        ],
+        "LABELS": [
+            "PURPOSE",
+            "MATERIALS AND METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Aged",
+            "Aged, 80 and over",
+            "Follow-Up Studies",
+            "Humans",
+            "Male",
+            "Middle Aged",
+            "Prostatectomy",
+            "Prostatic Neoplasms",
+            "Time Factors",
+            "Treatment Outcome"
+        ],
+        "YEAR": "2004",
+        "reasoning_required_pred": "no",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "When controlling for preoperative features, the year in which RP was performed is a predictor of outcome on multivariate analysis. This effect could not be explained by stage migration."
+    },
+    "24695920": {
+        "QUESTION": "Does anterior laxity of the uninjured knee influence clinical outcomes of ACL reconstruction?",
+        "CONTEXTS": [
+            "The purpose of this study was to evaluate the association between the postoperative outcomes of anterior cruciate ligament (ACL) reconstruction and the anterior laxity of the uninjured knee.",
+            "We retrospectively reviewed 163 patients who had undergone unilateral ACL reconstruction from January 2002 to August 2009. Patients were divided into three groups according to the anterior laxity of the contralateral, normal knee in 30\u00b0 of knee flexion as measured with a KT2000 arthrometer exerting a force of 134 N:<5 mm for Group 1, 5 to 7.5 mm for Group 2, and>7.5 mm for Group 3. Anterior laxity of the uninjured knee was assessed preoperatively, and anterior laxity of the reconstructed knee was assessed at twenty-four months postoperatively. Anterior stability of the knee was also assessed with use of the Lachman and pivot-shift tests. Functional outcomes were assessed with the Lysholm score and the International Knee Documentation Committee (IKDC) score.",
+            "The three groups differed significantly with respect to the postoperative side-to-side difference in anterior laxity (p = 0.015), Lysholm score (p<0.001), and IKDC subjective score (p<0.001). The mean side-to-side difference in anterior laxity of the reconstructed knee was 2.1 \u00b1 1.3 mm in Group 1, 2.2 \u00b1 1.3 mm in Group 2, and 2.9 \u00b1 1.4 mm in Group 3. The postoperative Lysholm score was 91.8 \u00b1 4.5 in Group 1, 90.3 \u00b1 5.5 in Group 2, and 85.4 \u00b1 6.6 in Group 3. The postoperative IKDC subjective score was 89.3 \u00b1 6.4 in Group 1, 87.9 \u00b1 6.0 in Group 2, and 82.6 \u00b1 8.2 in Group 3. Post hoc testing showed that Group 3 had significantly greater anterior laxity (p \u2264 0.039) and lower functional scores (p \u2264 0.001) compared with Groups 1 and 2."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adolescent",
+            "Adult",
+            "Aged",
+            "Anterior Cruciate Ligament Reconstruction",
+            "Arthrometry, Articular",
+            "Female",
+            "Health Status Indicators",
+            "Humans",
+            "Joint Instability",
+            "Knee Injuries",
+            "Knee Joint",
+            "Male",
+            "Middle Aged",
+            "Observer Variation",
+            "Postoperative Period",
+            "Range of Motion, Articular",
+            "Recovery of Function",
+            "Retrospective Studies",
+            "Treatment Outcome",
+            "Young Adult"
+        ],
+        "YEAR": "2014",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Greater anterior laxity of the uninjured knee was associated with poorer stability and functional outcomes after ACL reconstruction. Excessive anterior laxity of the uninjured knee thus appears to represent a risk factor for inferior outcomes."
+    },
+    "25406780": {
+        "QUESTION": "Does skin care frequency affect the severity of incontinence-associated dermatitis in critically ill patients?",
+        "CONTEXTS": [
+            "Incontinence-associated dermatitis (IAD) is a potentially serious skin injury that can lead to pressure ulcers (PUs). Multiple studies have indicated the need for evidence to find the most effective skin care protocol to reduce the incidence and severity of IAD in critically ill patients.",
+            "To compare the incidence and severity of IAD in two groups on a progressive care unit (PCU) using a defined skin care protocol: cleaning with a gentle cleanser and moisturizer, then applying a skin protectant/barrier. The control group received the skin care protocol every 12 hours and the interventional group received the protocol every 6 hours; both groups also received it as needed.",
+            "A 9-month randomized prospective study was conducted on 99 patients (N = 55 in the intervention group and N = 44 in the control group) who were incontinent of urine, stool, or both, or had a fecal diversion device or urinary catheter for more than 2 days.",
+            "The dermatitis score in the intervention group on discharge was significantly less (7.1%; P \u2264 0.001) in the moderate IAD group than in the control group (10.9%). The dermatitis score means and P values of each group were compared using a paired t test."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "OBJECTIVE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Aged",
+            "Critical Illness",
+            "Dermatitis",
+            "Fecal Incontinence",
+            "Female",
+            "Humans",
+            "Male",
+            "Nursing Evaluation Research",
+            "Prospective Studies",
+            "Severity of Illness Index",
+            "Skin Care",
+            "Urinary Incontinence"
+        ],
+        "YEAR": "2014",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "The researchers studied a defined skin care protocol using a cleanser with aloe vera and a cleansing lotion, followed by application of either a moisture barrier with silicone or skin protectant with zinc oxide and menthol, undertaken at two different frequencies. Data revealed the incidence of moderate IAD was decreased in the experimental group (receiving the skin protocol every 6 hours and p.r.n.)."
+    },
+    "22658587": {
+        "QUESTION": "Affect-regulated exercise intensity: does training at an intensity that feels 'good' improve physical health?",
+        "CONTEXTS": [
+            "Affect-regulated exercise to feel 'good' can be used to control exercise intensity amongst both active and sedentary individuals and should support exercise adherence. It is not known, however, whether affect-regulated exercise training can lead to physical health gains. The aim of this study was to examine if affect-regulated exercise to feel 'good' leads to improved fitness over the course of an 8-week training programme.",
+            "A repeated measures design (pretest-posttest) with independent groups (training and control).",
+            "20 sedentary females completed a submaximal graded exercise test and were then allocated to either a training group or control group. The training group completed two supervised sessions and one unsupervised session per week for 8 weeks. Exercise intensity was affect-regulated to feel 'good'. Following the 8 weeks of training, both groups completed a second submaximal graded exercise test.",
+            "Repeated measures analyses of variance indicated a significant increase in the time to reach ventilatory threshold in the training group (318 \u00b1 23.7s) compared to control (248 \u00b1 16.9s). Overall compliance to training was high (>92%). Participants in the training group exercised at intensities that would be classified as being in the lower range of the recommended guidelines (\u2248 50% V\u02d9O(2) max) for cardiovascular health."
+        ],
+        "LABELS": [
+            "OBJECTIVES",
+            "DESIGN",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adolescent",
+            "Adult",
+            "Affect",
+            "Exercise",
+            "Female",
+            "Heart Rate",
+            "Humans",
+            "Middle Aged",
+            "Oxygen Consumption",
+            "Physical Fitness",
+            "Sedentary Lifestyle",
+            "Young Adult"
+        ],
+        "YEAR": "2012",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Affect-regulated exercise to feel 'good' can be used in a training programme to regulate exercise intensity. This approach led to a 19% increase in time to reach ventilatory threshold, which is indicative of improved fitness."
+    },
+    "15065192": {
+        "QUESTION": "Three-dimensional ultrasound-validated large-core needle biopsy: is it a reliable method for the histological assessment of breast lesions?",
+        "CONTEXTS": [
+            "The use of three-dimensional (3D) ultrasound may help to determine the exact position of the needle during breast biopsy, thereby reducing the number of core samples that are needed to achieve a reliable histological diagnosis. The aim of this study was to demonstrate the efficacy of 3D ultrasound-validated large-core needle biopsy (LCNB) of the breast.",
+            "A total of 360 core needle biopsies was obtained from 169 breast lesions in 146 patients. Additional open breast biopsy was performed in 111 women (127/169 breast lesions); the remaining 42 lesions were followed up for at least 24 months. 3D ultrasound visualization of the needle in the postfiring position was used to classify the biopsy as central, marginal or outside the lesion. Based on this classification it was decided whether another sample had to be obtained.",
+            "A median of two core samples per lesion provided for all the lesions a sensitivity for malignancy of 96.9%, specificity of 100%, false-positive rate of 0% and false-negative rate of 3.1%, and for the excised lesions a sensitivity of 96.5%, specificity of 100%, false-positive rate of 0%, false-negative rate of 3.5% and an underestimation rate of 3.4%."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Biopsy, Needle",
+            "Breast Diseases",
+            "Breast Neoplasms",
+            "False Negative Reactions",
+            "False Positive Reactions",
+            "Female",
+            "Humans",
+            "Needles",
+            "Predictive Value of Tests",
+            "Ultrasonography, Mammary"
+        ],
+        "YEAR": "2004",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "3D ultrasound validation of the postfiring needle position is an efficient adjunct to ultrasound-guided LCNB. The advantages of 3D ultrasound validation are likely to include a reduction in the number of core samples needed to achieve a reliable histological diagnosis (and a possible reduction in the risk of tumor cell displacement), reduced procedure time and lower costs."
+    },
+    "17914515": {
+        "QUESTION": "Suturing of the nasal septum after septoplasty, is it an effective alternative to nasal packing?",
+        "CONTEXTS": [
+            "To discuss and compare the results of suturing the nasal septum after septoplasty with the results of nasal packing.",
+            "A prospective study, which was performed at Prince Hashem Military Hospital in Zarqa, Jordan and Prince Rashed Military Hospital in Irbid, Jordan between September 2005 and August 2006 included 169 consecutive patients that underwent septoplasty. The patients were randomly divided into 2 groups. After completion of surgery, the nasal septum was sutured in the first group while nasal packing was performed in the second group.",
+            "Thirteen patients (15.3%) in the first group and 11 patients (13%) in the second group had minor oozing in the first 24 hours, 4 patients (4.8%) had bleeding after removal of the pack in the second group. Four patients (4.8%) developed septal hematoma in the second group. Two patients (2.4%) had septal perforation in the second group. One patient (1.1%) in the first group, and 5 patients (5.9%) in the second group had postoperative adhesions. Five patients (5.9%) were found to have remnant deviated nasal septum in each group. The operating time was 4 minutes longer in the first group."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adolescent",
+            "Adult",
+            "Bandages",
+            "Female",
+            "Humans",
+            "Male",
+            "Middle Aged",
+            "Nasal Septum",
+            "Postoperative Care",
+            "Prospective Studies",
+            "Suture Techniques",
+            "Treatment Outcome"
+        ],
+        "YEAR": "2007",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Septal suturing after septoplasty offers the following advantages: elimination of discomfort for the patients, minimal complications, the outcome is almost the same as with nasal packing, and finally the hospital stay is less than with nasal packing. Therefore, suturing of the nasal septum after septoplasty should be a preferred alternative to nasal packing."
+    },
+    "22108230": {
+        "QUESTION": "Is the fibronectin-aggrecan complex present in cervical disk disease?",
+        "CONTEXTS": [
+            "To investigate the presence of inflammatory cytokines and the fibronectin-aggrecan complex (FAC) in persons undergoing surgical treatment for cervical radiculopathy caused by disk herniation.",
+            "Single-center, prospective, consecutive case series.",
+            "A single large academic institution.",
+            "A total of 11 patients with radiculopathic pain and magnetic resonance imaging findings positive for disk herniation elected to undergo single-level cervical diskectomy.",
+            "Lavage was performed by needle injection and aspiration upon entering the disk space for fluoroscopic localization before diskectomy.",
+            "The lavage fluid was assayed for pH and the FAC, as well as for the cytokines interleukin-6 (IL-6), interferon-\u03b3, monocyte chemotactic protein (MCP), and macrophage inhibitory protein-1\u03b2.",
+            "The subjects were 7 women and 4 men with a mean age of 50.6 years (SE 9.7; range, 36-70 years). The mean concentrations (SE; range) in picograms per milliliter were 7.9 (4.4; 0-44) for IL-6, 25.3 (15.5; 0-159) for interferon-\u03b3, 16.1 (11.9; 0-121) for MCP, and 6.1 (2.8; 0-29) for macrophage inhibitory protein-1\u03b2. The optical density of the FAC at 450 nm was 0.151 (0.036; 0.1-0.32), and the pH was 6.68 (0.1; 6.10-7.15). Statistically significant correlations were found between MCP and FAC (P = .036) and between FAC and pH (P = .008)."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "DESIGN",
+            "SETTING",
+            "PATIENTS",
+            "METHODS OR INTERVENTIONS",
+            "MAIN OUTCOME MEASUREMENTS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Aged",
+            "Aggrecans",
+            "Biomarkers",
+            "Cervical Vertebrae",
+            "Female",
+            "Fibronectins",
+            "Follow-Up Studies",
+            "Humans",
+            "Intervertebral Disc Degeneration",
+            "Intervertebral Disc Displacement",
+            "Magnetic Resonance Imaging",
+            "Male",
+            "Middle Aged",
+            "Prospective Studies",
+            "Severity of Illness Index"
+        ],
+        "YEAR": "2011",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Biochemical analysis of injured cervical intervertebral disks reveals the presence of inflammatory markers such as MCP, fragments of structural matrix proteins such as FAC, and a correlation with pH. Further evaluation of the FAC as a potential diagnostic biomarker or therapeutic target is warranted in the cervical spine."
+    },
+    "26104852": {
+        "QUESTION": "Can echocardiography and ECG discriminate hereditary transthyretin V30M amyloidosis from hypertrophic cardiomyopathy?",
+        "CONTEXTS": [
+            "Hereditary transthyretin (ATTR) amyloidosis with increased left ventricular wall thickness could easily be misdiagnosed by echocardiography as hypertrophic cardiomyopathy (HCM). Our aim was to create a diagnostic tool based on echocardiography and ECG that could optimise identification of ATTR amyloidosis.",
+            "Data were analysed from 33 patients with biopsy proven ATTR amyloidosis and 30 patients with diagnosed HCM. Conventional features from ECG were acquired as well as two dimensional and Doppler echocardiography, speckle tracking derived strain and tissue characterisation analysis. Classification trees were used to select the most important variables for differentiation between ATTR amyloidosis and HCM.",
+            "The best classification was obtained using both ECG and echocardiographic features, where a QRS voltage>30\u2009mm was diagnostic for HCM, whereas in patients with QRS voltage<30\u2009mm, an interventricular septal/posterior wall thickness ratio (IVSt/PWt)>1.6 was consistent with HCM and a ratio<1.6 supported the diagnosis of ATTR amyloidosis. This classification presented both high sensitivity (0.939) and specificity (0.833)."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Aged",
+            "Amino Acid Substitution",
+            "Amyloidosis",
+            "Biopsy",
+            "Cardiomyopathy, Hypertrophic",
+            "Diagnosis, Differential",
+            "Echocardiography, Doppler",
+            "Electrocardiography",
+            "Female",
+            "Gene Expression",
+            "Heart Ventricles",
+            "Humans",
+            "Male",
+            "Middle Aged",
+            "Mutation",
+            "Myocardium",
+            "Prealbumin"
+        ],
+        "YEAR": "2015",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Our study proposes an easily interpretable classification method for the differentiation between HCM and increased left ventricular myocardial thickness due to ATTR amyloidosis. Our combined echocardiographic and ECG model could increase the ability to identify ATTR cardiac amyloidosis in clinical practice."
+    },
+    "26285789": {
+        "QUESTION": "Does Molecular Genotype Provide Useful Information in the Management of Radioiodine Refractory Thyroid Cancers?",
+        "CONTEXTS": [
+            "Whether mutation status should be used to guide therapy is an important issue in many cancers. We correlated mutation profile in radioiodine-refractory (RAIR) metastatic thyroid cancers (TCs) with patient outcome and response to tyrosine kinase inhibitors (TKIs), and discussed the results with other published data.",
+            "Outcome in 82 consecutive patients with metastatic RAIR thyroid carcinoma prospectively tested for BRAF, RAS and PI3KCA mutations was retrospectively analyzed, including 55 patients treated with multikinase inhibitors.",
+            "Papillary thyroid carcinomas (PTCs) were the most frequent histological subtype (54.9 %), followed by poorly differentiated thyroid carcinoma [PDTC] (30.5 %) and follicular thyroid carcinoma [FTC](14.6 %). A genetic mutation was identified in 23 patients (28 %) and BRAF was the most frequently mutated gene (23 %). Median progression-free survival (PFS) on first-line TKI treatment was 14.6 months (95% CI 9.9-18.4). BRAF mutation positively influenced median PFS, both in the entire TKI-treated cohort (median PFS 34.7 months versus 11.6 months; hazard ratio [HR] 0.29; 95% CI 0.09-0.98; p\u2009=\u20090.03) and in the TKI-treated PTC cohort (n\u2009=\u200922) [log-rank p\u2009=\u20090.086; HR 2.95; 95 % CI 0.81-10.70). However, in TKI-treated patients, PDTC histologic subtype was the only independent prognostic factor for PFS identified in the multivariate analysis (HR 2.36; 95% CI 1.01-5.54; p\u2009=\u20090.048)."
+        ],
+        "LABELS": [
+            "INTRODUCTION",
+            "MATERIALS AND METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adenocarcinoma",
+            "Adult",
+            "Aged",
+            "Aged, 80 and over",
+            "Biomarkers, Tumor",
+            "Carcinoma, Papillary",
+            "Disease Management",
+            "Female",
+            "Follow-Up Studies",
+            "Genotype",
+            "Humans",
+            "Iodine Radioisotopes",
+            "Male",
+            "Middle Aged",
+            "Molecular Targeted Therapy",
+            "Mutation",
+            "Neoplasm Staging",
+            "Prognosis",
+            "Prospective Studies",
+            "Radiation Tolerance",
+            "Retrospective Studies",
+            "Survival Rate",
+            "Thyroid Neoplasms"
+        ],
+        "YEAR": "2016",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Patients with BRAF-mutant PTC had a significantly longer PFS than BRAF wild-type when treated with TKIs. However, due to the small number of BRAF-mutant patients, further investigations are required, especially to understand the potential positive effect of BRAF mutations in RAIR TC patients while having a negative prognostic impact in RAI-sensitive PTC patients."
+    },
+    "21801416": {
+        "QUESTION": "The effect of an intracerebroventricular injection of metformin or AICAR on the plasma concentrations of melatonin in the ewe: potential involvement of AMPK?",
+        "CONTEXTS": [
+            "It is now widely accepted that AMP-activated protein kinase (AMPK) is a critical regulator of energy homeostasis. Recently, it has been shown to regulate circadian clocks. In seasonal breeding species such as sheep, the circadian clock controls the secretion of an endogenous rhythm of melatonin and, as a consequence, is probably involved in the generation of seasonal rhythms of reproduction. Considering this, we identified the presence of the subunits of AMPK in different hypothalamic nuclei involved in the pre- and post-pineal pathways that control seasonality of reproduction in the ewe and we investigated if the intracerebroventricular (i.c.v.) injection of two activators of AMPK, metformin and AICAR, affected the circadian rhythm of melatonin in ewes that were housed in constant darkness. In parallel the secretion of insulin was monitored as a peripheral metabolic marker. We also investigated the effects of i.c.v. AICAR on the phosphorylation of AMPK and acetyl-CoA carboxylase (ACC), a downstream target of AMPK, in brain structures along the photoneuroendocrine pathway to the pineal gland.",
+            "All the subunits of AMPK that we studied were identified in all brain areas that were dissected but with some differences in their level of expression among structures. Metformin and AICAR both reduced (p<0.001 and p<0.01 respectively) the amplitude of the circadian rhythm of melatonin secretion independently of insulin secretion. The i.c.v. injection of AICAR only tended (p = 0.1) to increase the levels of phosphorylated AMPK in the paraventricular nucleus but significantly increased the levels of phosphorylated ACC in the paraventricular nucleus (p<0.001) and in the pineal gland (p<0.05)."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "AMP-Activated Protein Kinases",
+            "Aminoimidazole Carboxamide",
+            "Animals",
+            "Brain",
+            "Circadian Rhythm",
+            "Female",
+            "Infusions, Intraventricular",
+            "Melatonin",
+            "Metformin",
+            "Ribonucleotides",
+            "Sheep"
+        ],
+        "YEAR": "2011",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Taken together, these results suggest a potential role for AMPK on the secretion of melatonin probably acting trough the paraventricular nucleus and/or directly in the pineal gland. We conclude that AMPK may act as a metabolic cue to modulate the rhythm of melatonin secretion."
+    },
+    "17259061": {
+        "QUESTION": "Cigarettes and cinema: does parental restriction of R-rated movie viewing reduce adolescent smoking susceptibility?",
+        "CONTEXTS": [
+            "To examine the relationship between exposure to pro-smoking messages in media and susceptibility to smoking adoption among middle school students. The hypothesis that parental restriction of R-rated movie viewing is associated with lower adolescent smoking susceptibility was tested.",
+            "A sample of 1687 6th-, 7th-, and 8th-grade students from four Wisconsin middle schools were surveyed about their use of cigarettes, exposure to smoking in media, their views of smoking, and peer smoking behaviors.",
+            "An index of smoking susceptibility was created using measures of cigarette use and future intention to smoke. A zero-order correlation for parental restriction of R-rated movie viewing and smoking susceptibility showed a strong association (r = -.36, p<.001). A hierarchical logistic regression yielded odds ratios (ORs) for being susceptible to or having tried smoking for three levels of parental R-rated movie restriction. Results show that compared to full restriction, respondents with partial or no restriction were more likely to be susceptible to smoking (partial restriction: OR = 2.1, 95% CI = 1.5-2.8; no restriction: OR = 3.3, 95% CI = 2.3-4.6), when controlling for demographic factors, and family and friend smoking. Analyses using a measure of smoking prevalence as the dependent variable yielded similar results (partial restriction: OR = 1.5, 95% CI = 1.0-2.2; no restriction: OR = 2.5, 95% CI = 1.7-3.7)."
+        ],
+        "LABELS": [
+            "PURPOSE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adolescent",
+            "Adolescent Behavior",
+            "Female",
+            "Humans",
+            "Imitative Behavior",
+            "Logistic Models",
+            "Male",
+            "Motion Pictures",
+            "Parent-Child Relations",
+            "Prevalence",
+            "Smoking",
+            "Smoking Prevention",
+            "Surveys and Questionnaires",
+            "Wisconsin"
+        ],
+        "YEAR": "2007",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Parental restriction of R-rated movie viewing is associated with both lower adolescent smoking susceptibility and lower smoking rates."
+    },
+    "25819796": {
+        "QUESTION": "Literacy after cerebral hemispherectomy: Can the isolated right hemisphere read?",
+        "CONTEXTS": [
+            "Cerebral hemispherectomy, a surgical procedure undergone to control intractable seizures, is becoming a standard procedure with more cases identified and treated early in life [33]. While the effect of the dominant hemisphere resection on spoken language has been extensively researched, little is known about reading abilities in individuals after left-sided resection. Left-lateralized phonological abilities are the key components of reading, i.e., grapheme-phoneme conversion skills [1]. These skills are critical for the acquisition of word-specific orthographic knowledge and have been shown to predict reading levels in average readers as well as in readers with mild cognitive disability [26]. Furthermore, impaired phonological processing has been implicated as the cognitive basis in struggling readers. Here, we explored the reading skills in participants who have undergone left cerebral hemispherectomy.",
+            "Seven individuals who have undergone left cerebral hemispherectomy to control intractable seizures associated with perinatal infarct have been recruited for this study. We examined if components of phonological processing that are shown to reliably separate average readers from struggling readers, i.e., phonological awareness, verbal memory, speed of retrieval, and size of vocabulary, show the same relationship to reading levels when they are mediated by the right hemisphere [2].",
+            "We found that about 60% of our group developed both word reading and paragraph reading in the average range. Phonological processing measured by both phonological awareness and nonword reading was unexpectedly spared in the majority of participants. Phonological awareness levels strongly correlated with word reading. Verbal memory, a component of phonological processing skills, together with receptive vocabulary size, positively correlated with reading levels similar to those reported in average readers. Receptive vocabulary, a bilateral function, was preserved to a certain degree similar to that of strongly left-lateralized phonological skills [3]. Later seizure onset was associated with better reading levels."
+        ],
+        "LABELS": [
+            "OBJECTIVES",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adolescent",
+            "Child",
+            "Cohort Studies",
+            "Drug Resistant Epilepsy",
+            "Female",
+            "Functional Laterality",
+            "Hemispherectomy",
+            "Humans",
+            "Literacy",
+            "Male",
+            "Postoperative Period",
+            "Reading",
+            "Young Adult"
+        ],
+        "YEAR": "2015",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "When cerebral hemispherectomy is performed to control seizures associated with very early (in utero) insult, it has been found that the remaining right hemisphere is still able to support reading and phonological processing skills that are normally mediated by the left hemisphere. Our results also suggest the existence of variability in individuals after hemispherectomy, even within groups having the same etiology and similar timing of insult."
+    },
+    "25186850": {
+        "QUESTION": "May student examiners be reasonable substitute examiners for faculty in an undergraduate OSCE on medical emergencies?",
+        "CONTEXTS": [
+            "To compare the effect of student examiners (SE) to that of faculty examiners (FE) on examinee performance in an OSCE as well as on post-assessment evaluation in the area of emergency medicine management.",
+            "An OSCE test-format (seven stations: Advanced Cardiac Life Support (ACLS), Basic Life Support (BLS), Trauma-Management (TM), Pediatric-Emergencies (PE), Acute-Coronary-Syndrome (ACS), Airway-Management (AM), and Obstetrical-Emergencies (OE)) was administered to 207 medical students in their third year of training after they had received didactics in emergency medicine management. Participants were randomly assigned to one of the two simultaneously run tracks: either with SE (n = 110) or with FE (n = 98). Students were asked to rate each OSCE station and to provide their overall OSCE perception by means of a standardized questionnaire. The independent samples t-test was used and effect sizes were calculated (Cohens d).",
+            "Students achieved significantly higher scores for the OSCE stations \"TM\", \"AM\", and \"OE\" as well as \"overall OSCE score\" in the SE track, whereas the station score for \"PE\" was significantly higher for students in the FE track. Mostly small effect sizes were reported. In the post-assessment evaluation portion of the study, students gave significant higher ratings for the ACS station and \"overall OSCE evaluation\" in the FE track; also with small effect sizes."
+        ],
+        "LABELS": [
+            "OBJECTIVES",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Clinical Competence",
+            "Education, Medical, Undergraduate",
+            "Educational Measurement",
+            "Emergency Medicine",
+            "Faculty, Medical",
+            "Female",
+            "Humans",
+            "Male",
+            "Medical History Taking",
+            "Patient Simulation",
+            "Physical Examination",
+            "Students, Medical",
+            "Young Adult"
+        ],
+        "YEAR": "2015",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "It seems quite admissible and justified to encourage medical students to officiate as examiners in undergraduate emergency medicine OSCE formative testing, but not necessarily in summative assessment evaluations."
+    },
+    "19054501": {
+        "QUESTION": "Is motion perception deficit in schizophrenia a consequence of eye-tracking abnormality?",
+        "CONTEXTS": [
+            "Studies have shown that schizophrenia patients have motion perception deficit, which was thought to cause eye-tracking abnormality in schizophrenia. However, eye movement closely interacts with motion perception. The known eye-tracking difficulties in schizophrenia patients may interact with their motion perception.",
+            "Two speed discrimination experiments were conducted in a within-subject design. In experiment 1, the stimulus duration was 150 msec to minimize the chance of eye-tracking occurrence. In experiment 2, the duration was increased to 300 msec, increasing the possibility of eye movement intrusion. Regular eye-tracking performance was evaluated in a third experiment.",
+            "At 150 msec, speed discrimination thresholds did not differ between schizophrenia patients (n = 38) and control subjects (n = 33). At 300 msec, patients had significantly higher thresholds than control subjects (p = .03). Furthermore, frequencies of eye tracking during the 300 msec stimulus were significantly correlated with speed discrimination in control subjects (p = .01) but not in patients, suggesting that eye-tracking initiation may benefit control subjects but not patients. The frequency of eye tracking during speed discrimination was not significantly related to regular eye-tracking performance."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adolescent",
+            "Adult",
+            "Discrimination (Psychology)",
+            "Female",
+            "Fixation, Ocular",
+            "Humans",
+            "Male",
+            "Middle Aged",
+            "Motion Perception",
+            "Ocular Motility Disorders",
+            "Psychomotor Performance",
+            "Pursuit, Smooth",
+            "Schizophrenic Psychology",
+            "Temporal Lobe",
+            "Visual Pathways",
+            "Young Adult"
+        ],
+        "YEAR": "2009",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Speed discrimination, per se, is not impaired in schizophrenia patients. The observed abnormality appears to be a consequence of impairment in generating or integrating the feedback information from eye movements. This study introduces a novel approach to motion perception studies and highlights the importance of concurrently measuring eye movements to understand interactions between these two systems; the results argue for a conceptual revision regarding motion perception abnormality in schizophrenia."
+    },
+    "26194560": {
+        "QUESTION": "Does cup-cage reconstruction with oversized cups provide initial stability in THA for osteoporotic acetabular fractures?",
+        "CONTEXTS": [
+            "The incidence of acetabular fractures in osteoporotic patients is increasing. Immediate total hip arthroplasty (THA) has potential advantages, but achieving acetabular component stability is challenging and, at early followup, reported revision rates for loosening are high.QUESTIONS/",
+            "This study measured acetabular component stability and the initial surface contact achieved between the acetabular component and unfractured region of the pelvis after THA using an oversized acetabular component and cup-cage reconstruction.",
+            "Between November 2011 and November 2013, we treated 40 acute acetabular fractures in patients older than 70 years of age. Of these, 12 (30%) underwent immediate THA using an oversized acetabular component with screws inserted only into the ilium and a cup-cage construct. Postoperatively all patients were mobilized without weightbearing restrictions. Indications for immediate THA after acetabular fractures were displaced articular comminution deemed unreducible. Eleven of the 12 were prospectively studied to evaluate the initial stability of the reconstructions using radiostereometric analysis. One of the patients died of a pulmonary embolism after surgery, and the remaining 10 (median age, 81 years; range, 72-86 years) were studied. Of these, five were analyzed at 1 year and five were analyzed at 2 years. Acetabular component migration was defined as acceptable if less than the limits for primary THA that predict later loosening (1.76 mm of proximal migration and 2.53\u00b0 of sagittal rotation). The contact surface between the acetabular component and ilium in direct continuity with the sacroiliac joint, and the ischium and pubis in direct continuity with the symphysis pubis, was measured on postoperative CT scans.",
+            "At 1 year the median proximal migration was 0.83 mm (range, 0.09-5.13 mm) and sagittal rotation was 1.3\u00b0 (range, 0.1\u00b0-7.4\u00b0). Three of the 10 components had migration above the suggested limits for primary THA at 1 year postoperatively. The contact surface achieved at surgery between the acetabular component and pelvis ranged from 11 to 17 cm(2) (15%-27% of each component)."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "PURPOSES",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Acetabulum",
+            "Aged",
+            "Aged, 80 and over",
+            "Arthroplasty, Replacement, Hip",
+            "Biomechanical Phenomena",
+            "Bone Density",
+            "Female",
+            "Hip Fractures",
+            "Hip Prosthesis",
+            "Humans",
+            "Joint Instability",
+            "Male",
+            "Osteoporotic Fractures",
+            "Prospective Studies",
+            "Prosthesis Design",
+            "Prosthesis Failure",
+            "Radiography",
+            "Risk Factors",
+            "Time Factors",
+            "Treatment Outcome"
+        ],
+        "YEAR": "2015",
+        "reasoning_required_pred": "maybe",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "The majority of acetabular components in this cohort were stable despite the small contact surface achieved between the component and pelvic bone. Three of 10 migrated in excess of the limits that predict later loosening in primary THA but it remains to be seen whether these limits apply to this selected group of frail osteoporotic patients. We continue to use this technique routinely to treat patients with the same indications, but since the analysis of these data we have added screw fixation of the acetabular component to the ischial tuberosity and the superior pubic ramus."
+    },
+    "27405146": {
+        "QUESTION": "PREVALENCE OF THE STREPTOCOCUS AGALACTIAE IN THE PREGNANT WOMAN FROM THE AUTONOMIC CITY OF MELILLA: IS CULTURE A DETERMINANT FACTOR?",
+        "CONTEXTS": [
+            "The neonatal infection by Streptococcus group B is one of the main causes of neonatal morbi-mortality rate. For this reason a screening is made to each pregnant woman in order to detect its presence, and if it was the case, to apply an antibiotic treatment during labour. The aim of this study was to know the prevalence of this Streptococcus in the pregnant women from Melilla, as well as the differences according to culture and age.",
+            "A descriptive cross-sectional study located in the Hospital Comarcal from Melilla.",
+            "The sample is taken from 280 women: 194 are from Muslim culture (69.3%), 68 are from Christian culture (24.3%) and 18 women from unknown cultures (6.4%). Also it is known that 78 of them are 25 years old or less (27.85%), 158 are between 26 and 34 years old (56.42%) and 44 are 35 years old or more (15.71%)."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "METHOD",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Christianity",
+            "Cross-Sectional Studies",
+            "Cultural Characteristics",
+            "Female",
+            "Humans",
+            "Islam",
+            "Pregnancy",
+            "Pregnancy Complications, Infectious",
+            "Prevalence",
+            "Rectum",
+            "Retrospective Studies",
+            "Risk Factors",
+            "Streptococcal Infections",
+            "Streptococcus agalactiae",
+            "Vagina",
+            "Young Adult"
+        ],
+        "YEAR": "2016",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "The prevalence of vagino-rectal colonization by Streptococcus group B in the pregnant women from Melilla is within the national estimated figures, however it is different if they are from Muslim or Christian culture, being higher in the Muslim population. On one hand both prevalences are within the national statistics, and on the other hand it is observed that there is not any difference according to age."
+    },
+    "17610439": {
+        "QUESTION": "Do hospitals provide lower quality care on weekends?",
+        "CONTEXTS": [
+            "To examine the effect of a weekend hospitalization on the timing and incidence of intensive cardiac procedures, and on subsequent expenditures, mortality and readmission rates for Medicare patients hospitalized with acute myocardial infarction (AMI).",
+            "The primary data are longitudinal, administrative claims for 922,074 elderly, non-rural, fee-for-service Medicare beneficiaries hospitalized with AMI from 1989 to 1998. Annual patient-level cohorts provide information on ex ante health status, procedure use, expenditures, and health outcomes.",
+            "The patient is the primary unit of analysis. I use ordinary least squares regression to estimate the effect of weekend hospitalization on rates of cardiac catheterization, angioplasty, and bypass surgery (in various time periods subsequent to the initial hospitalization), 1-year expenditures and rates of adverse health outcomes in various periods following the AMI admission.",
+            "Weekend AMI patients are significantly less likely to receive immediate intensive cardiac procedures, and experience significantly higher rates of adverse health outcomes. Weekend admission leads to a 3.47 percentage point reduction in catheterization at 1 day, a 1.52 point reduction in angioplasty, and a 0.35 point reduction in by-pass surgery (p<.001 in all cases). The primary effect is delayed treatment, as weekend-weekday procedure differentials narrow over time from the initial hospitalization. Weekend patients experience a 0.38 percentage point (p<.001) increase in 1-year mortality and a 0.20 point (p<.001) increase in 1-year readmission with congestive heart failure."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "DATA SOURCES",
+            "STUDY DESIGN",
+            "PRINCIPAL FINDINGS"
+        ],
+        "MESHES": [
+            "Aged",
+            "Female",
+            "Health Expenditures",
+            "Health Status",
+            "Hospital Mortality",
+            "Hospitalization",
+            "Humans",
+            "Insurance Claim Review",
+            "Male",
+            "Medicare",
+            "Myocardial Infarction",
+            "Patient Readmission",
+            "Quality of Health Care",
+            "Time Factors",
+            "Treatment Outcome"
+        ],
+        "YEAR": "2007",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "Weekend hospitalization leads to delayed provision of intensive procedures and elevated 1-year mortality for elderly AMI patients. The existence of measurable differences in treatments raises questions regarding the efficacy of a single input regulation (e.g., mandated nurse staffing ratios) in enhancing the quality of weekend care. My results suggest that targeted financial incentives might be a more cost-effective policy response than broad regulation aimed at improving quality."
+    },
+    "20382292": {
+        "QUESTION": "Knee extensor strength, dynamic stability, and functional ambulation: are they related in Parkinson's disease?",
+        "CONTEXTS": [
+            "To evaluate the relationship between knee extensor strength, postural stability, functional ambulation, and disease severity in Parkinson's disease (PD).",
+            "A cohort study.",
+            "University research laboratory.",
+            "Patients (N=44) with idiopathic PD.",
+            "Not applicable.",
+            "Participants were evaluated on their isokinetic knee extensor strength. Additionally, participants completed an assessment of their postural stability (Functional Reach Test for static stability and a dynamic postural stability assessment as measured by the center of pressure-center of mass moment arm during gait initiation). Participants also underwent an evaluation of their functional ambulation as measured by a 6-minute walk test. Lastly, participants were evaluated by a neurologist specially trained in movement disorders to assess neurologic status and disease severity using the Unified Parkinson's Disease Rating Scale and the Hoehn and Yahr disability score.",
+            "Knee extensor strength positively correlated with dynamic postural stability and negatively correlated with disease severity. Further, dynamic postural stability was negatively correlated to disease severity and positively correlated with functional ambulation in this cohort of patients with PD (P<.05). The results also suggest that the Functional Reach Test may be a valuable assessment tool to examine postural stability in PD."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "DESIGN",
+            "SETTING",
+            "PARTICIPANTS",
+            "INTERVENTION",
+            "MAIN OUTCOME MEASURES",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Aged",
+            "Cohort Studies",
+            "Humans",
+            "Knee",
+            "Middle Aged",
+            "Muscle Strength",
+            "Muscle, Skeletal",
+            "Parkinson Disease",
+            "Physical Therapy Modalities",
+            "Postural Balance",
+            "Severity of Illness Index",
+            "Walking"
+        ],
+        "YEAR": "2010",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "yes",
+        "final_decision": "yes",
+        "LONG_ANSWER": "These findings suggest a malleable relationship between knee extensor strength, dynamic stability, and disease severity in PD. Although strength is only one piece of the puzzle in the functional outcome of PD, these findings may assist clinicians in designing appropriate interventions aimed at increasing function and decreasing fall risk in PD."
+    },
+    "26784147": {
+        "QUESTION": "Target Serum Urate: Do Gout Patients Know Their Goal?",
+        "CONTEXTS": [
+            "To examine gout patients' knowledge of their condition, including the central role of achieving and maintaining the serum urate (SU) goal with the use of urate-lowering therapy (ULT).",
+            "This study of 612 gout patients was conducted at a Veterans Affairs medical center. Gout patients were included based on administrative diagnostic codes and receipt of at least 1 allopurinol prescription over a 1-year period. Questionnaires were mailed to patients and linked to medical records data. The questionnaire included gout-specific knowledge questions, the Patient Activation Measure, and self-reported health outcomes. Knowledge was assessed descriptively. Multivariable logistic regression was used to determine predictors of SU goal knowledge. Associations of knowledge with health outcomes were examined in exploratory analyses.",
+            "The questionnaire had a 62% response rate. Only 14% of patients knew their SU goal, while the majority answered correctly for the other 5 gout-specific knowledge questions. In adjusted analyses, having a rheumatologist as initial prescriber (odds ratio [OR] 3.0 [95% confidence interval (95% CI) 1.4-6.2]) and knowing all of the other 5 gout-specific knowledge questions (OR 2.1 [95% CI 1.3-3.4]) were associated with greater odds of knowing the SU goal. SU goal knowledge was associated with self-reported global health status, but not with self-reported health-related quality of life or gout-specific health status."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Aged",
+            "Cross-Sectional Studies",
+            "Female",
+            "Gout",
+            "Health Knowledge, Attitudes, Practice",
+            "Humans",
+            "Male",
+            "Middle Aged",
+            "Surveys and Questionnaires",
+            "Uric Acid"
+        ],
+        "YEAR": "2016",
+        "reasoning_required_pred": "no",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "There is a knowledge deficit regarding the SU treatment goal among gout patients receiving ULT, despite generally high levels of other gout-specific knowledge. SU goal information may be an important and underutilized concept among providers treating gout patients."
+    },
+    "11888773": {
+        "QUESTION": "Stage I non-small cell lung carcinoma: really an early stage?",
+        "CONTEXTS": [
+            "We review our results on surgical treatment of patients with stage I non-small cell lung carcinoma and we attempted to clarify the prognostic significance of some surgical--pathologic variables.",
+            "From 1993 to 1999, 667 patients received curative lung resection and complete hilar and mediastinal lymphadenectomy for non-small cell lung cancer. Of these, there were 436 Stage I disease (65%), of whom 144 T1N0 and 292 T2N0. No patients had pre- or postoperative radio- or chemotherapy. Prognostic significance of the following independent variables was tested using univariate (log-rank) and multivariate (Cox proportional-hazards) analysis: type of resection (sublobar vs lobectomy vs pneumonectomy), histology (squamous cell vs adenocarcinoma), tumour size (<or=3cm vs>3cm), histologic vascular invasion, visceral pleura involvement, positive bronchial resection margin, general T status.",
+            "Overall 5-year survival was 63%. In both univariate and multivariate survival analysis, significant prognostic factors were histology (adenocarcinoma 65% vs squamous cell carcinoma 51%), tumour size (<or=3cm 67% vs>3cm 46%), and the presence of negative resection margin. Five-year survival by general T status was 66% in T1N0 vs 55% in T2N0 disease (P=0.19)."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Carcinoma, Non-Small-Cell Lung",
+            "Female",
+            "Humans",
+            "Lung",
+            "Lung Neoplasms",
+            "Male",
+            "Middle Aged",
+            "Neoplasm Recurrence, Local",
+            "Neoplasm Staging",
+            "Prognosis",
+            "Proportional Hazards Models",
+            "Retrospective Studies",
+            "Survival Rate"
+        ],
+        "YEAR": "2002",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "Despite advances in early diagnosis and surgical technique, 5-year survival of stage I non-small cell lung carcinoma remains low as compared to survival of other solid organ neoplasm. Tumour size<or=3cm, adenocarcinoma histologic type and negative bronchial resection margins were associated with a more favourable outcome in our patient population. More effective multimodality treatments are needed to increase survival rates."
+    },
+    "25982163": {
+        "QUESTION": "Appendectomy timing: Will delayed surgery increase the complications?",
+        "CONTEXTS": [
+            "This study investigated whether the time from emergency room registration to appendectomy (ETA) would affect the incidence of perforation and postoperative complications in patients with acute appendicitis.",
+            "Patients who underwent an appendectomy at the Ren-Ai branch of Taipei City Hospital between January 2010 and October 2012 were retrospectively reviewed. Their demographics, white blood cell count, C-reactive protein, body temperature, computed tomography scan usage, operation method, pathology report, postoperative complication, length of hospital stay, and ETA were abstracted. Multivariate analysis was performed to search the predictors, including ETA, of outcomes for the perforation and postoperative complication rates.",
+            "A total of 236 patients were included in the study. Perforation occurred in 12.7% (30/236) and postoperative complications developed in 24.1% (57/236) of these patients. There were 121 patients with ETA<8 hours, 88 patients with ETA of 8-24 hours, and 27 patients with ETA>24 hours; patients with ETA>24 hours had significantly longer hospital stay. Univariate analysis showed that perforated patients were significantly older, and had higher C-reactive protein level, longer hospital stay, and higher complication rate. Patients who developed postoperative complications were significantly older, and had higher neutrophil count, less use of computed tomography, and higher open appendectomy rate. After multivariate analysis, age \u226555 years was the only predictor for perforation [odds ratio (OR) = 3.65; 95% confidence interval (CI), 1.54-8.68]; for postoperative complications, age \u226555 years (OR = 1.65; 95% CI, 1.84-3.25), perforated appendicitis (OR = 3.17; 95% CI, 1.28-7.85), and open appendectomy (OR = 3.21; 95% CI, 1.36-7.58) were associated. ETA was not a significant predictor in both analyses."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Aged",
+            "Appendectomy",
+            "C-Reactive Protein",
+            "Female",
+            "Humans",
+            "Length of Stay",
+            "Male",
+            "Middle Aged",
+            "Postoperative Complications",
+            "Retrospective Studies",
+            "Time Factors"
+        ],
+        "YEAR": "2015",
+        "reasoning_required_pred": "no",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "In our study, it was observed that although longer ETA was associated with longer hospitalization, ETA was not correlated with postoperative complications. Our results inclined toward the position that appendectomy can be performed as a semielective surgery."
+    },
+    "24827404": {
+        "QUESTION": "Is resected stomach volume related to weight loss after laparoscopic sleeve gastrectomy?",
+        "CONTEXTS": [
+            "Laparoscopic sleeve gastrectomy (LSG) was initially performed as the first stage of biliopancreatic diversion with duodenal switch for the treatment of super-obese or high-risk obese patients but is now most commonly performed as a standalone operation. The aim of this prospective study was to investigate outcomes after LSG according to resected stomach volume.",
+            "Between May 2011 and April 2013, LSG was performed in 102 consecutive patients undergoing bariatric surgery. Two patients were excluded, and data from the remaining 100 patients were analyzed in this study. Patients were divided into three groups according to the following resected stomach volume: 700-1,200 mL (group A, n\u2009=\u200921), 1,200-1,700 mL (group B, n\u2009=\u200962), and>1,700 mL (group C, n\u2009=\u200917). Mean values were compared among the groups by analysis of variance.",
+            "The mean percentage excess body weight loss (%EBWL) at 3, 6, 12, and 24 months after surgery was 37.68\u2009\u00b1\u200910.97, 50.97\u2009\u00b1\u200913.59, 62.35\u2009\u00b1\u200911.31, and 67.59\u2009\u00b1\u20099.02 %, respectively. There were no significant differences in mean %EBWL among the three groups. Resected stomach volume was greater in patients with higher preoperative body mass index and was positively associated with resected stomach weight."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Bariatric Surgery",
+            "Body Mass Index",
+            "Comorbidity",
+            "Female",
+            "Gastrectomy",
+            "Humans",
+            "Laparoscopy",
+            "Male",
+            "Middle Aged",
+            "Obesity, Morbid",
+            "Prospective Studies",
+            "Stomach",
+            "Treatment Outcome",
+            "Weight Loss"
+        ],
+        "YEAR": "2014",
+        "reasoning_required_pred": "no",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "Mean %EBWL after LSG was not significantly different among three groups of patients divided according to resected stomach volume. Resected stomach volume was significantly greater in patients with higher preoperative body mass index."
+    },
+    "20497880": {
+        "QUESTION": "Is transurethral catheterisation the ideal method of bladder drainage?",
+        "CONTEXTS": [
+            "Bladder catheterisation is a routine part of major abdominal surgery. Transurethral catheterisation is the most common method of bladder drainage but is also notorious for its discomfort and increased risk of urinary tract infection. The present study aimed to establish patient satisfaction with transurethral catheterisation and to assess the incidence of clinically significant urinary tract infections after transurethral catheterisation through survey.",
+            "All patients who underwent major open abdominal surgery between October 2006 and December 2008 and required standard transurethral bladder catheterisation, were asked to participate in the study. Fifty patients were recruited.",
+            "Male patients were more dissatisfied than their female counterparts with transurethral catheterisation (satisfaction score: 4.18/10 vs. 2.75/10; p = 0.05). Male patients had more than double the score for pain at the urinary meatus with the catheter in situ (p =0.012) and during urine catheter removal (p = 0.013). Half the patients in the study also had symptoms of urinary tract infection after catheter removal."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Aged",
+            "Catheters, Indwelling",
+            "Female",
+            "Health Care Surveys",
+            "Humans",
+            "Incidence",
+            "Male",
+            "Middle Aged",
+            "Pain",
+            "Patient Satisfaction",
+            "Urinary Catheterization",
+            "Urinary Tract Infections"
+        ],
+        "YEAR": "2010",
+        "reasoning_required_pred": "no",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "Our study emphasised the discomfort of transurethral urinary catheters, especially in male patients, and the high incidence of urinary tract infections in both sexes. Consideration should be given to the utilisation of alternative methods of bladder drainage, such as suprapubic catheterisation, which can be performed with ease during laparotomy."
+    },
+    "23002947": {
+        "QUESTION": "Does feeding tube insertion and its timing improve survival?",
+        "CONTEXTS": [
+            "To examine survival with and without a percutaneous endoscopic gastrostomy (PEG) feeding tube using rigorous methods to account for selection bias and to examine whether the timing of feeding tube insertion affected survival.",
+            "Prospective cohort study.",
+            "All U.S. nursing homes (NHs).",
+            "Thirty-six thousand four hundred ninety-two NH residents with advanced cognitive impairment from dementia and new problems eating studied between 1999 and 2007.",
+            "Survival after development of the need for eating assistance and feeding tube insertion.",
+            "Of the 36,492 NH residents (88.4% white, mean age 84.9, 87.4% with one feeding tube risk factor), 1,957 (5.4%) had a feeding tube inserted within 1\u00a0year of developing eating problems. After multivariate analysis correcting for selection bias with propensity score weights, no difference was found in survival between the two groups (adjusted hazard ratio (AHR)\u00a0=\u00a01.03, 95% confidence interval (CI)\u00a0=\u00a00.94-1.13). In residents who were tube-fed, the timing of PEG tube insertion relative to the onset of eating problems was not associated with survival after feeding tube insertion (AHR\u00a0=\u00a01.01, 95% CI\u00a0=\u00a00.86-1.20, persons with a PEG tube inserted within 1\u00a0month of developing an eating problem versus later (4\u00a0months) insertion)."
+        ],
+        "LABELS": [
+            "OBJECTIVES",
+            "DESIGN",
+            "SETTING",
+            "PARTICIPANTS",
+            "MEASUREMENTS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Aged, 80 and over",
+            "Female",
+            "Gastrostomy",
+            "Humans",
+            "Intubation, Gastrointestinal",
+            "Male",
+            "Prospective Studies",
+            "Survival Rate",
+            "Time Factors"
+        ],
+        "YEAR": "2012",
+        "reasoning_required_pred": "no",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "Neither insertion of PEG tubes nor timing of insertion affect survival."
+    },
+    "23601294": {
+        "QUESTION": "Pitfalls in urinary stone identification using CT attenuation values: are we getting the same information on different scanner models?",
+        "CONTEXTS": [
+            "Evaluate the capability of different Computed Tomography scanners to determine urinary stone compositions based on CT attenuation values and to evaluate potential differences between each model.",
+            "241 human urinary stones were obtained and their biochemical composition determined. Four different CT scanners (Siemens, Philips, GEMS and Toshiba) were evaluated. Mean CT-attenuation values and the standard deviation were recorded separately and compared with a t-paired test.",
+            "For all tested CT scanners, when the classification of the various types of stones was arranged according to the mean CT-attenuation values and to the confidence interval, large overlappings between stone types were highlighted. The t-paired test showed that most stone types could not be identified. Some types of stones presented mean CT attenuation values significantly different from one CT scanner to another. At 80kV, the mean CT attenuation values obtained with the Toshiba Aquilion were significantly different from those obtained with the Siemens Sensation. On the other hand, mean values obtained with the Philips Brilliance were all significantly equal to those obtained with the Siemens Sensation and with the Toshiba Aquilion. At 120kV mean CT attenuation values of uric acid, cystine and struvite stones obtained with the Philips model are significantly different from those obtained with the Siemens and the Toshiba but equal to those obtained with the GE 64."
+        ],
+        "LABELS": [
+            "INTRODUCTION",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Equipment Design",
+            "Equipment Failure Analysis",
+            "Humans",
+            "Radiographic Image Enhancement",
+            "Reproducibility of Results",
+            "Sensitivity and Specificity",
+            "Tomography, X-Ray Computed",
+            "Urinary Calculi"
+        ],
+        "YEAR": "2013",
+        "reasoning_required_pred": "no",
+        "reasoning_free_pred": "yes",
+        "final_decision": "no",
+        "LONG_ANSWER": "According to our study, there is a great variability when different brands and models of scanners are compared directly. Furthermore, the CT scan analysis and HU evaluation appears to gather insufficient information in order to characterize and identify the composition of renal stones."
+    },
+    "11053064": {
+        "QUESTION": "Fatigue in primary Sj\u00f6gren's syndrome: is there a link with the fibromyalgia syndrome?",
+        "CONTEXTS": [
+            "To determine whether fibromyalgia (FM) is more common in patients with primary Sj\u00f6gren's syndrome (pSS) who complain of fatigue. The association and prevalence of fatigue and FM was recorded in a group of patients with pSS and a control group of lupus patients, a subset of whom had secondary Sj\u00f6gren's syndrome (sSS).",
+            "74 patients with pSS and 216 patients with lupus were assessed with a questionnaire to identify the presence of fatigue and generalised pain. From the lupus group, in a subset of 117 lupus patients (from the Bloomsbury unit) those with sSS were identified. All patients were studied for the presence of FM.",
+            "50 of 74 patients with pSS (68%) reported fatigue-a prevalence significantly higher than in the lupus group (108/216 (50%); p<0.0087). Fatigue was present in 7/13 (54%) patients with SLE/sSS. FM was present in 9/74 patients with pSS (12%), compared with 11/216 lupus patients (5%), and in none of the patients with SLE/sSS. None of these values corresponds with previously reported figures of the incidence of FM in pSS."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Aged",
+            "Aged, 80 and over",
+            "Case-Control Studies",
+            "Fatigue",
+            "Female",
+            "Fibromyalgia",
+            "Humans",
+            "Lupus Erythematosus, Systemic",
+            "Male",
+            "Middle Aged",
+            "Prevalence",
+            "Sjogren's Syndrome",
+            "United Kingdom"
+        ],
+        "YEAR": "2000",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "The results show that fatigue in patients with pSS and sSS is not due to the coexistence of FM in most cases. A lower incidence in the United Kingdom of FM in patients with pSS was found than has been previously reported."
+    },
+    "16510651": {
+        "QUESTION": "Birth characteristics and risk of low intellectual performance in early adulthood: are the associations confounded by socioeconomic factors in adolescence or familial effects?",
+        "CONTEXTS": [
+            "In this study we investigated whether the association between measures of fetal growth restriction and intellectual performance was mediated by socioeconomic or familial factors.",
+            "This was a population-based cohort study of 357,768 Swedish males born as singletons without congenital malformations between 1973 and 1981. The main outcome measure was intellectual performance at military conscription.",
+            "Compared with men born with appropriate birth weight for gestational age, men born light for gestational age suffered an increased risk of low intellectual performance after adjustment for maternal and socioeconomic factors. The increase in risk of low intellectual performance related to a decrease in birth weight for gestational age was similar between families and within families. Men born short or with a small head circumference for gestational age were also at increased risk of low intellectual performance, both when adjusting for maternal and socioeconomic factors and within families."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adolescent",
+            "Birth Weight",
+            "Family Characteristics",
+            "Female",
+            "Fetal Growth Retardation",
+            "Growth",
+            "Humans",
+            "Infant, Newborn",
+            "Infant, Small for Gestational Age",
+            "Intelligence",
+            "Male",
+            "Pregnancy",
+            "Risk Factors",
+            "Socioeconomic Factors",
+            "Sweden"
+        ],
+        "YEAR": "2006",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "We found that all of the studied dimensions of restricted fetal growth are independently associated with increased risks of low intellectual performance and that these associations are only partly mediated by socioeconomic or familial factors."
+    },
+    "15137012": {
+        "QUESTION": "Ovarian torsion in children: is oophorectomy necessary?",
+        "CONTEXTS": [
+            "Most pediatric surgeons perform oophorectomy in girls presenting with ovarian torsion in which the ovary appears necrotic. However, the adult gynecology literature suggests that many ovaries can be treated by detorsion alone.",
+            "All children with ovarian torsion on the gynecology and general surgery services between 1988 and 2002 were reviewed.",
+            "There were 36 torsions in 34 children. Seventeen underwent detorsion with or without ovarian cystectomy, and 19 had oophorectomy (mean age 10 years in both groups). Torsion was suspected preoperatively in 94% of the detorsion cases and in 47% of the oophorectomy patients. Median time from presentation to surgery was significantly lower in the detorsion than the oophorectomy group (median 14 v 27 hours; P =.04). Postoperative complications and length of stay were similar between the 2 groups. Despite the ovary being judged intraoperatively as moderately to severely ischemic in 53% of the detorsion cases, follow-up sonogram or ovarian biopsy available in 14 of the 17 cases showed normal ovary with follicular development in each case."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adolescent",
+            "Child",
+            "Child, Preschool",
+            "Fallopian Tubes",
+            "Female",
+            "Follow-Up Studies",
+            "Humans",
+            "Ovarian Diseases",
+            "Ovariectomy",
+            "Torsion Abnormality",
+            "Treatment Outcome"
+        ],
+        "YEAR": "2004",
+        "reasoning_required_pred": "no",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "Simple detorsion was not accompanied by an increase in morbidity, and all patients studied had functioning ovarian tissue on follow-up despite the surgeon's assessment of the degree of ovarian ischemia. Detorsion is the procedure of choice for most cases of ovarian torsion in children."
+    },
+    "18439500": {
+        "QUESTION": "Laparoscopic myomectomy: do size, number, and location of the myomas form limiting factors for laparoscopic myomectomy?",
+        "CONTEXTS": [
+            "To assess whether it is possible for an experienced laparoscopic surgeon to perform efficient laparoscopic myomectomy regardless of the size, number, and location of the myomas.",
+            "Prospective observational study (Canadian Task Force classification II-1).",
+            "Tertiary endoscopy center.",
+            "A total of 505 healthy nonpregnant women with symptomatic myomas underwent laparoscopic myomectomy at our center. No exclusion criteria were based on the size, number, or location of myomas.",
+            "Laparoscopic myomectomy and modifications of the technique: enucleation of the myoma by morcellation while it is still attached to the uterus with and without earlier devascularization.",
+            "In all, 912 myomas were removed in these 505 patients laparoscopically. The mean number of myomas removed was 1.85 +/- 5.706 (95% CI 1.72-1.98). In all, 184 (36.4%) patients had multiple myomectomy. The mean size of the myomas removed was 5.86 +/- 3.300 cm in largest diameter (95% CI 5.56-6.16 cm). The mean weight of the myomas removed was 227.74 +/- 325.801 g (95% CI 198.03-257.45 g) and median was 100 g. The median operating time was 60 minutes (range 30-270 minutes). The median blood loss was 90 mL (range 40-2000 mL). Three comparisons were performed on the basis of size of the myomas (<10 cm and>or=10 cm in largest diameter), number of myomas removed (<or=4 and>or=5 myomas), and the technique (enucleation of the myomas by morcellation while the myoma is still attached to the uterus and the conventional technique). In all these comparisons, although the mean blood loss, duration of surgery, and hospital stay were greater in the groups in which larger myomas or more myomas were removed or the modified technique was performed as compared with their corresponding study group, the weight and size of removed myomas were also proportionately larger in these groups. Two patients were given the diagnosis of leiomyosarcoma in their histopathology and 1 patient developed a diaphragmatic parasitic myoma followed by a leiomyoma of the sigmoid colon. Six patients underwent laparoscopic hysterectomy 4 to 6 years after the surgery for recurrent myomas. One conversion to laparotomy occurred and 1 patient underwent open subtotal hysterectomy for dilutional coagulopathy."
+        ],
+        "LABELS": [
+            "STUDY OBJECTIVE",
+            "DESIGN",
+            "SETTING",
+            "PATIENTS",
+            "INTERVENTIONS",
+            "MEASUREMENTS AND MAIN RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Cohort Studies",
+            "Female",
+            "Gynecologic Surgical Procedures",
+            "Humans",
+            "Laparoscopy",
+            "Leiomyomatosis",
+            "Postoperative Complications",
+            "Uterine Neoplasms"
+        ],
+        "YEAR": null,
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "Laparoscopic myomectomy can be performed by experienced surgeons regardless of the size, number, or location of the myomas."
+    },
+    "26079501": {
+        "QUESTION": "Does base deficit predict mortality in patients with severe traumatic brain injury?",
+        "CONTEXTS": [
+            "Base Deficit (BD) is a marker of tissue hypoxia in polytrauma patients. It guides resuscitative measures, and predicts outcomes, complications and mortality. The aim of this study was to examine the presence of BD in patients with isolated severe traumatic brain injury (TBI), and to assess if it correlates with the outcomes in these patients.",
+            "This was a retrospective observational study. All patients over the age of 16 years presenting to Aga Khan University Hospital from 2009 to 2013 with isolated TBI, were included. Data was extracted from 2009 to 2013. Glasgow Outcome Scale (GOS) of 4 and 5 at last follow up was categorized as favorable outcome. Data was analyzed using SPSS version 19 and receiver operative curve (ROC) was generated for BD as a predictor of mortality and unfavorable outcome.",
+            "One hundred and eight patients were analyzed. Ninety-eight (90.7%) were males. Mean age was 36.69 \u00b1 17.65. Eighty-eight (81.5%) patients had BD, while 20 (18.5%) patients had base excess. 62 (58.5%) of the patients had unfavorable outcomes. BD on admission had a statistically significant negative correlation with Glasgow Coma Scale (GCS) on presentation (r = -0.239, p = 0.025) and Revised Trauma Score (RTS) (r = -0.214, p = 0.046). However, there was no statistically significant difference in means of BD between survivors and non survivors. Area under receiver operator curve (ROC) for BD as a predictor of mortality statistically non-significant."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "METHOD",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Acid-Base Imbalance",
+            "Adult",
+            "Biomarkers",
+            "Brain Injuries",
+            "Female",
+            "Glasgow Coma Scale",
+            "Humans",
+            "Hypoxia",
+            "Male",
+            "Middle Aged",
+            "Prognosis",
+            "Retrospective Studies",
+            "Young Adult"
+        ],
+        "YEAR": "2015",
+        "reasoning_required_pred": "no",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "Although BD is correlated with GCS at presentation and RTS, it is not a reliable prognostic marker for outcome and mortality in patients with isolated TBI."
+    },
+    "18375490": {
+        "QUESTION": "Are laboratories reporting serum quantitative hCG results correctly?",
+        "CONTEXTS": [
+            "Human chorionic gonadotropin (hCG) is a heterodimeric glycoprotein hormone that exists in multiple forms. Immunoassays commonly used in clinical laboratories measure intact hCG, total beta hCG (intact hCG + hCG free beta-subunit), and/or hCG free beta-subunit. Measurement of serum concentrations of hCG is useful for confirmation and monitoring of pregnancy, diagnosis of trophoblastic diseases and monitoring of the efficacy of treatment, and prenatal screening. Correctly reporting results for the various forms of hCG is clinically important.",
+            "We prepared samples by addition of intact hCG and hCG free beta-subunit to an essentially hCG-free human serum matrix. The samples were analyzed by participant laboratories using various immunoassay methods.",
+            "We identified errors in participant reporting of intact hCG results as total beta hCG (9.3%; 22 of 235 laboratories) and total beta hCG as intact hCG (13.1%; 8 of 61 laboratories)."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "METHOD",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Chorionic Gonadotropin",
+            "Chorionic Gonadotropin, beta Subunit, Human",
+            "Humans",
+            "Immunoassay",
+            "Quality Control",
+            "Research Design"
+        ],
+        "YEAR": "2008",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "Many factors contribute to the erroneous reporting of hCG results, including (a) the complexity of hCG molecule and confusion of nomenclature on the various forms of hCG; (b) laboratory personnel's lack of awareness of the distinctions of the forms of hCG and failure to recognize the specificity of assays for their measurement; (c) lack of clarity and uniformity in manufacturers' reagent labeling; and (d) most product inserts' lack of information on the specificity of each method to the various forms of hCG."
+    },
+    "10593212": {
+        "QUESTION": "Does loss of consciousness predict neuropsychological decrements after concussion?",
+        "CONTEXTS": [
+            "To investigate the importance of loss of consciousness (LOC) in predicting neuropsychological test performance in a large sample of patients with head injury.",
+            "Retrospective comparison of neuropsychological test results for patients who suffered traumatic LOC, no LOC, or uncertain LOC.",
+            "Allegheny General Hospital, Pittsburgh, Pennsylvania.",
+            "The total number of patients included in this study was 383.",
+            "Neuropsychological test measures, including the visual reproduction, digit span, and logical memory subtests of the Wechsler memory scale (revised), the Trail Making test, Wisconsin Card Sorting test, Hopkins Verbal Learning test, Controlled Oral Word Association, and the Galveston Orientation and Amnesia test (GOAT).",
+            "No significant differences were found between the LOC, no LOC, or uncertain LOC groups for any of the neuropsychological measures used. Patients who had experienced traumatic LOC did not perform more poorly on neuropsychological testing than those with no LOC or uncertain LOC. All three groups demonstrated mildly decreased performance on formal tests of speed of information processing, attentional process, and memory."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "DESIGN",
+            "SETTING",
+            "PATIENTS",
+            "MAIN OUTCOME MEASURES",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Brain Concussion",
+            "Female",
+            "Glasgow Coma Scale",
+            "Humans",
+            "Male",
+            "Neuropsychological Tests",
+            "Retrospective Studies",
+            "Unconsciousness"
+        ],
+        "YEAR": "1999",
+        "reasoning_required_pred": "no",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "The results of this study cast doubt on the importance of LOC as a predictor of neuropsychological test performance during the acute phase of recovery from mild traumatic brain injury. Neuropsychological testing procedures have been shown to be sensitive in measuring cognitive sequelae of mild traumatic brain injury (concussion) in athletes. The failure of this study to find any relationship between LOC and neuropsychological functioning in a large sample of patients with mild head trauma calls into question the assignment of primary importance to LOC in grading severity of concussion. This study also does not provide support for the use of guidelines that rely heavily on LOC in making return-to-play decisions. Continued research is necessary to determine the relative importance of markers of concussion in athletes."
+    },
+    "19683101": {
+        "QUESTION": "Can D-dimer become a new diagnostic parameter for acute appendicitis?",
+        "CONTEXTS": [
+            "In this study, we investigated D-dimer serum level as a diagnostic parameter for acute appendicitis.",
+            "Forty-nine patients were enrolled in the study. Patients were classified according to age; sex; duration between the beginning of pain and referral to a hospital or clinic; Alvarado scores; and in physical examination, presence of muscular defense, the number of leukocytes, preoperative ultrasonography, and D-dimer levels of histopathologic study groups were analyzed.",
+            "Of the patients enrolled in the study, 26.5% were females and 73.5% males. The average age was 21 years (range, 16-38 years) and 81.7% acute appendicitis (AA). According the duration of pain, 63.2% of the patients were referred to the hospital within the first 24 hours, 26.5% of the patients were referred to the hospital within 24 to 48 hours, and 10.3% were referred to the hospital within a period of more than 48 hours. No statistically significant difference was determined regarding D-dimer levels between the histopathologic study groups (P>.05). Alvarado scores lower than 7 were found in 36.7% and 7 or higher in 63.3% of the patients. There was no statistically significant difference related with D-dimer levels between histopathologic study groups (P>.05). The ratio of cases with a number of leukocytes below the upper limit were determined respectively as 32.7% and 67.3%, and no statistically significant difference was found regarding d-dimer levels between histopathologic study groups (P>.05)."
+        ],
+        "LABELS": [
+            "INTRODUCTION",
+            "MATERIALS AND METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Acute Disease",
+            "Adolescent",
+            "Adult",
+            "Appendicitis",
+            "Female",
+            "Fibrin Fibrinogen Degradation Products",
+            "Humans",
+            "Male",
+            "Retrospective Studies",
+            "Sensitivity and Specificity",
+            "Young Adult"
+        ],
+        "YEAR": "2009",
+        "reasoning_required_pred": "no",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "Increased D-dimer levels should not be considered as a diagnostic parameter in diagnosis of acute appendicitis."
+    },
+    "16647887": {
+        "QUESTION": "Are women who are treated for hypothyroidism at risk for pregnancy complications?",
+        "CONTEXTS": [
+            "The purpose of this study was to investigate the outcomes that are associated with pregnancy and treated hypothyroidism.",
+            "This was a retrospective cohort study of all women who received prenatal care and were delivered at the University of California, San Francisco, between 1989 and 2001. All patients with hypothyroidism diagnosed before pregnancy or early in pregnancy were identified. Maternal, fetal, and obstetric outcomes were then collected and analyzed for women with hypothyroidism and compared with women without hypothyroidism.",
+            "Among 20,499 deliveries, there were 419 women (2.1%) who were treated for hypothyroidism during the study period. Hypothyroidism was more common among women>or =35 years old, white women, and women without Medicaid insurance. Treated hypothyroidism was not associated with any increase in maternal, fetal, or neonatal complications. In addition, hypothyroidism did not affect mode of delivery."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "STUDY DESIGN",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Age Distribution",
+            "Cohort Studies",
+            "Female",
+            "Humans",
+            "Hypothyroidism",
+            "Pregnancy",
+            "Pregnancy Complications",
+            "Prevalence",
+            "Retrospective Studies",
+            "Risk Assessment"
+        ],
+        "YEAR": "2006",
+        "reasoning_required_pred": "no",
+        "reasoning_free_pred": "no",
+        "final_decision": "no",
+        "LONG_ANSWER": "Compared with patients without hypothyroidism, patients with treated hypothyroidism are not at any increased risk for perinatal morbidity."
+    },
+    "17489316": {
+        "QUESTION": "Is tumour expression of VEGF associated with venous invasion and survival in pT3 renal cell carcinoma?",
+        "CONTEXTS": [
+            "To determine whether there is a relationship between VEGF expression and renal vein and vena cava invasion in stage pT3 renal cell carcinoma and to evaluate the impact of VEGF expression on survival in pT3 renal cell carcinoma.",
+            "78 patients with a pT3a or pT3b tumour without vena cava invasion or pT3b tumour with vena cava invasion were compared for age, gender, Fuhrman grade and immunohistochemical expression of VEGF. All these variables were submitted to univariate and multivariate analysis to establish their impact on survival.",
+            "Only tumour size appeared to be significantly different between the 3 groups. On univariate analysis, invasion of the perirenal fat, lymph node involvement, distant metastases and VEGF expression were significantly associated with survival (p<0.01). On multivariate analysis, lymph node involvement, distant metastases and VEGF expression (OR 6.07) were identified as independent predictive factors of survival."
+        ],
+        "LABELS": [
+            "STUDY OBJECTIVE",
+            "MATERIAL AND METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Aged",
+            "Aged, 80 and over",
+            "Carcinoma, Renal Cell",
+            "Cause of Death",
+            "Disease-Free Survival",
+            "Female",
+            "Follow-Up Studies",
+            "Humans",
+            "Kidney Neoplasms",
+            "Lymphatic Metastasis",
+            "Male",
+            "Middle Aged",
+            "Neoplasm Invasiveness",
+            "Neoplasm Staging",
+            "Prognosis",
+            "Renal Veins",
+            "Survival Rate",
+            "Vascular Endothelial Growth Factor A",
+            "Vascular Neoplasms",
+            "Vena Cava, Inferior"
+        ],
+        "YEAR": "2007",
+        "reasoning_required_pred": "maybe",
+        "reasoning_free_pred": "maybe",
+        "final_decision": "maybe",
+        "LONG_ANSWER": "Progression of a pT3 tumour into the renal vein and vena cava is not associated with increased tumour expression of VEGF. However, VEGF is an independent prognostic factor in this group of poor prognosis renal tumours."
+    },
+    "21914194": {
+        "QUESTION": "Health care for immigrants in Europe: is there still consensus among country experts about principles of good practice?",
+        "CONTEXTS": [
+            "European Member States are facing a challenge to provide accessible and effective health care services for immigrants. It remains unclear how best to achieve this and what characterises good practice in increasingly multicultural societies across Europe. This study assessed the views and values of professionals working in different health care contexts and in different European countries as to what constitutes good practice in health care for immigrants.",
+            "A total of 134 experts in 16 EU Member States participated in a three-round Delphi process. The experts represented four different fields: academia, Non-Governmental Organisations, policy-making and health care practice. For each country, the process aimed to produce a national consensus list of the most important factors characterising good practice in health care for migrants.",
+            "The scoring procedures resulted in 10 to 16 factors being identified as the most important for each participating country. All 186 factors were aggregated into 9 themes: (1) easy and equal access to health care, (2) empowerment of migrants, (3) culturally sensitive health care services, (4) quality of care, (5) patient/health care provider communication, (6) respect towards migrants, (7) networking in and outside health services, (8) targeted outreach activities, and (9) availability of data about specificities in migrant health care and prevention. Although local political debate, level of immigration and the nature of local health care systems influenced the selection and rating of factors within each country, there was a broad European consensus on most factors. Yet, discordance remained both within countries, e.g. on the need for prioritising cultural differences, and between countries, e.g. on the need for more consistent governance of health care services for immigrants."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Attitude of Health Personnel",
+            "Consensus",
+            "Delivery of Health Care",
+            "Delphi Technique",
+            "Emigrants and Immigrants",
+            "Europe",
+            "Health Services Accessibility",
+            "Humans",
+            "Policy Making"
+        ],
+        "YEAR": "2011",
+        "reasoning_required_pred": "yes",
+        "reasoning_free_pred": "maybe",
+        "final_decision": "maybe",
+        "LONG_ANSWER": "Experts across Europe asserted the right to culturally sensitive health care for all immigrants. There is a broad consensus among experts about the major principles of good practice that need to be implemented across Europe. However, there also is some disagreement both within and between countries on specific issues that require further research and debate."
+    },
+    "20101129": {
+        "QUESTION": "Is prophylactic fixation a cost-effective method to prevent a future contralateral fragility hip fracture?",
+        "CONTEXTS": [
+            ": A previous hip fracture more than doubles the risk of a contralateral hip fracture. Pharmacologic and environmental interventions to prevent hip fracture have documented poor compliance. The purpose of this study was to examine the cost-effectiveness of prophylactic fixation of the uninjured hip to prevent contralateral hip fracture.",
+            ": A Markov state-transition model was used to evaluate the cost and quality-adjusted life-years (QALYs) for unilateral fixation of hip fracture alone (including internal fixation or arthroplasty) compared with unilateral fixation and contralateral prophylactic hip fixation performed at the time of hip fracture or unilateral fixation and bilateral hip pad protection. Prophylactic fixation involved placement of a cephalomedullary nail in the uninjured hip and was initially assumed to have a relative risk of a contralateral fracture of 1%. Health states included good health, surgery-related complications requiring a second operation (infection, osteonecrosis, nonunion, and malunion), fracture of the uninjured hip, and death. The primary outcome measure was the incremental cost-effectiveness ratio estimated as cost per QALY gained in 2006 US dollars with incremental cost-effectiveness ratios below $50,000 per QALY gained considered cost-effective. Sensitivity analyses evaluated the impact of patient age, annual mortality and complication rates, intervention effectiveness, utilities, and costs on the value of prophylactic fixation.",
+            ": In the baseline analysis, in a 79-year-old woman, prophylactic fixation was not found to be cost-effective (incremental cost-effectiveness ratio = $142,795/QALY). However, prophylactic fixation was found to be a cost-effective method to prevent contralateral hip fracture in: 1) women 71 to 75 years old who had 30% greater relative risk for a contralateral fracture; and 2) women younger than age 70 years. Cost-effectiveness was greater when the additional costs of prophylaxis were less than $6000. However, for most analyses, the success of prophylactic fixation was highly sensitive to the effectiveness and the relative morbidity and mortality of the additional procedure."
+        ],
+        "LABELS": [
+            "OBJECTIVE",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Age Factors",
+            "Aged",
+            "Aged, 80 and over",
+            "Bone Nails",
+            "Cost-Benefit Analysis",
+            "Female",
+            "Fracture Fixation, Internal",
+            "Hip Fractures",
+            "Humans",
+            "Male",
+            "Markov Chains",
+            "Middle Aged",
+            "Primary Prevention",
+            "Protective Clothing",
+            "Quality-Adjusted Life Years",
+            "Sex Factors"
+        ],
+        "YEAR": "2010",
+        "reasoning_required_pred": "maybe",
+        "reasoning_free_pred": "maybe",
+        "final_decision": "maybe",
+        "LONG_ANSWER": ": Prophylactic fixation with a cephalomedullary nail was not found to be cost-effective for the average older woman who sustained a hip fracture. However, it may be appropriate for select patient populations. The study supports the need for basic science and clinical trials investigating the effectiveness of prophylactic fixation for patient populations at higher lifetime risk for contralateral hip fracture."
+    },
+    "17578985": {
+        "QUESTION": "Parasacral sciatic nerve block: does the elicited motor response predict the success rate?",
+        "CONTEXTS": [
+            "In this prospective, randomized, double-blind study, we compared the tibial and the peroneal evoked motor response with regard to efficacy of sciatic nerve block using the parasacral approach.",
+            "Twenty-six ASA I-III patients scheduled for elective lower limb surgery were randomized to receive a parasacral sciatic block, using a nerve stimulator technique seeking either a tibial (n = 14) or peroneal (n = 12) motor response. After the evoked motor response was obtained, a solution of 10 mL 2% lidocaine with epinephrine and 10 mL 0.75% ropivacaine (actual final concentration of epinephrine, 1/160,000) was slowly injected through the needle. Sensory and motor blocks were assessed every 5 min for 30 min by an anesthesiologist blinded to the elicited motor response. If the block was not complete 30 min after injection of the local anesthetics, it was considered as failed, and general anesthesia was supplemented.",
+            "Time to perform the block and level of minimal and maximal stimulation were not different between groups. The success rate of complete block was significantly higher in the tibial compared to the peroneal group (11 of 14 vs 2 of 12; P = 0.002)."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Adult",
+            "Aged",
+            "Anesthetics, Local",
+            "Double-Blind Method",
+            "Evoked Potentials, Motor",
+            "Female",
+            "Humans",
+            "Male",
+            "Middle Aged",
+            "Nerve Block",
+            "Predictive Value of Tests",
+            "Prospective Studies",
+            "Sacrum",
+            "Sciatic Nerve"
+        ],
+        "YEAR": "2007",
+        "reasoning_required_pred": "maybe",
+        "reasoning_free_pred": "yes",
+        "final_decision": "maybe",
+        "LONG_ANSWER": "Eliciting a tibial motor response predicts a higher success rate than eliciting a peroneal motor response with parasacral sciatic nerve block."
+    },
+    "28011794": {
+        "QUESTION": "Can Ambu self-inflating bag and Neopuff infant resuscitator provide adequate and safe manual inflations for infants up to 10\u2005kg weight?",
+        "CONTEXTS": [
+            "Manual resuscitation devices for infants and newborns must be able to provide adequate ventilation in a safe and consistent manner across a wide range of patient sizes (0.5-10\u2005kg) and differing clinical states. There are little comparative data assessing biomechanical performance of common infant manual resuscitation devices across the manufacturers' recommended operating weight ranges. We aimed to compare performance of the Ambu self-inflating bag (SIB) with the Neopuff T-piece resuscitator in three resuscitation models.",
+            "Five experienced clinicians delivered targeted ventilation to three lung models differing in compliance, delivery pressures and inflation rates; Preterm (0.5\u2005mL/cmH2O, 25/5 cmH2O, 60 per minute), Term (3\u2005mL/cmH2O, 30/5 cmH2O, 40 per minute) and Infant (9\u2005mL/cmH2O, 35/5 cmH2O, 30 per minute). The Neopuff was examined with three gas inflow rates (5 litres per minute (LPM), 10 LPM and 15 LPM) and the Ambu with no gas inflow.",
+            "3309 inflations were collected and analysed with analysis of variance for repeated measures. The Neopuff was unable to reach set peak inflation pressures and exhibited seriously elevated positive end expiratory pressure (PEEP) with all inflow gas rates (p<0.001) in this infant model. The Ambu SIB accurately delivered targeted pressures in all three models."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Equipment Design",
+            "Female",
+            "Humans",
+            "Infant Care",
+            "Infant, Newborn",
+            "Infant, Postmature",
+            "Male",
+            "Positive-Pressure Respiration",
+            "Respiration, Artificial",
+            "Resuscitation"
+        ],
+        "YEAR": "2017",
+        "reasoning_required_pred": "maybe",
+        "reasoning_free_pred": "maybe",
+        "final_decision": "maybe",
+        "LONG_ANSWER": "The Ambu SIB was able to accurately deliver targeted pressures across all three models from preterm to infant. The Neopuff infant resuscitator was unable to deliver the targeted pressures in the infant model developing clinically significant levels of inadvertent PEEP which may pose risk during infant resuscitation."
+    },
+    "19711462": {
+        "QUESTION": "Standardizing care in medical oncology: are Web-based systems the answer?",
+        "CONTEXTS": [
+            "Medical oncology is embracing information technology to standardize care and improve patient outcomes, with a range of Web-based systems used internationally. The authors' aim was to determine the factors affecting the uptake and use of a Web-based protocol system for medical oncology in the Australian setting.",
+            "The authors conducted 50 interviews and observed medical oncology physicians, nurses, and pharmacists in their treatment setting at 6 hospitals in different geographic locations.",
+            "The Web-based system plays a major role in guiding oncology treatment across participating sites. However, its use varies according to hospital location, clinician roles, and experience. A range of issues impact on clinicians' attitudes toward and use of the Web-based system. Important factors are clinician-specific (eg, their need for autonomy and perceptions of lack of time) or environmental (eg, hospital policy on protocol use, endorsement of the system, and the availability of appropriate infrastructure, such as sufficient computers). The level of education received regarding the system was also found to be integral to its ongoing use."
+        ],
+        "LABELS": [
+            "BACKGROUND",
+            "METHODS",
+            "RESULTS"
+        ],
+        "MESHES": [
+            "Attitude of Health Personnel",
+            "Australia",
+            "Delivery of Health Care",
+            "Evidence-Based Medicine",
+            "Internet",
+            "Medical Oncology",
+            "Practice Patterns, Physicians'"
+        ],
+        "YEAR": "2009",
+        "reasoning_required_pred": "maybe",
+        "reasoning_free_pred": "maybe",
+        "final_decision": "maybe",
+        "LONG_ANSWER": "Although the provision of high-quality evidence-based resources, electronic or otherwise, is essential for standardizing care and improving patient outcomes, the authors' findings demonstrate that this alone does not ensure uptake. It is important to understand end-users, the environment in which they operate, and the basic infrastructure required to implement such a system. Implementation must also be accompanied by continuing education and endorsement to ensure both long-term sustainability and use of the system to its full potential."
+    }
+}
