@@ -493,6 +493,22 @@ files = [
 ]
 
 [[package]]
+name = "dtx-prompt-guard-client"
+version = "0.2.0"
+description = "Detoxio AI Guardrails and Security APIs Client "
+optional = false
+python-versions = "<4.0,>=3.11"
+groups = ["main"]
+files = [
+    {file = "dtx_prompt_guard_client-0.2.0-py3-none-any.whl", hash = "sha256:5ac19a3135656dbd084803a8afab17b888ec7e84d9b9fef4a9fb7125ba0b7159"},
+    {file = "dtx_prompt_guard_client-0.2.0.tar.gz", hash = "sha256:42ce6f2f0c73c53dbf5cbadf232e9a854950c5f3d5852b35bb3357386f8b3fdd"},
+]
+
+[package.dependencies]
+pydantic = ">=2.10.6,<3.0.0"
+requests = ">=2.32.3,<3.0.0"
+
+[[package]]
 name = "fastapi"
 version = "0.115.12"
 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
@@ -2986,4 +3002,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<4.0"
-content-hash = "ea62afe04243298eb045af8f41f911c054d277b09c8974d223127022839a18ee"
+content-hash = "a376a62c82453b82357038b8953bdd5332c22afef1086f0022cdc822be2e6786"

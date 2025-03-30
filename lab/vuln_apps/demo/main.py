@@ -100,6 +100,24 @@ def toggle_security_toggles(enable_security):
 def update_system_prompt(selected_role):
     return ROLE_PROMPTS.get(selected_role, "")
 
+# New callback to update advanced security options based on Enable Security Checks.
+def update_security_options(enable_security):
+    if enable_security:
+        # When security is enabled, enable all three checkboxes,
+        # with jailbreak checked and the others unchecked.
+        return (
+            gr.update(interactive=True, value=True),
+            gr.update(interactive=True, value=False),
+            gr.update(interactive=True, value=False)
+        )
+    else:
+        # When security is disabled, disable all three and uncheck them.
+        return (
+            gr.update(interactive=False, value=False),
+            gr.update(interactive=False, value=False),
+            gr.update(interactive=False, value=False)
+        )
+
 with gr.Blocks() as demo:
     gr.Markdown("## 🛡️ Secure AI Chatbot 🤖")
     gr.Markdown("### Select a Role and Start Chatting!")
@@ -117,11 +135,18 @@ with gr.Blocks() as demo:
         reset_system_prompt = gr.Button("Reset System Prompt")
         reset_system_prompt.click(update_system_prompt, inputs=[selected_role], outputs=[system_prompt])
 
-    with gr.Accordion("Advanced Security Options", open=False):
-        security_toggle = gr.Checkbox(label="Enable Security Checks", value=True)
-        jailbreak_toggle = gr.Checkbox(label="Check Malicious User Input (Jailbreak Detection)", value=True)
-        prompt_injection_toggle = gr.Checkbox(label="Check Malicious Context Input (Prompt Injection Detection)", value=False)
-        hask_toggle = gr.Checkbox(label="Enable Data Leak Prevention", value=False)
+    # Advanced Security Options: expanded by default
+    with gr.Accordion("Advanced Security Options", open=True):
+        security_toggle = gr.Checkbox(label="Enable Security Checks", value=False)
+        jailbreak_toggle = gr.Checkbox(label="Check Malicious User Input (Jailbreak Detection)", value=False, interactive=False)
+        prompt_injection_toggle = gr.Checkbox(label="Check Malicious Context Input (Prompt Injection Detection)", value=False, interactive=False)
+        hask_toggle = gr.Checkbox(label="Enable Data Leak Prevention", value=False, interactive=False)
+        # Wire up the enable_security checkbox to toggle advanced security options.
+        security_toggle.change(
+            update_security_options,
+            inputs=[security_toggle],
+            outputs=[jailbreak_toggle, prompt_injection_toggle, hask_toggle]
+        )
     
     chat_history = gr.Chatbot(label="Chat History", elem_id="chat-container", type="messages")
     user_input = gr.Textbox(placeholder="Type your message...", label="Your Message", interactive=True)
@@ -144,12 +169,6 @@ with gr.Blocks() as demo:
 
 if __name__ == "__main__":
     demo.launch(server_name='0.0.0.0', share=True)
-
-
-
-
-
-
 
 
 

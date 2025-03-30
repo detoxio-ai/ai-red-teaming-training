@@ -14,7 +14,8 @@ dependencies = [
     "langchain-community (>=0.3.20,<0.4.0)",
     "openai (>=1.69.0,<2.0.0)",
     "gradio (>=5.23.1,<6.0.0)",
-    "pandas (>=2.2.3,<3.0.0)"
+    "pandas (>=2.2.3,<3.0.0)",
+    "dtx-prompt-guard-client (>=0.2.0,<0.3.0)"
 ]
 
 [build-system]
