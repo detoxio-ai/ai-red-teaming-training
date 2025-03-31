@@ -15,6 +15,10 @@ from langchain_community.document_loaders import WebBaseLoader
 from langchain.chains import create_retrieval_chain
 from langchain_community.document_loaders import DirectoryLoader
 from langchain_community.document_loaders import TextLoader
+from dtx_prompt_guard_client.guard import DtxPromptGuardClient
+
+# Initialize a global security client (adjust base_url and threshold as needed)
+client = DtxPromptGuardClient(base_url="http://localhost:8000/", threshold=0.8)
 
 class GradioUserInference:
     @staticmethod
@@ -24,7 +28,8 @@ class GradioUserInference:
     ):
         """
         Create components for a chat interface including a customizable system prompt,
-        chat history, user prompt textbox, an option to show full LLM prompt, and controls.
+        security options, chat history, user prompt textbox, an option to show full LLM prompt,
+        and controls.
         """
         with gr.Column("100%"):
             gr.Markdown(
@@ -38,6 +43,17 @@ class GradioUserInference:
                 placeholder="Customize the system prompt if needed",
                 container=False
             )
+            # --- Security Options Section (placed immediately below System Prompt) ---
+            with gr.Accordion("Advanced Security Options", open=True):
+                enable_security = gr.Checkbox(label="Enable Security Checks", value=False)
+                jailbreak_checkbox = gr.Checkbox(label="Check Malicious User Input (Jailbreak Detection)", value=False, interactive=False)
+                def toggle_jailbreak(enable):
+                    if enable:
+                        return gr.update(interactive=True, value=True)
+                    else:
+                        return gr.update(interactive=False, value=False)
+                enable_security.change(toggle_jailbreak, inputs=[enable_security], outputs=[jailbreak_checkbox])
+            # Chat History
             history = gr.Chatbot(
                 elem_id="Rag",
                 label="Rag",
@@ -70,16 +86,16 @@ class GradioUserInference:
             gr.Markdown(
                 "# <h5><center style='color:black;'>Powered by [Detoxio AI](https://detoxio.ai)</center></h5>",
             )
-
-        # Update the input list to include the new components:
+        # Assemble inputs for the callback, including security toggles.
         inputs = [
             system_prompt,
             prompt,
             history,
             mode,
-            show_prompt
+            show_prompt,
+            enable_security,
+            jailbreak_checkbox
         ]
-
         clear.click(fn=lambda: [], outputs=[history])
         sub_event = submit.click(
             fn=sample_func, inputs=inputs, outputs=[prompt, history]
@@ -93,6 +109,7 @@ class GradioUserInference:
             outputs=None,
             cancels=[txt_event, sub_event]
         )
+        return inputs
 
     def _handle_gradio_input(
             self,
@@ -101,18 +118,28 @@ class GradioUserInference:
             history: List[List[str]],
             mode: str,
             show_prompt: bool,
+            enable_security: bool,
+            jailbreak_toggle: bool,
     ):
+        # Security check: if security is enabled and jailbreak detection is enabled, check for malicious input.
+        if enable_security and jailbreak_toggle:
+            if client.contain_jailbreak(prompt):
+                response = "⚠️ Malicious input detected. Command aborted."
+                if show_prompt:
+                    full_prompt = f"System Prompt: {system_prompt}\nUser Query: {prompt}"
+                    response += "\n\n=== Full LLM Prompt ===\n" + full_prompt
+                history.append([prompt, ""])
+                history[-1][-1] = response
+                yield "", history
+                return
+
         # Update the retrieval chain with the custom system prompt.
         self._update_docs(custom_system_prompt=system_prompt)
-        
-        # Process the command using the provided prompt and mode.
         response = self._handle_command(prompt, mode)
-        
-        # Optionally append full prompt details for debugging.
+        # Always show the full prompt details if "Show LLM Prompts" is checked.
         if show_prompt:
             full_prompt = f"System Prompt: {system_prompt}\nUser Query: {prompt}"
             response += "\n\n=== Full LLM Prompt ===\n" + full_prompt
-        
         history.append([prompt, ""])
         history[-1][-1] = response
         yield "", history
@@ -280,11 +307,25 @@ Question: {{input}}"""
                              history: List[List[str]],
                              mode: str,
                              show_prompt: bool,
+                             enable_security: bool,
+                             jailbreak_toggle: bool,
                              ):
+        # Security check: if security is enabled and jailbreak detection is enabled, check for malicious input.
+        if enable_security and jailbreak_toggle:
+            if client.contain_jailbreak(prompt):
+                response = "⚠️ Malicious input detected. Command aborted."
+                if show_prompt:
+                    full_prompt = f"System Prompt: {system_prompt}\nUser Query: {prompt}"
+                    response += "\n\n=== Full LLM Prompt ===\n" + full_prompt
+                history.append([prompt, ""])
+                history[-1][-1] = response
+                yield "", history
+                return
+
         # Update the retrieval chain with the custom system prompt.
         self._update_docs(custom_system_prompt=system_prompt)
         response = self._handle_command(prompt, mode)
-        # Optionally append the full prompt details if requested.
+        # Always show full prompt details if "Show LLM Prompts" is checked.
         if show_prompt:
             full_prompt = f"System Prompt: {system_prompt}\nUser Query: {prompt}"
             response += "\n\n=== Full LLM Prompt ===\n" + full_prompt
@@ -304,6 +345,5 @@ Question: {{input}}"""
         self._gradio_app_handle = self.build_inference(self._handle_gradio_input, role_name=self.assistant.name)
         print("Launching the App")
         self._gradio_app_handle.launch(server_name='0.0.0.0', share=self.__share)
-
 
 
