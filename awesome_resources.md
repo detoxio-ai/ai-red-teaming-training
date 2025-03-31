@@ -86,8 +86,12 @@ https://github.com/precize/OWASP-Agentic-AI
 
 
 ### AI in Security
+[**Awesome-LM-SSP (Good One)**](https://github.com/ThuCCSLab/Awesome-LM-SSP)
 [**Awesome-LLM4Cybersecurity**](https://github.com/tmylla/Awesome-LLM4Cybersecurity)
 https://github.com/jiep/offensive-ai-compilation
+[**Awesome AI Security**](https://github.com/corca-ai/awesome-llm-security)
+[**Awesome Multi Modal Generation**](https://github.com/YingqingHe/Awesome-LLMs-meet-Multimodal-Generation)
+[**Multi Modal Jailbreaks**](https://github.com/liuxuannan/Awesome-Multimodal-Jailbreak)
 
 ### Adversarial Attacks on AI Models
 
@@ -105,14 +109,25 @@ https://augly.readthedocs.io/en/latest/README.html
 
 #### 2024
 [**Generative AI Misuse: A Taxonomy of Tactics**](https://arxiv.org/pdf/2406.13843?)
-
+[**Navigating the Safety Landscape: Measuring Risks in Finetuning Large Language Models**](https://arxiv.org/pdf/2405.17374)
 
 
 
 ### Text to Image Models
 [**Nightshade: Prompt-Specific Poisoning Attacks on Text-to-Image Generative Models**](https://arxiv.org/abs/2310.13828) [Code](https://github.com/Shawn-Shan/nightshade-release) [Site](https://nightshade.cs.uchicago.edu/aboutus.html)
+[**Multimodal Prompt Injection**](https://github.com/ebagdasa/multimodal_injection) [Talk](https://i.blackhat.com/EU-23/Presentations/EU-23-Nassi-IndirectPromptInjection.pdf)
+
+## Prompt Injections
+
+[**List of Prompt Injections**](https://simonwillison.net/tags/prompt-injection/)
+
+
+## Defenses 
+
+### Prompt Injections
+
+[**Prompt Injection Defenses**](https://github.com/tldrsec/prompt-injection-defenses)
 
 
 
-
-
+[**Malicious Models (Jfrog)](https://jfrog.com/blog/jfrog-and-hugging-face-join-forces/)
