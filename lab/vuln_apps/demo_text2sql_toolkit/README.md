@@ -3,7 +3,7 @@ Text2SQL Toolkit is a demo project that converts natural language queries into S
 
 ## Setup Instructions
 
-### 1. Navigate to the `demo` Folder
+### 1. Navigate to the `demo_text2sql_toolkit` Folder
 
 Before installing dependencies, move to the `demo_text2sql_toolkit` folder:
 

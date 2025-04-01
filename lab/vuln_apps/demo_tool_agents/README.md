@@ -18,10 +18,13 @@ This project is built using **OpenAI's API**, **Gradio**, and **AgentDojo** to e
 ---
 
 ## **Installation & Setup**
-### **1. Clone the Repository**
+
+### 1. Navigate to the `demo` Folder
+
+Before installing dependencies, move to the `cd demo_tool_agents` folder:
+
 ```sh
-git clone https://github.com/your-repo/ai-tool-agents-demo.git
-cd ai-tool-agents-demo
+cd demo_tool_agents
 ```
 
 ### **2. Install Dependencies**
