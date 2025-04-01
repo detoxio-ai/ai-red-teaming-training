@@ -31,6 +31,7 @@ services:
       DTXPROMPT_GUARD_SVC_URL: http://pg:${PG_PORT}
       OPENAI_BASE_URL: ${OPENAI_BASE_URL}
       ENABLE_JAILBREAK_SECURITY: ${ENABLE_JAILBREAK_SECURITY:-False}
+      CONCURRENCY_LIMIT: ${CONCURRENCY_LIMIT:1}
   ollama:
     image: ollama/ollama
     restart: unless-stopped
@@ -67,11 +68,11 @@ services:
     depends_on:
       - ollama
   demo_rag:
-    image: detoxio/dtxguard-demo-rag:1.1.0
+    image: detoxio/dtxguard-demo-rag:2.0.0
     ports:
       - "${DEMO_RAG_PORT}:7860"
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:7860/"]
+      test: [ "CMD", "curl", "-f", "http://localhost:7860/" ]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -79,12 +80,13 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - DTXPROMPT_GUARD_SVC_URL=${DTXPROMPT_GUARD_SVC_URL}
       - OPENAI_BASE_URL=${OPENAI_BASE_URL}
+      - CONCURRENCY_LIMIT=${CONCURRENCY_LIMIT:1}
   demo_tool_agents:
     image: detoxio/dtxguard-demo-tool-agents:0.1.0
     ports:
       - "${DEMO_TOOL_AGENTS_PORT}:7860"
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:7860/"]
+      test: [ "CMD", "curl", "-f", "http://localhost:7860/" ]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -92,4 +94,18 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - DTXPROMPT_GUARD_SVC_URL=${DTXPROMPT_GUARD_SVC_URL}
       - OPENAI_BASE_URL=${OPENAI_BASE_URL}
-
+      - CONCURRENCY_LIMIT=${CONCURRENCY_LIMIT:1}
+  demo_text2sql_agents:
+    image: detoxio/dtxguard-demo-text2sql:1.0.0
+    ports:
+      - "${DEMO_TEXT2SQL_AGENTS_PORT}:7860"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:7860/" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DTXPROMPT_GUARD_SVC_URL=${DTXPROMPT_GUARD_SVC_URL}
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL}
+      - CONCURRENCY_LIMIT=${CONCURRENCY_LIMIT:1}

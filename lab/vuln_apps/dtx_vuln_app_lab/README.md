@@ -7,6 +7,7 @@ This Docker Compose environment provides a local lab setup to test Generative AI
 3. **Ollama Local Models**
 4. **Demo RaG App**
 5. **Demo Tool Agents**
+6. **Demo Text2Sql Agent**
 
 ---
 
@@ -72,6 +73,7 @@ OPENAI_API_KEY=your-openai-key
 | **Demo RaG App**                 | Web UI to interact with and test Demo Rag App                       | [http://localhost:17861](http://localhost:17861) |
 | **Ollama Models**                | Local language models runtime for testing without external LLM APIs | [http://localhost:11434](http://localhost:11434) |
 | **Demo Tool Agents**             | Interactive tool agent demo for prompt engineering and testing      | [http://localhost:17862](http://localhost:17862) |
+| **Demo Text2Sql Agents**             | Interactive text2sql agent      | [http://localhost:17863](http://localhost:17863) |
 
 ---
 
