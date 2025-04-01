@@ -15,7 +15,7 @@ services:
       CACHE_DIR: ${CACHE_DIR}
 
   demo:
-    image: detoxio/dtxguard-demo:0.2.0
+    image: detoxio/dtxguard-demo:0.3.0
     ports:
       - "${DEMO_PORT}:7860"
     depends_on:
@@ -68,7 +68,7 @@ services:
     depends_on:
       - ollama
   demo_rag:
-    image: detoxio/dtxguard-demo-rag:2.0.0
+    image: detoxio/dtxguard-demo-rag:3.0.0
     ports:
       - "${DEMO_RAG_PORT}:7860"
     healthcheck:
@@ -82,7 +82,7 @@ services:
       - OPENAI_BASE_URL=${OPENAI_BASE_URL}
       - CONCURRENCY_LIMIT=${CONCURRENCY_LIMIT:-1}
   demo_tool_agents:
-    image: detoxio/dtxguard-demo-tool-agents:0.1.0
+    image: detoxio/dtxguard-demo-tool-agents:1.0.0
     ports:
       - "${DEMO_TOOL_AGENTS_PORT}:7860"
     healthcheck:
@@ -96,7 +96,7 @@ services:
       - OPENAI_BASE_URL=${OPENAI_BASE_URL}
       - CONCURRENCY_LIMIT=${CONCURRENCY_LIMIT:-1}
   demo_text2sql_agents:
-    image: detoxio/dtxguard-demo-text2sql:1.0.0
+    image: detoxio/dtxguard-demo-text2sql:2.0.0
     ports:
       - "${DEMO_TEXT2SQL_AGENTS_PORT}:7860"
     healthcheck:
