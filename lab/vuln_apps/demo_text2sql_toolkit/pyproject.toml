@@ -1,23 +1,20 @@
-[project]
+[tool.poetry]
 name = "demo-text2sql-toolkit"
 version = "0.1.0"
 description = ""
-authors = [
-    { name = "Mithlesh Upadhyay", email = "mithleshupadhyay515@gmail.com" }
-]
+authors = ["Mithlesh Upadhyay <mithleshupadhyay515@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.11,<4.0"
-dependencies = [
-    "langchain (>=0.3.21,<0.4.0)",
-    "sqlalchemy (>=2.0.40,<3.0.0)",
-    "python-dotenv (>=1.1.0,<2.0.0)",
-    "langchain-community (>=0.3.20,<0.4.0)",
-    "openai (>=1.69.0,<2.0.0)",
-    "gradio (>=5.23.1,<6.0.0)",
-    "pandas (>=2.2.3,<3.0.0)",
-    "dtx-prompt-guard-client (>=0.2.0,<0.3.0)"
-]
+
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+gradio = "^5.16.0"
+openai = "^1.63.0"
+dtx-prompt-guard-client = ">=0.2.0"
+python-dotenv = "^1.0.1"
+langchain-community = "^0.3.20"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
