@@ -8,13 +8,15 @@ Pokebot is a demonstration vulnerable Retrieval-Augmented Generation (RAG) appli
 
 ## Quick Start
 
-Clone the repository and Install:
-```bash
-git clone https://github.com/safedep/pokebot
-cd pokebot
-pip install poetry
+**Navigate to the `demo_rag` Folder and install dependecies**
+
+Before installing dependencies, move to the `demo_rag` folder:
+
+```sh
+cd demo_rag
+poetry install
+poetry shell
 ```
-above command will create a virtual env in case non exists
 
 **Setup OpenAI API Key**
 
