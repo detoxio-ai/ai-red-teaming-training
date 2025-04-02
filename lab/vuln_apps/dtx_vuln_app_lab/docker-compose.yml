@@ -68,9 +68,12 @@ services:
     depends_on:
       - ollama
   demo_rag:
-    image: detoxio/dtxguard-demo-rag:3.0.0
+    image: detoxio/dtxguard-demo-rag:3.1.0
     ports:
       - "${DEMO_RAG_PORT}:7860"
+    depends_on:
+      pg:
+        condition: service_healthy
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:7860/" ]
       interval: 30s
@@ -85,6 +88,9 @@ services:
     image: detoxio/dtxguard-demo-tool-agents:1.0.0
     ports:
       - "${DEMO_TOOL_AGENTS_PORT}:7860"
+    depends_on:
+      pg:
+        condition: service_healthy
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:7860/" ]
       interval: 30s
@@ -99,6 +105,9 @@ services:
     image: detoxio/dtxguard-demo-text2sql:2.0.0
     ports:
       - "${DEMO_TEXT2SQL_AGENTS_PORT}:7860"
+    depends_on:
+      pg:
+        condition: service_healthy
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:7860/" ]
       interval: 30s
@@ -109,3 +118,4 @@ services:
       - DTXPROMPT_GUARD_SVC_URL=${DTXPROMPT_GUARD_SVC_URL}
       - OPENAI_BASE_URL=${OPENAI_BASE_URL}
       - CONCURRENCY_LIMIT=${CONCURRENCY_LIMIT:-1}
+
