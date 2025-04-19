@@ -110,11 +110,11 @@ pip install dtx[pytorch]
 
 - ✅ Test a local LLM:  
   ```bash
-  dtx redteam run hf_model --url arnir0/Tiny-LLM --dataset beaver --eval ibm38
+  dtx redteam run --agent hf_model --url arnir0/Tiny-LLM --dataset beaver --eval ibm38
   ```
 
 - ✅ Try dummy agent test (no model needed):  
   ```bash
-  dtx redteam run echo --dataset beaver --eval ibm38
+  dtx redteam run --agent echo --dataset beaver --eval ibm38
   ```
 

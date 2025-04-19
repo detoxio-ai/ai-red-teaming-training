@@ -2,9 +2,9 @@
 
 This guide will show you how to install and run `dtx` using the built-in **ECHO** dummy agent and datasets like **Garak** or **Airbench**, without needing heavy models or external APIs.
 
-> ✅ No external API keys required  
-> ✅ No local models required  
-> ✅ Safe for quick testing and sandboxing workflows
+>  No external API keys required  
+> No local models required  
+> Safe for quick testing and sandboxing workflows
 
 ---
 
@@ -12,8 +12,8 @@ This guide will show you how to install and run `dtx` using the built-in **ECHO*
 
 Make sure you have:
 
-- ✅ **Python** `>= 3.8`
-- ✅ **Git** (optional, for pulling templates)
+- **Python** `>= 3.10`
+- **Git** (optional, for pulling templates)
 
 To check:
 ```bash
@@ -43,7 +43,7 @@ This will run a red team test using:
 - **Airbench dataset** (default dataset)
 
 ```bash
-dtx redteam run echo --eval ibm38
+dtx redteam run --agent echo --eval ibm38
 ```
 
 ✅ You will see generated prompts, responses, and evaluation results printed in your terminal!
@@ -58,7 +58,7 @@ This uses:
 - ✅ **No evaluator required** — `garak` dataset already contains signature rules.
 
 ```bash
-dtx redteam run echo --dataset garak
+dtx redteam run --agent echo --dataset garak -o
 ```
 
 ✅ Outputs simulated responses and matched signatures from the Garak dataset.
@@ -78,7 +78,7 @@ You can open this YAML file to inspect prompts, responses, and evaluation outcom
 Optional: customize the output file with:
 
 ```bash
-dtx redteam run echo --dataset garak --yml my_report.yml
+dtx redteam run --agent echo --dataset garak -o --yml my_report.yml
 ```
 
 ---
