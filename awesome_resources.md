@@ -74,6 +74,14 @@ https://github.com/Significant-Gravitas/AutoGPT
 
 https://github.com/precize/OWASP-Agentic-AI
 
+### Agents Surveys
+
+Large Language Model Agent: A Survey on Methodology, Applications and Challenges - https://arxiv.org/pdf/2503.21460
+
+
+Survey of AI Agents Protocols - https://arxiv.org/html/2504.16736v2/
+
+
 
 ## Research Papers
 
