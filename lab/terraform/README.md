@@ -2,6 +2,9 @@
 
 This guide explains how to **start**, **access**, and **stop** various services and tools used in AI safety research, red teaming, and offensive security testing.
 
+**Note**
+>> Replace IP_ADDRESS with localhost if running on the same VM, or the VM’s external/public IP for remote access.
+
 ---
 
 ## 🔑 API Keys
@@ -42,7 +45,7 @@ cd labs/pentagi/
 docker compose up -d
 ```
 
-* Access: `https://localhost:8443`
+* Access: `https://IP_ADDRESS:8443`
 * Stop: `docker compose down`
 
 ---
@@ -56,10 +59,10 @@ docker compose up -d
 
 | Name             | URL                                              |
 | ---------------- | ------------------------------------------------ |
-| Chatbot Demo     | [http://localhost:17860](http://localhost:17860) |
-| RAG Demo         | [http://localhost:17861](http://localhost:17861) |
-| Tool Agents Demo | [http://localhost:17862](http://localhost:17862) |
-| Text2SQL Demo    | [http://localhost:17863](http://localhost:17863) |
+| Chatbot Demo     | [http://IP_ADDRESS:17860](http://IP_ADDRESS:17860) |
+| RAG Demo         | [http://IP_ADDRESS:17861](http://IP_ADDRESS:17861) |
+| Tool Agents Demo | [http://IP_ADDRESS:17862](http://IP_ADDRESS:17862) |
+| Text2SQL Demo    | [http://IP_ADDRESS:17863](http://IP_ADDRESS:17863) |
 
 * Stop: `docker compose down`
 
@@ -68,7 +71,7 @@ docker compose up -d
 ## 🧪 Garak (LLM Scanner)
 
 ```bash
-garak --model openai:gpt-3.5-turbo --checks jailbreaks toxicity
+garak --model_type test.Blank --probes test.Test
 ```
 
 * Output: `results.json` (optional)
@@ -104,7 +107,7 @@ dtx redteam run --agent echo --dataset garak -o
 
 ```bash
 promptfoo test
-promptfoo dev  # Launches Web UI at http://localhost:8080
+promptfoo dev  # Launches Web UI at http://IP_ADDRESS:8080
 ```
 
 * Stop: `Ctrl+C`
@@ -299,10 +302,10 @@ Your Autogen Studio server will continue running in the background.
 In your browser:
 
 ```
-http://localhost:18081
+http://IP_ADDRESS:18081
 ```
 
-Or replace `localhost` with your remote server's IP if accessing externally.
+Or replace `IP_ADDRESS` with your remote server's IP if accessing externally.
 
 ---
 
@@ -335,7 +338,7 @@ tmux kill-session -t autogenstudio
 | Start tmux session    | `tmux new -s autogenstudio`          |
 | Run server            | `autogenstudio ui --port 18081`      |
 | Detach tmux           | `Ctrl + b`, then `d`                 |
-| Access UI             | `http://localhost:18081`             |
+| Access UI             | `http://IP_ADDRESS:18081`             |
 | Reattach tmux session | `tmux attach -t autogenstudio`       |
 | Kill session          | `tmux kill-session -t autogenstudio` |
 
@@ -346,11 +349,11 @@ tmux kill-session -t autogenstudio
 
 | Tool               | Start / Usage Example           | Access / Output               |
 | ------------------ | ------------------------------- | ----------------------------- |
-| Pentagi            | `docker compose up -d`          | `https://localhost:8443`      |
-| Demo Agents        | `docker compose up -d`          | `http://localhost:17860+`     |
+| Pentagi            | `docker compose up -d`          | `https://IP_ADDRESS:8443`      |
+| Demo Agents        | `docker compose up -d`          | `http://IP_ADDRESS:17860+`     |
 | Garak              | `garak --model openai:...`      | CLI or `results.json`         |
 | DTX                | `dtx redteam run ...`           | `report.yml`                  |
-| Promptfoo          | `promptfoo dev`                 | `http://localhost:8080`       |
+| Promptfoo          | `promptfoo dev`                 | `http://IP_ADDRESS:8080`       |
 | Vulhub             | `docker compose up -d` per CVE  | Based on lab setup            |
 | Metasploit         | `msfconsole`, `db_status`       | CLI Shell                     |
 | Amass              | `amass enum -d target.com`      | Subdomain list                |
@@ -358,4 +361,5 @@ tmux kill-session -t autogenstudio
 | Nuclei             | `nuclei -u http://target.com`   | Vulnerability findings        |
 | Nmap               | `nmap -sV -p- target.com`       | Port & service details        |
 | llm                | `llm "your prompt"`             | Terminal response / chat mode |
-| **Autogen Studio** | `autogenstudio ui --port 18081` | `http://localhost:18081`      |
+| **Autogen Studio** | `autogenstudio ui --port 18081` | `http://IP_ADDRESS:18081`      |
+
