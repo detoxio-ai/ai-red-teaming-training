@@ -1,12 +1,12 @@
 # 🔧 AI & Cybersecurity Lab Guide
 
-This guide outlines how to **start**, **access**, and **stop** various services and tools in a modular AI/Cybersecurity lab environment. It also includes instructions for evaluating models and prompts using red teaming and prompt security tools.
+This guide outlines how to **start**, **access**, and **stop** various services and tools in a modular AI/Cybersecurity lab environment. It includes instructions for LLM safety tools, red teaming agents, and vulnerable software setups (via Vulhub).
 
 ---
 
 ## 🔑 API Keys
 
-Ensure the following API keys are present:
+Ensure the following API keys are available in:
 
 ```bash
 ls ~/.secrets/
@@ -80,7 +80,7 @@ docker compose down
 garak --model openai:gpt-3.5-turbo --checks jailbreaks toxicity
 ```
 
-You can also save results:
+Optional output to file:
 
 ```bash
 garak --output results.json
@@ -88,7 +88,9 @@ garak --output results.json
 
 ### 🛑 Stop
 
-No persistent process — press `Ctrl+C` to stop.
+```bash
+Ctrl+C
+```
 
 ---
 
@@ -99,46 +101,31 @@ No persistent process — press `Ctrl+C` to stop.
 
 ### ▶️ Option 1: Red Team Evaluation (Airbench Dataset + IBM Model)
 
-This simulates red team attacks and evaluates responses:
-
 ```bash
 dtx redteam run --agent echo --eval ibm38
 ```
 
-* **Agent:** `echo` (simulated dummy replies)
-* **Evaluator:** IBM Granite HAP 38M (`ibm38`)
-* **Dataset:** `airbench` (default)
-
-You’ll see prompts, responses, and evaluation results in the terminal.
+* Agent: `echo`
+* Evaluator: IBM Granite HAP 38M
+* Dataset: `airbench`
 
 ---
 
 ### ▶️ Option 2: Signature-Based Check (Garak Dataset)
 
-This checks against known jailbreak prompt patterns:
-
 ```bash
 dtx redteam run --agent echo --dataset garak -o
 ```
 
-* **Agent:** `echo`
-* **Dataset:** `garak` (no evaluator needed)
-
----
-
-### 📁 Output
-
-By default, results are saved to:
-
-```bash
-report.yml
-```
-
-To customize the filename:
+Custom output:
 
 ```bash
 dtx redteam run --agent echo --dataset garak -o --yml my_report.yml
 ```
+
+### 📁 Output
+
+Default file: `report.yml`
 
 ### 🛑 Stop
 
@@ -155,8 +142,6 @@ Ctrl+C
 
 ### ▶️ Run Tests
 
-In a project with a `promptfooconfig.yaml`:
-
 ```bash
 promptfoo test
 ```
@@ -167,7 +152,7 @@ promptfoo test
 promptfoo dev
 ```
 
-Open in browser:
+Visit:
 
 ```
 http://localhost:8080
@@ -181,13 +166,76 @@ Ctrl+C
 
 ---
 
+## 🧨 Tool: Vulhub (Vulnerable Applications Lab)
+
+* **Location:** `labs/vulhub/`
+* **Docs:** [https://vulhub.org](https://vulhub.org)
+
+Vulhub provides Dockerized vulnerable environments for learning, testing, and exploitation.
+
+---
+
+### ▶️ Example: Drupal CVE-2019-6341
+
+* **Path:** `labs/vulhub/drupal/CVE-2019-6341`
+
+#### ▶️ Start
+
+```bash
+cd labs/vulhub/drupal/CVE-2019-6341
+docker compose up -d
+```
+
+This launches a Drupal instance vulnerable to **Remote Code Execution (RCE)**.
+
+#### 🌐 Access
+
+```bash
+http://localhost:8080
+```
+
+(Port may vary depending on Docker config)
+
+#### 🛑 Stop
+
+```bash
+docker compose down
+```
+
+---
+
+### 🔍 Explore Other Vulhub Labs
+
+To view available labs:
+
+```bash
+cd labs/vulhub/
+ls
+```
+
+Each lab typically contains:
+
+* `README.md` (exploit explanation)
+* `docker-compose.yml` (launch config)
+
+You can navigate to any CVE directory and run:
+
+```bash
+docker compose up -d
+```
+
+Then visit the URL in the browser or run the provided PoC if applicable.
+
+---
+
 ## ✅ Tool Summary
 
-| Tool            | Start Command / Action              | Stop Command          | Access URL / Output        |
-| --------------- | ----------------------------------- | --------------------- | -------------------------- |
-| **Pentagi**     | `docker compose up -d`              | `docker compose down` | `https://localhost:8443`   |
-| **Demo Agents** | `docker compose up -d`              | `docker compose down` | `http://localhost:17860+`  |
-| **Garak**       | `garak --model ...`                 | `Ctrl+C`              | CLI Output / JSON File     |
-| **DTX**         | `dtx redteam run ...`               | `Ctrl+C`              | `report.yml` / custom file |
-| **Promptfoo**   | `promptfoo test` or `promptfoo dev` | `Ctrl+C`              | `http://localhost:8080`    |
+| Tool          | Start Command                      | Stop Command          | Access / Output           |
+| ------------- | ---------------------------------- | --------------------- | ------------------------- |
+| **Pentagi**   | `docker compose up -d`             | `docker compose down` | `https://localhost:8443`  |
+| **AI Demos**  | `docker compose up -d`             | `docker compose down` | `http://localhost:17860+` |
+| **Garak**     | `garak --model ...`                | `Ctrl+C`              | JSON file or CLI output   |
+| **DTX**       | `dtx redteam run ...`              | `Ctrl+C`              | `report.yml` or custom    |
+| **Promptfoo** | `promptfoo test` / `promptfoo dev` | `Ctrl+C`              | `http://localhost:8080`   |
+| **Vulhub**    | `docker compose up -d` per CVE     | `docker compose down` | Depends on each lab setup |
 
