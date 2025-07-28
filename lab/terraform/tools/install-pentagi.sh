@@ -8,7 +8,7 @@ LABS_DIR="$HOME/labs"
 REPO_URL="https://github.com/vxcontrol/pentagi.git"
 REPO_DIR="$LABS_DIR/pentagi"
 SECRETS_DIR="$HOME/.secrets"
-OPENAI_FILE="$SECRETS_DIR/OPENAI_API_KEY.txt"
+OPENAI_FILE="$SECRETS_DIR/OPEN_AI_KEY.txt"
 ENV_TEMPLATE=".env.example"
 ENV_FILE=".env"
 DOCKER_COMPOSE_FILE="docker-compose.yml"
@@ -40,10 +40,10 @@ cp "$ENV_TEMPLATE" "$ENV_FILE"
 # Inject OpenAI API key
 if [ -f "$OPENAI_FILE" ]; then
   OPENAI_KEY=$(cat "$OPENAI_FILE")
-  if grep -q "^OPENAI_API_KEY=" "$ENV_FILE"; then
-    sed -i.bak "s|^OPENAI_API_KEY=.*|OPENAI_API_KEY=${OPENAI_KEY}|" "$ENV_FILE"
+  if grep -q "^OPEN_AI_KEY=" "$ENV_FILE"; then
+    sed -i.bak "s|^OPEN_AI_KEY=.*|OPEN_AI_KEY=${OPENAI_KEY}|" "$ENV_FILE"
   else
-    echo "OPENAI_API_KEY=${OPENAI_KEY}" >> "$ENV_FILE"
+    echo "OPEN_AI_KEY=${OPENAI_KEY}" >> "$ENV_FILE"
   fi
   echo "✅ OpenAI key inserted into $ENV_FILE"
 else

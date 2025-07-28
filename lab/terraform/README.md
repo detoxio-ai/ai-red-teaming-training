@@ -1,12 +1,12 @@
 # 🔧 AI & Cybersecurity Lab Guide
 
-This guide outlines how to **start**, **access**, and **stop** various services and tools in a modular AI/Cybersecurity lab environment. It includes instructions for LLM safety tools, red teaming agents, and vulnerable software setups (via Vulhub).
+This guide explains how to **start**, **access**, and **stop** various services and tools used in AI safety research, red teaming, and offensive security testing.
 
 ---
 
 ## 🔑 API Keys
 
-Ensure the following API keys are available in:
+Ensure the following keys are present:
 
 ```bash
 ls ~/.secrets/
@@ -15,227 +15,252 @@ ANTHROPIC_API_KEY.txt  GROQ_API_KEY.txt  OPENAI_API_KEY.txt
 
 ---
 
-## 🔐 Tool: Pentagi (Cybersecurity Lab)
+## 🧰 Core Tools Overview
 
-* **Location:** `labs/pentagi/`
+| Tool           | Category        | Interface     | Purpose                                 |
+| -------------- | --------------- | ------------- | --------------------------------------- |
+| Pentagi        | Cybersecurity   | Web (Docker)  | Cyber lab interface                     |
+| AI Demo Agents | AI Red Team     | Web (Docker)  | Prompt injection + eval agents          |
+| Garak          | LLM Testing     | CLI           | LLM vulnerability scanner               |
+| DTX            | LLM Testing     | CLI           | Red teaming & prompt evaluation         |
+| Promptfoo      | LLM Evaluation  | CLI / Web     | Prompt eval framework                   |
+| Vulhub         | Exploit Labs    | Web (Docker)  | Vulnerable app playground               |
+| Metasploit     | Offensive Sec   | CLI / Console | Exploitation framework                  |
+| Amass          | Recon           | CLI           | Attack surface mapping                  |
+| Subfinder      | Recon           | CLI           | Subdomain enumeration                   |
+| Nuclei         | Scanning        | CLI           | Vulnerability scanner                   |
+| Nmap           | Scanning        | CLI           | Port and service scanner                |
+| llm            | LLM CLI Utility | CLI           | Run LLM prompts, chat, embeddings, etc. |
 
-### ▶️ Start
+---
+
+## 🔐 Pentagi (Cyber Lab Environment)
 
 ```bash
 cd labs/pentagi/
 docker compose up -d
 ```
 
-### 🌐 Access
-
-* Local: `https://localhost:8443`
-* Remote: `https://<IP_ADDRESS>:8443`
-
-### ⏹ Stop
-
-```bash
-docker compose down
-```
+* Access: `https://localhost:8443`
+* Stop: `docker compose down`
 
 ---
 
-## 🤖 Tool: AI Security Demo Agents
-
-* **Location:** `labs/ai-red-teaming-training/lab/vuln_apps/dtx_vuln_app_lab/`
-
-### ▶️ Start
+## 🤖 AI Security Demo Agents
 
 ```bash
 cd labs/ai-red-teaming-training/lab/vuln_apps/dtx_vuln_app_lab/
 docker compose up -d
 ```
 
-### 🌐 Access
+| Name             | URL                                              |
+| ---------------- | ------------------------------------------------ |
+| Chatbot Demo     | [http://localhost:17860](http://localhost:17860) |
+| RAG Demo         | [http://localhost:17861](http://localhost:17861) |
+| Tool Agents Demo | [http://localhost:17862](http://localhost:17862) |
+| Text2SQL Demo    | [http://localhost:17863](http://localhost:17863) |
 
-| Demo Name            | URL                                              |
-| -------------------- | ------------------------------------------------ |
-| Chatbot Demo         | [http://localhost:17860](http://localhost:17860) |
-| RAG Demo             | [http://localhost:17861](http://localhost:17861) |
-| Tool Agents Demo     | [http://localhost:17862](http://localhost:17862) |
-| Text2SQL Agents Demo | [http://localhost:17863](http://localhost:17863) |
-
-> Replace `localhost` with your `IP_ADDRESS` for remote access.
-
-### ⏹ Stop
-
-```bash
-docker compose down
-```
+* Stop: `docker compose down`
 
 ---
 
-## 🧪 Tool: Garak (LLM Vulnerability Scanner)
-
-* **Docs:** [https://docs.garak.ai/garak](https://docs.garak.ai/garak)
-* **Installed as:** CLI tool (`garak`)
-
-### ▶️ Run a Scan
+## 🧪 Garak (LLM Scanner)
 
 ```bash
 garak --model openai:gpt-3.5-turbo --checks jailbreaks toxicity
 ```
 
-Optional output to file:
-
-```bash
-garak --output results.json
-```
-
-### 🛑 Stop
-
-```bash
-Ctrl+C
-```
+* Output: `results.json` (optional)
+* Stop: `Ctrl+C`
 
 ---
 
-## 🧼 Tool: DTX (Detox Prompt Safety Evaluation)
+## 🧼 DTX (Prompt Security Evaluation)
 
-* **Docs:** [https://docs.detoxio.ai](https://docs.detoxio.ai)
-* **Installed as:** CLI tool (`dtx`)
-
-### ▶️ Option 1: Red Team Evaluation (Airbench Dataset + IBM Model)
+**Option 1: Red Team Test (Airbench + IBM Model)**
 
 ```bash
 dtx redteam run --agent echo --eval ibm38
 ```
 
-* Agent: `echo`
-* Evaluator: IBM Granite HAP 38M
-* Dataset: `airbench`
-
----
-
-### ▶️ Option 2: Signature-Based Check (Garak Dataset)
+**Option 2: Signature Match (Garak Dataset)**
 
 ```bash
 dtx redteam run --agent echo --dataset garak -o
 ```
 
-Custom output:
+**Custom Output:**
 
 ```bash
-dtx redteam run --agent echo --dataset garak -o --yml my_report.yml
+--yml my_report.yml
 ```
 
-### 📁 Output
-
-Default file: `report.yml`
-
-### 🛑 Stop
-
-```bash
-Ctrl+C
-```
+* Default output: `report.yml`
 
 ---
 
-## 🤖 Tool: Promptfoo (Prompt Evaluation Framework)
-
-* **Docs:** [https://www.promptfoo.dev/docs/intro](https://www.promptfoo.dev/docs/intro)
-* **Installed as:** CLI tool (`promptfoo`)
-
-### ▶️ Run Tests
+## 🧠 Promptfoo (Prompt Evaluation)
 
 ```bash
 promptfoo test
+promptfoo dev  # Launches Web UI at http://localhost:8080
 ```
 
-### ▶️ Optional Web UI
-
-```bash
-promptfoo dev
-```
-
-Visit:
-
-```
-http://localhost:8080
-```
-
-### 🛑 Stop
-
-```bash
-Ctrl+C
-```
+* Stop: `Ctrl+C`
 
 ---
 
-## 🧨 Tool: Vulhub (Vulnerable Applications Lab)
+## 🧨 Vulhub (Vulnerable CVE Labs)
 
-* **Location:** `labs/vulhub/`
-* **Docs:** [https://vulhub.org](https://vulhub.org)
-
-Vulhub provides Dockerized vulnerable environments for learning, testing, and exploitation.
-
----
-
-### ▶️ Example: Drupal CVE-2019-6341
-
-* **Path:** `labs/vulhub/drupal/CVE-2019-6341`
-
-#### ▶️ Start
+Example: Drupal RCE – `CVE-2019-6341`
 
 ```bash
 cd labs/vulhub/drupal/CVE-2019-6341
 docker compose up -d
 ```
 
-This launches a Drupal instance vulnerable to **Remote Code Execution (RCE)**.
+* Access via specified port (check `docker-compose.yml`)
+* Stop: `docker compose down`
 
-#### 🌐 Access
-
-```bash
-http://localhost:8080
-```
-
-(Port may vary depending on Docker config)
-
-#### 🛑 Stop
-
-```bash
-docker compose down
-```
-
----
-
-### 🔍 Explore Other Vulhub Labs
-
-To view available labs:
+Explore all labs:
 
 ```bash
 cd labs/vulhub/
 ls
 ```
 
-Each lab typically contains:
+---
 
-* `README.md` (exploit explanation)
-* `docker-compose.yml` (launch config)
+## ⚔️ Metasploit Framework
 
-You can navigate to any CVE directory and run:
+### ▶️ First-time setup
 
 ```bash
-docker compose up -d
+msfconsole
+# Answer 'yes' to database setup
 ```
 
-Then visit the URL in the browser or run the provided PoC if applicable.
+### ▶️ Check DB Status
+
+```bash
+db_status
+# Output: Connected to msf...
+```
+
+### ▶️ Exit
+
+```bash
+exit
+```
+
+* Metasploit will remember environment on next launch.
 
 ---
 
-## ✅ Tool Summary
+## 🌐 Recon & Scanning Tools
 
-| Tool          | Start Command                      | Stop Command          | Access / Output           |
-| ------------- | ---------------------------------- | --------------------- | ------------------------- |
-| **Pentagi**   | `docker compose up -d`             | `docker compose down` | `https://localhost:8443`  |
-| **AI Demos**  | `docker compose up -d`             | `docker compose down` | `http://localhost:17860+` |
-| **Garak**     | `garak --model ...`                | `Ctrl+C`              | JSON file or CLI output   |
-| **DTX**       | `dtx redteam run ...`              | `Ctrl+C`              | `report.yml` or custom    |
-| **Promptfoo** | `promptfoo test` / `promptfoo dev` | `Ctrl+C`              | `http://localhost:8080`   |
-| **Vulhub**    | `docker compose up -d` per CVE     | `docker compose down` | Depends on each lab setup |
+### 🔎 Amass
+
+```bash
+amass enum -d example.com
+```
+
+### 🔎 Subfinder
+
+```bash
+subfinder -d example.com
+```
+
+### ⚡ Nuclei
+
+```bash
+nuclei -u http://example.com
+```
+
+### ⚡ Nmap
+
+```bash
+nmap -sV -Pn -T4 -p- example.com
+```
+
+---
+
+## 🤖 LLM CLI Toolkit (`llm`)
+
+
+### ✨ Run Prompt
+
+```bash
+llm "Ten fun names for a pet pelican"
+```
+
+### 📄 Extract Text from Image
+
+```bash
+llm "extract text" -a scanned-document.jpg
+```
+
+### 🧠 Explain Code
+
+```bash
+cat myfile.py | llm -s "Explain this code"
+```
+
+---
+
+### 🔌 Plugins
+
+#### Gemini Plugin
+
+```bash
+llm install llm-gemini
+llm keys set gemini
+llm -m gemini-2.0-flash "Tell me facts about Mountain View"
+```
+
+#### Anthropic Plugin
+
+```bash
+llm install llm-anthropic
+llm keys set anthropic
+llm -m claude-4-opus "Facts about turnips"
+```
+
+#### Ollama Plugin (Local Models)
+
+```bash
+llm install llm-ollama
+ollama pull llama3.2:latest
+llm -m llama3.2:latest "What is the capital of France?"
+```
+
+---
+
+### 💬 Interactive Chat
+
+```bash
+llm chat -m gpt-4.1
+```
+
+* Type `exit` to quit
+* Type `!multi` for multiline input
+
+---
+
+## ✅ Summary Table
+
+| Tool        | Start / Usage Example          | Access / Output               |
+| ----------- | ------------------------------ | ----------------------------- |
+| Pentagi     | `docker compose up -d`         | `https://localhost:8443`      |
+| Demo Agents | `docker compose up -d`         | `http://localhost:17860+`     |
+| Garak       | `garak --model openai:...`     | CLI or `results.json`         |
+| DTX         | `dtx redteam run ...`          | `report.yml`                  |
+| Promptfoo   | `promptfoo dev`                | `http://localhost:8080`       |
+| Vulhub      | `docker compose up -d` per CVE | Based on lab setup            |
+| Metasploit  | `msfconsole`, `db_status`      | CLI Shell                     |
+| Amass       | `amass enum -d target.com`     | Subdomain list                |
+| Subfinder   | `subfinder -d target.com`      | Subdomain list                |
+| Nuclei      | `nuclei -u http://target.com`  | Vulnerability findings        |
+| Nmap        | `nmap -sV -p- target.com`      | Port & service details        |
+| llm         | `llm "your prompt"`            | Terminal response / chat mode |
 
