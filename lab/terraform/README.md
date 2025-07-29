@@ -344,6 +344,20 @@ tmux kill-session -t autogenstudio
 
 ---
 
+## Validate the Installations 
+
+Run the following script and check the logs
+
+Default: logs to terminal only
+```
+./validate_installation.sh
+```
+
+Optional: logs to file and stdout
+```
+./validate_installation.sh --log ~/dtx-validate.log
+```
+
 
 ## ✅ Summary Table
 
