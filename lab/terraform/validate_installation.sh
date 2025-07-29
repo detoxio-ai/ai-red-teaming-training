@@ -52,13 +52,15 @@ check_url() {
   for i in {1..5}; do
     if curl -sk --head --fail "$url" >/dev/null; then
       log "✅ $name reachable at $url"
-      return
+      return 0
     else
       sleep 10
     fi
   done
   log "❌ $name not reachable after 5 tries ($url)"
+  return 1
 }
+
 
 # === External IP ===
 log ""
@@ -157,12 +159,16 @@ PORTS=(
 
 for entry in "${PORTS[@]}"; do
   IFS="|" read -r name url <<< "$entry"
-  check_url "$name (localhost)" "$url"
-  if [[ "$EXTERNAL_IP" != "Unavailable" ]]; then
-    external_url="${url/localhost/$EXTERNAL_IP}"
-    check_url "$name (external)" "$external_url"
+  if check_url "$name (localhost)" "$url"; then
+    if [[ "$EXTERNAL_IP" != "Unavailable" ]]; then
+      external_url="${url/localhost/$EXTERNAL_IP}"
+      check_url "$name (external)" "$external_url"
+    fi
+  else
+    log "⚠️ Skipping external check for $name since internal is not reachable."
   fi
 done
+
 
 # === Stop Docker Services ===
 log ""
