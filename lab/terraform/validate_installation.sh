@@ -3,19 +3,26 @@ set -euo pipefail
 
 # === Parse arguments ===
 LOG_FILE=""
+DEBUG=0
 while [[ $# -gt 0 ]]; do
   case $1 in
     --log)
       LOG_FILE="$2"
       shift 2
       ;;
+    --debug)
+      DEBUG=1
+      shift
+      ;;
     *)
       echo "❌ Unknown option: $1"
-      echo "Usage: $0 [--log /path/to/logfile]"
+      echo "Usage: $0 [--log /path/to/logfile] [--debug]"
       exit 1
       ;;
   esac
 done
+
+[[ $DEBUG -eq 1 ]] && set -x
 
 # === Default log file ===
 if [[ -z "$LOG_FILE" ]]; then
@@ -38,7 +45,7 @@ check_tool() {
   local cmd="$2"
   if command -v "$cmd" &>/dev/null; then
     local version
-    version="$($cmd --version 2>&1 | head -n 1 || true)"
+    version="$($cmd --version 2>&1 | head -n 1 || echo 'Unknown version')"
     log "✅ $name is installed: $version"
   else
     log "❌ $name is NOT installed"
@@ -60,7 +67,6 @@ check_url() {
   log "❌ $name not reachable after 5 tries ($url)"
   return 1
 }
-
 
 # === External IP ===
 log ""
@@ -126,7 +132,7 @@ log "🚀 Starting Promptfoo and Autogen Studio (no tmux)..."
 promptfoo dev > /dev/null 2>&1 &
 PROMPTFOO_PID=$!
 sleep 1
-if ps -p $PROMPTFOO_PID > /dev/null; then
+if ps -p $PROMPTFOO_PID > /dev/null 2>&1; then
   log "✅ Promptfoo started with PID $PROMPTFOO_PID"
 else
   log "❌ Promptfoo failed to start"
@@ -135,11 +141,32 @@ fi
 autogenstudio ui --port 18081 > /dev/null 2>&1 &
 AUTOGEN_PID=$!
 sleep 1
-if ps -p $AUTOGEN_PID > /dev/null; then
+if ps -p $AUTOGEN_PID > /dev/null 2>&1; then
   log "✅ Autogen Studio started with PID $AUTOGEN_PID"
 else
   log "❌ Autogen Studio failed to start"
 fi
+
+
+log ""
+log "🧪 Testing PentestGPT OpenAI API connectivity..."
+
+OPENAI_KEY_FILE="$HOME/.secrets/OPENAI_API_KEY.txt"
+if [[ -f "$OPENAI_KEY_FILE" ]]; then
+  export OPENAI_API_KEY="$(cat "$OPENAI_KEY_FILE")"
+  CONNECTION_OUTPUT="$(pentestgpt-connection 2>&1 || true)"
+
+  if echo "$CONNECTION_OUTPUT" | grep -q "You're connected with OpenAI API"; then
+    log "✅ PentestGPT connection successful:"
+    echo "$CONNECTION_OUTPUT" | grep -v "CHATGPT_COOKIE" >> "$LOG_FILE"
+  else
+    log "❌ PentestGPT connection failed:"
+    echo "$CONNECTION_OUTPUT" >> "$LOG_FILE"
+  fi
+else
+  log "❌ OPENAI_API_KEY.txt not found, skipping PentestGPT connection test."
+fi
+
 
 sleep 10
 
@@ -168,7 +195,6 @@ for entry in "${PORTS[@]}"; do
     log "⚠️ Skipping external check for $name since internal is not reachable."
   fi
 done
-
 
 # === Stop Docker Services ===
 log ""
