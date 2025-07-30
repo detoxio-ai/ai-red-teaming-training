@@ -35,6 +35,8 @@ ANTHROPIC_API_KEY.txt  GROQ_API_KEY.txt  OPENAI_API_KEY.txt
 | Nmap               | Scanning        | CLI           | Port and service scanner                |
 | llm                | LLM CLI Utility | CLI           | Run LLM prompts, chat, embeddings, etc. |
 | **Autogen Studio** | Agent Workflow  | Web / CLI     | Visual multi-agent design & execution   |
+| Reaper             | Offensive AI   | Web (Docker)  | Real-world LLM exploitation & scanning |
+| CAI Framework       | Offensive AI   | CLI / Shell   | Autonomous multi-agent penetration testing |
 
 ---
 
@@ -329,18 +331,66 @@ To kill the session from outside:
 tmux kill-session -t autogenstudio
 ```
 
+
+## 🕵️ Reaper (Offensive LLM Exploitation Tool)
+
+```bash
+cd labs/reaper
+docker compose up -d
+````
+
+* Access: `http://IP_ADDRESS:18000`
+* Stop: `docker compose down`
+
+
 ---
 
-### ✅ Summary
+## 🤖 CAI Framework (Collaborative AI Pentesting)
 
-| Task                  | Command                              |
-| --------------------- | ------------------------------------ |
-| Start tmux session    | `tmux new -s autogenstudio`          |
-| Run server            | `autogenstudio ui --port 18081`      |
-| Detach tmux           | `Ctrl + b`, then `d`                 |
-| Access UI             | `http://IP_ADDRESS:18081`             |
-| Reattach tmux session | `tmux attach -t autogenstudio`       |
-| Kill session          | `tmux kill-session -t autogenstudio` |
+CAI treats penetration testing as a collaboration between human operators and AI agents. It automates distinct phases like:
+
+- Reconnaissance
+- Vulnerability Discovery
+- Exploitation
+- Privilege Escalation
+- Reporting
+
+These agents:
+- Run real terminal commands
+- Interact with GUI applications using OCR + mouse control
+- Chain tasks across systems to complete full exploit paths
+
+---
+
+### ▶️ Step 1: Export OpenAI API Key
+
+Make sure your key is stored in the default location:
+
+
+```bash
+export OPENAI_API_KEY=$(cat ~/.secrets/OPENAI_API_KEY.txt)
+```
+
+---
+
+### ▶️ Step 2: Run CAI Framework
+
+```bash
+cai
+```
+
+This starts an interactive session where CAI agents guide and automate the penetration process.
+
+---
+
+### ⏹️ To Exit
+
+Press:
+
+```bash
+Ctrl + C
+```
+
 
 ---
 
@@ -376,4 +426,6 @@ Optional: logs to file and stdout
 | Nmap               | `nmap -sV -p- target.com`       | Port & service details        |
 | llm                | `llm "your prompt"`             | Terminal response / chat mode |
 | **Autogen Studio** | `autogenstudio ui --port 18081` | `http://IP_ADDRESS:18081`      |
+| Reaper             | `docker compose up -d`          | `http://IP_ADDRESS:18000`       |
+
 
