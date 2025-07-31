@@ -172,131 +172,89 @@ def netmask_to_cidr(netmask):
         return 24  # Default to /24
 
 
-def nmap_scan(target, options=""):
+def nmap_scan(target, options="", use_sudo=False):  # Default use_sudo is False
     """
     Run an Nmap scan on the specified target with optional parameters.
-    
-    Args:
-        target: The target to scan (IP address, hostname, or IP range)
-        options: Additional Nmap command line options (e.g., "-sS -p 80,443")
-    
-    Returns:
-        The output of the Nmap scan
-    """
-    # Build the command
-    cmd_parts = ["nmap"]
-    
-    # Add options if provided
-    if options:
-        # Use shlex to safely split the options string
-        cmd_parts.extend(shlex.split(options))
-    
-    # Add the target
-    cmd_parts.append(target)
-    
-    try:
-        # Run the command
-        result = subprocess.run(
-            cmd_parts,
-            capture_output=True,
-            text=True,
-            timeout=300,
-            check=False
-        )
-        
-        if result.returncode != 0:
-            return f"Error: Nmap returned non-zero exit code {result.returncode}\nStderr: {result.stderr}"
-        
-        return result.stdout
-        
-    except subprocess.TimeoutExpired:
-        return "Error: Nmap scan timed out after 5 minutes"
-    except FileNotFoundError:
-        return "Error: nmap command not found. Please install nmap first."
-    except Exception as ex:
-        return f"Error: {type(ex).__name__}: {ex}"
-    """
-    Run an Nmap scan on the specified target with optional parameters.
-    
-    Args:
-        target: The target to scan (IP address, hostname, or IP range)
-        options: Additional Nmap command line options (e.g., "-sS -p 80,443")
-    
-    Returns:
-        The output of the Nmap scan
-    """
-    # Build the command
-    cmd_parts = ["nmap"]
-    
-    # Add options if provided
-    if options:
-        # Use shlex to safely split the options string
-        cmd_parts.extend(shlex.split(options))
-    
-    # Add the target
-    cmd_parts.append(target)
-    
-    try:
-        # Run the command
-        result = subprocess.run(
-            cmd_parts,
-            capture_output=True,
-            text=True,
-            timeout=300,
-            check=False
-        )
-        
-        if result.returncode != 0:
-            return f"Error: Nmap returned non-zero exit code {result.returncode}\nStderr: {result.stderr}"
-        
-        return result.stdout
-        
-    except subprocess.TimeoutExpired:
-        return "Error: Nmap scan timed out after 5 minutes"
-    except FileNotFoundError:
-        return "Error: nmap command not found. Please install nmap first."
-    except Exception as ex:
-        return f"Error: {type(ex).__name__}: {ex}"
 
+    Args:
+        target: The target to scan (IP address, hostname, or IP range)
+        options: Additional Nmap command line options (e.g., "-sS -p 80,443")
+        use_sudo: Whether to use sudo for privileged scans
+
+    Returns:
+        The output of the Nmap scan
+    """
+    cmd_parts = []
+
+    privileged_flags = ["-O", "-sS", "-sU", "--privileged"]
+    if use_sudo or any(flag in options for flag in privileged_flags):
+        cmd_parts.append("sudo")  # Add sudo if explicitly requested or implied
+
+    cmd_parts.append("nmap")
+
+    if options:
+        cmd_parts.extend(shlex.split(options))
+
+    cmd_parts.append(target)
+
+    try:
+        result = subprocess.run(
+            cmd_parts,
+            capture_output=True,
+            text=True,
+            timeout=300,
+            check=False
+        )
+
+        if result.returncode != 0:
+            return f"Error: Nmap returned non-zero exit code {result.returncode}\nStderr: {result.stderr}"
+
+        return result.stdout
+
+    except subprocess.TimeoutExpired:
+        return "Error: Nmap scan timed out after 5 minutes"
+    except FileNotFoundError:
+        return "Error: nmap command not found. Please install nmap first."
+    except Exception as ex:
+        return f"Error: {type(ex).__name__}: {ex}"
 
 def nmap_quick_scan(target):
     """
-    Perform a quick TCP scan on the most common ports.
-    Equivalent to: nmap -T4 -F target
-    
+    Perform a quick Nmap scan on common ports with faster timing.
+
     Args:
-        target: The target to scan
-    
+        target (str): The IP address, hostname, or range to scan.
+
     Returns:
-        The output of the quick scan
+        str: Output of the Nmap quick scan.
     """
     return nmap_scan(target, "-T4 -F")
 
 
 def nmap_port_scan(target, ports):
     """
-    Scan specific ports on the target.
-    
+    Scan specific ports on the given target.
+
     Args:
-        target: The target to scan
-        ports: Port specification (e.g., "80", "80,443", "1-1000", "U:53,T:80")
-    
+        target (str): The IP address or hostname to scan.
+        ports (str): Port specification string (e.g., "80", "22,443", "1-1000").
+
     Returns:
-        The output of the port scan
+        str: Output of the Nmap port scan.
     """
     return nmap_scan(target, f"-p {ports}")
 
 
 def nmap_service_detection(target, ports=""):
     """
-    Perform service version detection on the target.
-    
+    Detect service versions running on target ports.
+
     Args:
-        target: The target to scan
-        ports: Optional port specification (if not provided, scans default ports)
-    
+        target (str): The target IP or hostname.
+        ports (str, optional): Port list to scan. If omitted, default ports are used.
+
     Returns:
-        The output with service detection results
+        str: Nmap output with service version information.
     """
     options = "-sV"
     if ports:
@@ -306,42 +264,43 @@ def nmap_service_detection(target, ports=""):
 
 def nmap_os_detection(target):
     """
-    Attempt to detect the operating system of the target.
-    Note: This typically requires root/sudo privileges.
-    
+    Attempt to detect the operating system of the target host.
+    Requires sudo privileges to send raw packets.
+
     Args:
-        target: The target to scan
-    
+        target (str): The IP address or hostname of the target.
+
     Returns:
-        The output with OS detection results
+        str: Nmap output including OS guess and network distance.
     """
-    return nmap_scan(target, "-O")
+    return nmap_scan(target, "-O", use_sudo=True)
 
 
 def nmap_ping_scan(target):
     """
-    Perform a ping scan to discover live hosts (no port scanning).
-    
+    Perform a ping-only scan to discover live hosts in a network.
+    No ports are scanned.
+
     Args:
-        target: The target or range to scan (e.g., "192.168.1.0/24")
-    
+        target (str): CIDR range or IP (e.g., "192.168.1.0/24").
+
     Returns:
-        The list of live hosts
+        str: List of live hosts detected by Nmap.
     """
     return nmap_scan(target, "-sn")
 
 
 def nmap_script_scan(target, script, ports=""):
     """
-    Run a specific Nmap script against the target.
-    
+    Run a specified Nmap script (or script category) against a target.
+
     Args:
-        target: The target to scan
-        script: The script name or category (e.g., "http-title", "vuln")
-        ports: Optional port specification
-    
+        target (str): The IP address or hostname to scan.
+        script (str): Name or category of the script (e.g., "http-title", "vuln").
+        ports (str, optional): Ports to run the script against.
+
     Returns:
-        The output of the script scan
+        str: Output of the Nmap script scan.
     """
     options = f"--script {script}"
     if ports:
