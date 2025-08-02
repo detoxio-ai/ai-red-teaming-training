@@ -280,19 +280,7 @@ export OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Use `tmux` to keep Autogen Studio running even after you disconnect:
 
 ```bash
-tmux new -s autogenstudio
-```
-
-Then inside the tmux session:
-
-```bash
-autogenstudio ui --port 18081
-```
-
-To detach and leave it running:
-
-```bash
-Ctrl + b  then press  d
+tmux new -d -s autogenstudio 'autogenstudio ui --port 18081 --host 0.0.0.0'
 ```
 
 Your Autogen Studio server will continue running in the background.
