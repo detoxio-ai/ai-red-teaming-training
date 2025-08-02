@@ -9,6 +9,8 @@ if [[ -z "$DTX_PASSWORD" ]]; then
   exit 1
 fi
 
+export DEBIAN_FRONTEND=noninteractive
+
 # Update packages
 sudo apt update && sudo apt upgrade -y
 
