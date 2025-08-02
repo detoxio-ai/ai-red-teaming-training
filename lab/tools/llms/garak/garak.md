@@ -37,7 +37,7 @@ Install Docker:
 ## Running Garak
 
 ```
-❯ garak --model_type ollama --model_name qwen1-rai:0.5b --probes dan.Dan_11_0 -vvv
+❯ garak --model_type ollama --model_name qwen3:0.6b-q4_K_M --probes dan.Dan_11_0 -vvv
 garak LLM vulnerability scanner v0.10.1 ( https://github.com/NVIDIA/garak ) at 2025-01-06T09:03:32.453683
 📜 logging to /home/neo/.local/share/garak/garak.log
 🦜 loading generator: Ollama: qwen1-rai:0.5b
