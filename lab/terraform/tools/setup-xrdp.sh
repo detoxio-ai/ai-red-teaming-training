@@ -11,17 +11,21 @@ fi
 
 export DEBIAN_FRONTEND=noninteractive
 
-# Update packages
-sudo apt update && sudo apt upgrade -y
+# Suppress daemon restart prompts during upgrade
+echo '* libraries/restart-without-asking boolean true' | sudo debconf-set-selections
+
+# Update and upgrade packages
+sudo apt update
+sudo apt upgrade -y
 
 # Install Xfce (lightweight desktop)
-sudo apt install xfce4 xfce4-goodies -y
+sudo apt install -y xfce4 xfce4-goodies
 
 # Install XRDP (remote desktop protocol server)
-sudo apt install xrdp -y
+sudo apt install -y xrdp
 
 # Set Xfce as the default desktop for XRDP sessions
-echo "startxfce4" | sudo tee /etc/skel/.xsession
+echo "startxfce4" | sudo tee /etc/skel/.xsession >/dev/null
 echo "startxfce4" > /home/dtx/.xsession
 sudo chown dtx:dtx /home/dtx/.xsession
 sudo chmod +x /home/dtx/.xsession
@@ -36,4 +40,4 @@ sudo systemctl restart xrdp
 # Set the password for user 'dtx'
 echo "dtx:$DTX_PASSWORD" | sudo chpasswd
 
-## export DTX_PASSWORD='your-secure-password' bash setup-xrdp.sh
+echo "✅ XRDP setup complete. You can now connect via RDP."
