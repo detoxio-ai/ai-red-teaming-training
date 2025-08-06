@@ -1,14 +1,17 @@
-# client.py
-
 import asyncio
 from fastmcp import Client
 
-client = Client("http+uv://127.0.0.1:18800")
+# Replace this with your actual server URL if different
+SERVER_URL = "http://127.0.0.1:9000/sse/"
 
-async def run():
+client = Client(SERVER_URL)
+
+async def greet_user(name: str):
     async with client:
-        result = await client.call_tool("nmap_scan", {"ip": "192.168.1.1"})
-        print(result)
+        response = await client.call_tool("greet", {"name": name})
+        print("Response:", response)
 
-asyncio.run(run())
+if __name__ == "__main__":
+    asyncio.run(greet_user("UV Client"))
+
 
