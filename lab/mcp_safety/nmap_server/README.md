@@ -149,102 +149,37 @@ import subprocess
 import shlex
 import socket
 import re
+import openai
+import json
+
+openai.api_key = "sk-..."  # Replace with your key or load from environment
 
 mcp = FastMCP("Nmap MCP Server")
 
 
-@mcp.tool
-def get_local_network_info() -> str:
-    # Discover local IPs, interfaces, and CIDR scan ranges
-    try:
-        hostname = socket.gethostname()
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        try:
-            s.connect(("8.8.8.8", 80))
-            primary_ip = s.getsockname()[0]
-            s.close()
-        except:
-            primary_ip = "Unable to determine"
-
-        try:
-            all_ips = socket.gethostbyname_ex(hostname)[2]
-        except:
-            all_ips = []
-
-        interface_info = []
-        scan_ranges = []
-
-        try:
-            result = subprocess.run(["ip", "addr", "show"], capture_output=True, text=True, timeout=5)
-            if result.returncode == 0:
-                current_interface = None
-                for line in result.stdout.split('\n'):
-                    if re.match(r'^\d+:', line):
-                        current_interface = line.split(':')[1].strip()
-                    elif 'inet ' in line and current_interface:
-                        ip_match = re.search(r'inet (\d+\.\d+\.\d+\.\d+)/(\d+)', line)
-                        if ip_match and not ip_match.group(1).startswith('127.'):
-                            ip_addr = ip_match.group(1)
-                            cidr = ip_match.group(2)
-                            interface_info.append(f"{current_interface}: {ip_addr}/{cidr}")
-                            network_range = calculate_network_range(ip_addr, cidr)
-                            if network_range and network_range not in scan_ranges:
-                                scan_ranges.append(network_range)
-        except:
-            pass
-
-        response = f"Hostname: {hostname}\nPrimary IP: {primary_ip}\n"
-        if all_ips:
-            response += f"All IPs for hostname: {', '.join(all_ips)}\n"
-        if interface_info:
-            response += "\nNetwork interfaces:\n" + '\n'.join(f"  {info}" for info in interface_info)
-        if scan_ranges:
-            response += "\n\nNetwork ranges:\n" + '\n'.join(f"  {r}" for r in scan_ranges)
-        else:
-            if primary_ip != "Unable to determine":
-                octets = primary_ip.split('.')
-                if len(octets) == 4:
-                    response += f"\nSuggested scan range: {octets[0]}.{octets[1]}.{octets[2]}.0/24\n"
-
-        response += "\nUse this info with nmap_ping_scan to discover live hosts."
-        return response
-    except Exception as ex:
-        return f"Error: {type(ex).__name__}: {ex}"
-
-
-def calculate_network_range(ip_addr, cidr):
-    try:
-        cidr_int = int(cidr)
-        ip_parts = [int(x) for x in ip_addr.split('.')]
-        host_bits = 32 - cidr_int
-        mask = (0xFFFFFFFF << host_bits) & 0xFFFFFFFF
-        network_addr = [(ip_parts[i] & ((mask >> (24 - i * 8)) & 0xFF)) for i in range(4)]
-        return f"{'.'.join(map(str, network_addr))}/{cidr}"
-    except:
-        return None
-
+# === Nmap Utilities ===
 
 def nmap_scan(target, options="", use_sudo=False):
     cmd_parts = []
-    privileged_flags = ["-O", "-sS", "-sU", "--privileged"]
-    if use_sudo or any(flag in options for flag in privileged_flags):
+    if use_sudo or any(f in options for f in ["-O", "-sS", "-sU", "--privileged"]):
         cmd_parts.append("sudo")
     cmd_parts.append("nmap")
     if options:
         cmd_parts.extend(shlex.split(options))
     cmd_parts.append(target)
+
     try:
         result = subprocess.run(cmd_parts, capture_output=True, text=True, timeout=300)
         if result.returncode != 0:
-            return f"Error: Nmap exited with code {result.returncode}\nStderr: {result.stderr}"
+            return f"Error: Nmap returned code {result.returncode}\n{result.stderr}"
         return result.stdout
     except subprocess.TimeoutExpired:
-        return "Error: Scan timed out"
-    except FileNotFoundError:
-        return "Error: Nmap not installed"
+        return "Scan timed out"
     except Exception as ex:
         return f"Error: {type(ex).__name__}: {ex}"
 
+
+# === FastMCP Tools ===
 
 @mcp.tool
 def nmap_quick_scan(target: str) -> str:
@@ -258,10 +193,10 @@ def nmap_port_scan(target: str, ports: str) -> str:
 
 @mcp.tool
 def nmap_service_detection(target: str, ports: str = "") -> str:
-    options = "-sV"
+    opts = "-sV"
     if ports:
-        options += f" -p {ports}"
-    return nmap_scan(target, options)
+        opts += f" -p {ports}"
+    return nmap_scan(target, opts)
 
 
 @mcp.tool
@@ -276,19 +211,72 @@ def nmap_ping_scan(target: str) -> str:
 
 @mcp.tool
 def nmap_script_scan(target: str, script: str, ports: str = "") -> str:
-    options = f"--script {script}"
+    opts = f"--script {script}"
     if ports:
-        options += f" -p {ports}"
-    return nmap_scan(target, options)
+        opts += f" -p {ports}"
+    return nmap_scan(target, opts)
 
 
 @mcp.tool
-def nmap_full_scan(target: str, options: str = "") -> str:
-    return nmap_scan(target, options)
+def get_local_network_info() -> str:
+    hostname = socket.gethostname()
+    primary_ip = "unknown"
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        primary_ip = s.getsockname()[0]
+        s.close()
+    except:
+        pass
 
+    return f"Hostname: {hostname}\nPrimary IP: {primary_ip}\nSuggested scan: {primary_ip.rsplit('.', 1)[0]}.0/24"
+
+
+# === LLM Dispatcher Tool ===
+
+@mcp.tool
+async def natural_language_query(prompt: str) -> str:
+    """
+    Accepts a natural language prompt like:
+    "Scan common ports on scanme.nmap.org"
+    """
+    system = """
+You are a FastMCP tool router. Translate user prompts into structured tool calls.
+Respond ONLY in this format:
+{"tool": "tool_name", "params": {"arg1": "value", ...}}
+
+Available tools:
+- nmap_quick_scan(target)
+- nmap_port_scan(target, ports)
+- nmap_service_detection(target, ports)
+- nmap_os_detection(target)
+- nmap_ping_scan(target)
+- nmap_script_scan(target, script, ports)
+- get_local_network_info()
+    """
+
+    response = openai.ChatCompletion.create(
+        model="gpt-4",
+        messages=[
+            {"role": "system", "content": system},
+            {"role": "user", "content": prompt}
+        ]
+    )
+
+    try:
+        result = json.loads(response["choices"][0]["message"]["content"])
+        tool = result["tool"]
+        params = result["params"]
+        print(f"Dispatching: {tool}({params})")
+        return await mcp.call_tool(tool, params)
+    except Exception as ex:
+        return f"Failed to interpret prompt: {ex}"
+
+
+# === Run the MCP Server ===
 
 if __name__ == "__main__":
-    uv_run(mcp, host="127.0.0.1", port=8000)
+    uv_run(mcp, host="127.0.0.1", port=18801)
 ```
 
 ---
@@ -299,7 +287,7 @@ if __name__ == "__main__":
 python nmap_mcp_server.py
 ```
 
-This will start the MCP server on `http://127.0.0.1:8000`.
+This will start the MCP server on `http://127.0.0.1:18801`.
 
 ---
 
@@ -311,7 +299,7 @@ Create a test file named `client.py`:
 import asyncio
 from fastmcp import Client
 
-client = Client("http+uv://127.0.0.1:8000")
+client = Client("http+uv://127.0.0.1:18801")
 
 async def test():
     async with client:
