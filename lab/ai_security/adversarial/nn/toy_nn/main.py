@@ -114,18 +114,23 @@ def load_model(path, device):
 # Attacks (L∞)
 # ----------------------------
 def fgsm_attack(model, x, y, eps, loss_fn):
+    was_training = model.training
     model.eval()
     x = x.clone().detach().requires_grad_(True)
     y = y.clone().detach()
     out = model(x); loss = loss_fn(out, y)
     model.zero_grad(); loss.backward()
     x_adv = x + eps * x.grad.sign()
-    return torch.clamp(x_adv, 0.0, 1.0).detach()
+    x_adv = torch.clamp(x_adv, 0.0, 1.0).detach()
+    if was_training: model.train()
+    return x_adv
 
 def pgd_attack(model, x, y, eps=8/255, alpha=2/255, steps=10, loss_fn=None):
     if loss_fn is None: loss_fn = nn.NLLLoss()
+    was_training = model.training
     model.eval()
-    x = x.clone().detach(); y = y.clone().detach()
+    x = x.clone().detach()
+    y = y.clone().detach()
     delta = torch.empty_like(x).uniform_(-eps, eps)
     x_adv = torch.clamp(x + delta, 0.0, 1.0).detach()
     for _ in range(steps):
@@ -136,6 +141,7 @@ def pgd_attack(model, x, y, eps=8/255, alpha=2/255, steps=10, loss_fn=None):
             x_adv = x_adv + alpha * x_adv.grad.sign()
             x_adv = torch.max(torch.min(x_adv, x + eps), x - eps)  # project to L∞ ball
             x_adv = torch.clamp(x_adv, 0.0, 1.0).detach()
+    if was_training: model.train()
     return x_adv
 
 def adv_accuracy(model, dataloader, device, attack_fn, **attack_kwargs):
@@ -150,6 +156,162 @@ def adv_accuracy(model, dataloader, device, attack_fn, **attack_kwargs):
         correct += (pred == y).sum().item()
         total += y.numel()
     return correct / max(total, 1)
+
+# ----------------------------
+# Noise generators
+# ----------------------------
+def add_gaussian_noise(x, std=0.05):
+    if std <= 0: return x
+    return torch.clamp(x + torch.randn_like(x) * std, 0.0, 1.0)
+
+def add_salt_pepper_noise(x, p=0.02):
+    # p is per-pixel flip prob; we split equally for salt (1) and pepper (0)
+    if p <= 0: return x
+    noise = torch.rand_like(x)
+    x_sp = x.clone()
+    x_sp[noise < (p / 2)] = 0.0
+    x_sp[noise > 1 - (p / 2)] = 1.0
+    return x_sp
+
+# ----------------------------
+# HARDEN: adversarial + noisy re-training
+# ----------------------------
+def parse_eps_list(arg: str):
+    """CSV like '8,16,32' (as /255) or floats '0.031,0.063'."""
+    eps_list = []
+    for tok in arg.split(","):
+        tok = tok.strip()
+        if not tok: continue
+        val = float(tok)
+        eps_list.append(val/255.0 if val > 1.0 else val)
+    return eps_list
+
+def parse_alpha(arg: str, eps: float):
+    """'auto' => max(eps/4, 1/255). Otherwise numeric; >1 treated as /255."""
+    if isinstance(arg, str) and arg.lower() == "auto":
+        return max(eps/4.0, 1/255.0)
+    val = float(arg)
+    return val/255.0 if val > 1.0 else val
+
+def harden_one_epoch(
+    train_loader, model, loss_fn, optimizer, device,
+    adv_frac=0.5, noise_frac=0.3,
+    eps_choices=(8/255,), alpha="auto", steps=5,
+    gauss_std=0.05, sp_prob=0.02
+):
+    """
+    Mix each batch with:
+      - adv_frac portion: PGD adversarial examples
+      - noise_frac portion: noisy inputs (Gaussian + salt&pepper)
+      - (1 - adv_frac - noise_frac) portion: clean
+    """
+    assert 0.0 <= adv_frac <= 1.0 and 0.0 <= noise_frac <= 1.0 and adv_frac + noise_frac <= 1.0, \
+        "adv_frac + noise_frac must be <= 1.0"
+    model.train()
+    for batch, (X, y) in enumerate(train_loader):
+        X, y = X.to(device), y.to(device)
+        n = X.size(0)
+        idx_perm = torch.randperm(n, device=device)
+
+        n_adv   = int(n * adv_frac)
+        n_noise = int(n * noise_frac)
+        n_clean = n - n_adv - n_noise
+
+        idx_adv   = idx_perm[:n_adv]
+        idx_noise = idx_perm[n_adv:n_adv+n_noise]
+        idx_clean = idx_perm[n_adv+n_noise:]
+
+        X_mix = torch.empty_like(X)
+        y_mix = y.clone()
+
+        # --- Adversarial subset (PGD) ---
+        if n_adv > 0:
+            eps = random.choice(list(eps_choices))
+            alpha_val = parse_alpha(alpha, eps)
+            with torch.enable_grad():
+                X_adv = pgd_attack(model, X[idx_adv], y[idx_adv],
+                                   eps=eps, alpha=alpha_val, steps=steps, loss_fn=loss_fn)
+            X_mix[idx_adv] = X_adv
+
+        # --- Noisy subset ---
+        if n_noise > 0:
+            Xn = add_gaussian_noise(X[idx_noise], std=gauss_std)
+            # Apply S&P to half of them for variety
+            if n_noise > 1:
+                half = n_noise // 2
+                Xn_sp = add_salt_pepper_noise(Xn[:half], p=sp_prob)
+                Xn = torch.cat([Xn_sp, Xn[half:]], dim=0)
+            X_mix[idx_noise] = Xn
+
+        # --- Clean subset ---
+        if n_clean > 0:
+            X_mix[idx_clean] = X[idx_clean]
+
+        # --- Train step on the mixed batch ---
+        pred = model(X_mix)
+        loss = loss_fn(pred, y_mix)
+        optimizer.zero_grad(); loss.backward(); optimizer.step()
+
+        if batch % 100 == 0:
+            current = batch * len(X)
+            total = len(train_loader.dataset)
+            print(f"[harden] loss: {loss.item():>7f} [{current:>5d}/{total:>5d}]")
+
+def run_harden(
+    args,
+    *,
+    quick_eval_eps=(8/255,)
+):
+    """
+    Fine-tune the saved model with adversarial + noisy examples, then save hardened checkpoint.
+    """
+    set_seed(args.seed, deterministic=args.deterministic)
+    device = get_device(use_cuda=not args.no_cuda)
+    print("Device:", device)
+
+    train_loader, test_loader = build_loaders(args.data_root, args.batch_size, args.workers)
+
+    # Load base model
+    model, meta = load_model(args.ckpt, device)
+    loss_fn = nn.NLLLoss()
+    optimizer = optim.Adam(model.parameters(), lr=args.harden_lr)
+
+    eps_choices = tuple(parse_eps_list(args.harden_eps))
+
+    print(f"[HARDEN] Starting robust fine-tuning for {args.harden_epochs} epoch(s)")
+    print(f"         adv_frac={args.adv_frac}, noise_frac={args.noise_frac}, eps_choices={eps_choices}, steps={args.harden_steps}")
+
+    for ep in range(1, args.harden_epochs + 1):
+        print(f"--- Harden Epoch {ep}/{args.harden_epochs} ---")
+        harden_one_epoch(
+            train_loader, model, loss_fn, optimizer, device,
+            adv_frac=args.adv_frac, noise_frac=args.noise_frac,
+            eps_choices=eps_choices, alpha=args.harden_alpha, steps=args.harden_steps,
+            gauss_std=args.noise_gauss_std, sp_prob=args.noise_sp_prob
+        )
+        acc = test_accuracy(model, test_loader, device)
+        print(f"[HARDEN] epoch {ep} clean test acc: {acc:.3f}")
+
+        # quick adversarial spot-check
+        for eps in quick_eval_eps:
+            spot = adv_accuracy(model, test_loader, device, pgd_attack,
+                                eps=eps, alpha=parse_alpha("auto", eps), steps=5, loss_fn=loss_fn)
+            print(f"[HARDEN] epoch {ep} quick PGD acc (eps={eps:.4f}, 5 steps): {spot:.3f}")
+
+    # Save hardened model
+    meta_out = dict(meta or {})
+    meta_out.update({
+        "hardened": True,
+        "harden_epochs": args.harden_epochs,
+        "adv_frac": args.adv_frac,
+        "noise_frac": args.noise_frac,
+        "eps_choices": eps_choices,
+        "harden_steps": args.harden_steps,
+        "noise_gauss_std": args.noise_gauss_std,
+        "noise_sp_prob": args.noise_sp_prob
+    })
+    save_model(model, args.ckpt_out, meta=meta_out)
+    print(f"[HARDEN] Saved hardened checkpoint to {args.ckpt_out}")
 
 # ----------------------------
 # Visualization (headless-safe)
@@ -208,27 +370,7 @@ def show_and_save_first_misclassified_adv(
     return None
 
 # ----------------------------
-# Arg parsing helpers
-# ----------------------------
-def parse_eps_list(arg: str):
-    """CSV like '8,16,32' (as /255) or floats '0.031,0.063'."""
-    eps_list = []
-    for tok in arg.split(","):
-        tok = tok.strip()
-        if not tok: continue
-        val = float(tok)
-        eps_list.append(val/255.0 if val > 1.0 else val)
-    return eps_list
-
-def parse_alpha(arg: str, eps: float):
-    """'auto' => max(eps/4, 1/255). Otherwise numeric; >1 treated as /255."""
-    if arg.lower() == "auto":
-        return max(eps/4.0, 1/255.0)
-    val = float(arg)
-    return val/255.0 if val > 1.0 else val
-
-# ----------------------------
-# Modes
+# Modes: train / attack / harden
 # ----------------------------
 def run_train(args):
     set_seed(args.seed, deterministic=args.deterministic)
@@ -284,14 +426,14 @@ def run_attack(args):
         )
 
 # ----------------------------
-# Main
+# Main (CLI)
 # ----------------------------
 def main():
-    ap = argparse.ArgumentParser(description="FashionMNIST two modes: train | attack")
-    ap.add_argument("--mode", choices=["train","attack"], default="train", help="Run mode")
+    ap = argparse.ArgumentParser(description="FashionMNIST modes: train | attack | harden")
+    ap.add_argument("--mode", choices=["train","attack","harden"], default="train", help="Run mode")
 
     # shared I/O & env
-    ap.add_argument("--ckpt", type=str, default="./runs/fashion_mnist.pth", help="Checkpoint path")
+    ap.add_argument("--ckpt", type=str, default="./runs/fashion_mnist.pth", help="(train/attack) checkpoint path")
     ap.add_argument("--data-root", type=str, default="./data")
     ap.add_argument("--batch-size", type=int, default=64)
     ap.add_argument("--workers", type=int, default=2)
@@ -312,12 +454,26 @@ def main():
     ap.add_argument("--save-dir", type=str, default="./runs")
     ap.add_argument("--no-show", action="store_true")
 
+    # harden args
+    ap.add_argument("--ckpt-out", type=str, default="./runs/fashion_mnist_hardened.pth", help="Output hardened checkpoint")
+    ap.add_argument("--harden-epochs", type=int, default=3, help="Fine-tuning epochs")
+    ap.add_argument("--harden-lr", type=float, default=5e-4, help="LR during hardening")
+    ap.add_argument("--adv-frac", type=float, default=0.5, help="Fraction of batch made adversarial")
+    ap.add_argument("--noise-frac", type=float, default=0.3, help="Fraction of batch made noisy (rest is clean)")
+    ap.add_argument("--harden-eps", type=str, default="8,16", help="CSV eps for PGD during hardening")
+    ap.add_argument("--harden-steps", type=int, default=5, help="PGD steps during hardening")
+    ap.add_argument("--harden-alpha", type=str, default="auto", help="'auto' or numeric (per-255 if >1)")
+    ap.add_argument("--noise-gauss-std", type=float, default=0.05, help="Gaussian noise std")
+    ap.add_argument("--noise-sp-prob", type=float, default=0.02, help="Salt & pepper prob per pixel")
+
     args = ap.parse_args()
 
     if args.mode == "train":
         run_train(args)
-    else:
+    elif args.mode == "attack":
         run_attack(args)
+    else:
+        run_harden(args)
 
 if __name__ == "__main__":
     main()
