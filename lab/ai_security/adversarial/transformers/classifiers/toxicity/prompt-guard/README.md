@@ -24,7 +24,7 @@ uv pip install -U textattack "transformers<5" datasets accelerate
 # Get a token from https://huggingface.co/settings/tokens and accept model terms if required.
 huggingface-cli login   # paste your token
 # OR
-export HUGGINGFACE_HUB_TOKEN=hf_xxx   # same shell session
+export HF_TOKEN=hf_xxx   # same shell session
 ```
 
 **Avoid TensorFlow/USE metric crashes** (seen in your logs):
