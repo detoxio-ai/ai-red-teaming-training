@@ -1,22 +1,26 @@
 import asyncio
 from fastmcp import Client
 
+SERVER_URL = "http://127.0.0.1:9000/sse/"  # Or replace with your actual server
+
+client = Client(SERVER_URL)
+
 async def main():
-    client = Client("http+uv://127.0.0.1:8000")
+    async with client:
+        print("🔌 Connected to MCP server.")
+        print("💬 Type a natural language query (or 'exit' to quit):\n")
 
-    print("🔍 Nmap MCP Client (type 'exit' to quit)")
-    while True:
-        prompt = input("🧠 Ask: ").strip()
-        if prompt.lower() in {"exit", "quit"}:
-            break
+        while True:
+            user_input = input("🧠 > ").strip()
+            if user_input.lower() in {"exit", "quit"}:
+                print("👋 Exiting...")
+                break
 
-        try:
-            async with client:
-                result = await client.call_tool("natural_language_query", {"prompt": prompt})
-                print(f"\n📄 Result:\n{result}\n")
-        except Exception as e:
-            print(f"❌ Error: {e}")
+            try:
+                response = await client.call_tool("natural_language_query", {"prompt": user_input})
+                print("📡 Response:\n", response)
+            except Exception as e:
+                print(f"❌ Error calling tool: {e}")
 
 if __name__ == "__main__":
     asyncio.run(main())
-
