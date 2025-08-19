@@ -51,6 +51,8 @@ Think of the model like a very picky reader of images. **Adversarial attacks** a
 
 * **Hardening (robust training):** We teach the model to **expect** these tiny tricks by training it on both clean images and slightly perturbed/noisy ones. Over time, it learns to **ignore** the tricks and stay correct.
 
+![Adversarial triptych](examples/adv_triptych.png)
+
 
 ## 🧠 Attack Details
 
