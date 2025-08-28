@@ -115,11 +115,4 @@ See the [Challenges Guide](docs/challenges.md) for details.
 
 ---
 
-## ✅ Solutions
-
-Solution guides are provided **for educational purposes only**.  
-Try the challenges first before checking solutions.
-
-👉 [Solutions Guide](docs/solutions.md)
-
 ---
