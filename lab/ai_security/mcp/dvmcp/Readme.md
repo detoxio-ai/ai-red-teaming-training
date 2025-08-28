@@ -13,27 +13,32 @@ cd /home/dtx/labs/dtx_ai_sec_workshop_lab/setup/scripts/tools
 ./install_dvmcp.sh
 ```
 
-### Configure Ports
-You need to configure the ports to be mapped between container and host in the `.env` file:
+To start the server 
 
 ```bash
-cd ~/labs/webapps/mcp/damn
-cp .env.template .env
+cd labs/webapps/mcp/damn
+docker run -d -restart unless-stopped --name dvmcp -p 18567-18576:9001-9010 dvmcp
 ```
 
-### Start Service
-Run the service with:
+To stop the server 
 
 ```bash
-./start_service.sh
+docker stop dvmcp
 ```
 
-### Stop Service
-Stop the service with:
+To debug in the server 
 
 ```bash
-docker stop dvcmp
+docker logs -f dvmcp
 ```
+
+To run the server with clearing data
+
+```bash
+docker stop dvmcp
+docker rm dvmcp
+```
+
 
 ---
 
