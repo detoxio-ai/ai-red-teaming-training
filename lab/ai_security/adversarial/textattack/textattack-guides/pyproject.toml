@@ -1,0 +1,12 @@
+[project]
+name = "textattack-guides"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "datasets>=4.0.0",
+    "textattack[tensorflow]>=0.3.10",
+    "torch>=2.8.0",
+    "transformers>=4.55.2",
+]
