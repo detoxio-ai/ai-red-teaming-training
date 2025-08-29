@@ -35,7 +35,7 @@ The DVMCP project includes 10 challenges across three difficulty levels:
 - Try to craft input that would make an LLM ignore its previous instructions
 - The server contains a hidden resource with sensitive information
 
-**Port**: 8001
+**Port**: 18567
 
 ### Challenge 2: Tool Poisoning
 
@@ -49,7 +49,7 @@ The DVMCP project includes 10 challenges across three difficulty levels:
 - Try to understand how the LLM processes tool descriptions
 - The server contains a tool that can access sensitive information if used in a specific way
 
-**Port**: 8002
+**Port**: 18568
 
 ### Challenge 3: Excessive Permission Scope
 
@@ -63,7 +63,7 @@ The DVMCP project includes 10 challenges across three difficulty levels:
 - Try to use legitimate tools in ways that weren't intended
 - The file browser tool might have more access than it should
 
-**Port**: 8003
+**Port**: 18569
 
 ### Challenge 4: Rug Pull Attack
 
@@ -77,7 +77,7 @@ The DVMCP project includes 10 challenges across three difficulty levels:
 - The weather forecast tool might not be as innocent as it first appears
 - Try using the tool multiple times and observe any changes
 
-**Port**: 8004
+**Port**: 18570
 
 ### Challenge 5: Tool Shadowing
 
@@ -91,7 +91,7 @@ The DVMCP project includes 10 challenges across three difficulty levels:
 - Pay attention to which server a tool belongs to when it's called
 - The calculator tool might not be as simple as it appears
 
-**Port**: 8005
+**Port**: 18571
 
 ### Challenge 6: Indirect Prompt Injection
 
@@ -105,7 +105,7 @@ The DVMCP project includes 10 challenges across three difficulty levels:
 - The document processing tool might be vulnerable to injected content
 - Try to understand how the LLM interprets different sections of the processed data
 
-**Port**: 8006
+**Port**: 18572
 
 ### Challenge 7: Token Theft
 
@@ -119,7 +119,7 @@ The DVMCP project includes 10 challenges across three difficulty levels:
 - The email integration might not be properly securing its authentication tokens
 - Try to find ways to extract token information through legitimate tool usage
 
-**Port**: 8007
+**Port**: 18573
 
 ### Challenge 8: Malicious Code Execution
 
@@ -133,7 +133,7 @@ The DVMCP project includes 10 challenges across three difficulty levels:
 - The Python code execution tool might not be properly restricted
 - Try to escape any sandboxing mechanisms that might be in place
 
-**Port**: 8008
+**Port**: 18574
 
 ### Challenge 9: Remote Access Control
 
@@ -147,7 +147,7 @@ The DVMCP project includes 10 challenges across three difficulty levels:
 - Command injection techniques like using semicolons or pipes might be useful
 - Try to establish a reverse shell or other remote access mechanism
 
-**Port**: 8009
+**Port**: 18575
 
 ### Challenge 10: Multi-Vector Attack
 
@@ -161,7 +161,7 @@ The DVMCP project includes 10 challenges across three difficulty levels:
 - The authentication system might be vulnerable to multiple attack vectors
 - You'll need to chain at least three different vulnerabilities to complete this challenge
 
-**Port**: 8010
+**Port**: 18576
 
 ## General Approach to Solving Challenges
 

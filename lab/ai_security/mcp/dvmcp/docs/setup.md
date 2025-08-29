@@ -42,14 +42,16 @@ To connect to a challenge server:
       "command": "npx",
       "args": [
         "mcp-remote",
-        "http://127.0.0.1:9001/sse"
+        "http://127.0.0.1:18567/sse",
+        "--allow-http"
       ]
     },
     "Challenge 2": {
       "command": "npx",
       "args": [
         "mcp-remote",
-        "http://127.0.0.1:9002/sse"
+        "http://127.0.0.1:18568/sse",
+        "--allow-http"
       ]
     },
 
@@ -59,7 +61,8 @@ To connect to a challenge server:
       "command": "npx",
       "args": [
         "mcp-remote",
-        "http://127.0.0.1:9010/sse"
+        "http://127.0.0.1:18576/sse",
+        "--allow-http"
       ]
     }
   }
@@ -86,7 +89,7 @@ To use the MCP Inspector:
 
 2. Run the MCP Inspector:
    ```
-   mcp dev http://localhost:9001
+   mcp dev http://localhost:18567 --allow-http
    ```
 
 3. The inspector will connect to the server and allow you to explore its resources and tools
@@ -96,7 +99,7 @@ To use the MCP Inspector:
 ### Server Connection Issues
 
 If you have trouble connecting to the server:
-1. Ensure the server is running (you should see a message like "Server running at http://localhost:9001 in logs")
+1. Ensure the server is running (you should see a message like "Server running at http://localhost:18567 in logs")
 2. Check if there are any firewall issues blocking the connection
 3. Verify that you're using the correct URL in your MCP client
 
