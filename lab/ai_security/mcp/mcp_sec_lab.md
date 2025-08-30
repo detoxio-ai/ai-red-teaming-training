@@ -78,3 +78,7 @@
 * Basic tool calls succeed without credential leaks.
 * Cline runs O4-mini reliably for orchestration.
 * You can fetch resources, read docs, query HR data (read-only), and execute safe shell commands via CMD Exec.
+
+## Challenges Instruction
+
+* The lab includes challenges across three difficulty levels. Check [Instruction & CHallenges](instruction.md)
