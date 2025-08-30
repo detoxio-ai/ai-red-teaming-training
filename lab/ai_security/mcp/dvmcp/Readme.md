@@ -16,27 +16,29 @@ cd /home/dtx/labs/dtx_ai_sec_workshop_lab/setup/scripts/tools
 To start the server 
 
 ```bash
-cd labs/webapps/mcp/damn
-docker run -d -restart unless-stopped --name dvmcp -p 18567-18576:9001-9010 dvmcp
+cd /home/dtx/labs/webapps/mcp/damn
+./start_service.sh
 ```
 
 To stop the server 
 
 ```bash
+cd /home/dtx/labs/webapps/mcp/damn
 docker stop dvmcp
 ```
 
 To debug in the server 
 
 ```bash
+cd /home/dtx/labs/webapps/mcp/damn
 docker logs -f dvmcp
 ```
 
-To run the server with clearing data
+To fresh start
 
 ```bash
-docker stop dvmcp
-docker rm dvmcp
+cd /home/dtx/labs/webapps/mcp/damn
+./fresh_start.sh
 ```
 
 
