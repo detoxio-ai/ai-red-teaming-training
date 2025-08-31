@@ -12,7 +12,7 @@ It supports two modes:
 
 We use [uv](https://github.com/astral-sh/uv) for dependency management.
 
-Lab Location> cd labs/ai-red-teaming-training/lab/ai_security/adversarial/nn/toy_nn
+**Lab Location> cd labs/ai-red-teaming-training/lab/ai_security/adversarial/nn/toy_nn**
 
 ```bash
 # Create a virtual environment
