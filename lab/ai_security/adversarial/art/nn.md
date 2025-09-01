@@ -4,7 +4,7 @@
 ## 1. Setup Workspace
 
 ```bash
-cd ~/workspace
+mkdir ~/workspace/art1
 mkdir art1
 cd art1
 ```
@@ -40,6 +40,7 @@ Install ART and required libraries:
 uv add adversarial-robustness-toolbox
 uv add torch
 uv add packaging
+uv add torchvision
 ```
 
 > The `packaging` library is required due to ART internals.
