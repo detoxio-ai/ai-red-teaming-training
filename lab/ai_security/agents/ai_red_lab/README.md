@@ -35,7 +35,7 @@ PORT=15000 ./start.sh
 
 Open in browser:
 
-👉 [http://34.133.163.21:15000/login?auth=7d27427c2ae70d33dd487ec620ce5772](http://34.133.163.21:15000/login?auth=7d27427c2ae70d33dd487ec620ce5772)
+👉 [ < IP Address >:15000/login?auth=7d27427c2ae70d33dd487ec620ce5772](#)
 
 You’ll land on the login page, already authenticated by the token in the URL.
 
@@ -66,3 +66,9 @@ cd /home/dtx/labs/webapps/AI-Red-Teaming-Playground-Labs
 ```
 
 ---
+
+## Cheatsheet – Example Solutions
+**⚠️ Warning:** Try the challenges yourself first!
+
+These are hints and example attacks – actual payloads may vary depending on model/app configuration.
+Check the [cheatsheet](Cheatsheet/Lab_1.md)
