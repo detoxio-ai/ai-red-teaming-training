@@ -7,11 +7,11 @@ mkdir -p "$HOME/workspace/txt1"
 cd "$HOME/workspace/txt1"
 
 # optional: create & activate a local venv
-python -m venv .venv
+uv  venv .venv
 source .venv/bin/activate
 
 # install textattack
-pip install -U textattack
+uv pip install textattack
 ```
 
 Create `examples.csv` with two columns `text,label` (as you did). Example:
