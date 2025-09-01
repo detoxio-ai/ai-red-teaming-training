@@ -4,7 +4,7 @@
 ## 1. Setup Workspace
 
 ```bash
-mkdir ~/workspace/art1
+mkdir -p ~/workspace/art1
 mkdir art1
 cd art1
 ```
