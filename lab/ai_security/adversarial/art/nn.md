@@ -142,7 +142,7 @@ print("Accuracy on adversarial test examples: {}%".format(accuracy * 100))
 ## 6. Run the Example
 
 ```bash
-python main.py
+python fgsm.py
 ```
 
 ✅ Expected output (similar to your run):
