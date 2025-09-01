@@ -15,13 +15,10 @@
 mkdir -p "$HOME/workspace/txt1"
 cd "$HOME/workspace/txt1"
 
-python -m venv .venv
+uv venv .venv
 source .venv/bin/activate
 
-pip install -U pip
-pip install "textattack[tensorflow]" datasets pandas
-# optional: reduce TensorFlow log noise
-export TF_CPP_MIN_LOG_LEVEL=2
+uv pip install "textattack[tensorflow]" datasets pandas
 ```
 
 ---
