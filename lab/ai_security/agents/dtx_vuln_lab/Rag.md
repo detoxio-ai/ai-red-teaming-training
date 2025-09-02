@@ -4,22 +4,33 @@
 
 ---
 
+---
+
 ## 1. Lab Setup
 
-1. Navigate to your RAG workspace:
+1. Navigate to the vulnerable app directory:
 
    ```bash
-   cd ~/workspace/rag1
-   docker compose up -d
+   cd ~/labs/ai-red-teaming-training/lab/vuln_apps/dtx_vuln_app_lab/
+   docker compose up -d 
    ```
 
-2. Confirm your RAG demo app is running at:
+2. Available apps (via `LAB_IP`):
+
+   * **Chatbot Demo** → `http://LAB_IP:17860`
+   * **RAG Demo** → `17861`
+   * **Tool Agents Demo** → `17862`
+   * **Text2SQL Demo** → `17863`
+
+---
+
+3. Confirm your RAG demo app is running at:
 
    ```
    http://LAB_IP:17861
    ```
 
-3. Ensure `dtx` CLI is available.
+4. Ensure `dtx` CLI is available.
 
 ---
 
