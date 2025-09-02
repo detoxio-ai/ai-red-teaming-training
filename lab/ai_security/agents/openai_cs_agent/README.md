@@ -16,7 +16,7 @@ This lab demonstrates a multi-agent system for handling customer support interac
 2. **Run the application**
 
    ```bash
-   cd /labs/webapps/openai-cs-agents-demo
+   cd ./labs/webapps/openai-cs-agents-demo
    ./start.sh
    ```
 
@@ -115,4 +115,5 @@ After setup, you should see the **Agent View** and **Customer View** interface. 
   * System: *"Sorry, I can only answer questions related to airline travel."*
 
 ---
+
 
