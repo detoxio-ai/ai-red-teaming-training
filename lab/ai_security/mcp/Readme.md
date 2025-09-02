@@ -2,6 +2,12 @@
 
 **Goal:** Stand up a local MCP sandbox in VS Code with Cline, hook it to multiple remote MCP servers, and verify tools/resources work end-to-end for secure assistive workflows.
 
+## Further Reading & Discovery Guide
+
+For a complete red-team playbook on MCP enumeration (network + application layers, black-box chat probes, risks, and mitigations), see:  
+[📄 MCP Server Discovery Playbook](discovery.md)
+
+
 ## Prerequisites
 
 * **VS Code**
@@ -66,7 +72,7 @@
 3. **Browser tasks:** Use **Chrome** for any links or web content surfaced by the servers.
 
 ## Exploration & Security Checks
-
+* Test Each Connectors with the help of [MCP Inspector ](mcp_inspector.md)
 * Exercise each tool’s **least-privilege** operations first; avoid sensitive inputs.
 * Inspect Cline’s request/response logs for **PII leakage**, unexpected scopes, or over-broad tool calls.
 * Validate error handling, timeouts, and rate limits.
