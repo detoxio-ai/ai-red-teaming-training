@@ -13,15 +13,7 @@
    docker compose up -d 
    ```
 
-2. Verify files:
-
-   * `README.md`
-   * `docker-compose.yml`
-   * `redteam_plan.yml` → defines prompts & automation plan
-   * `report.yml` → structured log of results
-   * `report.html` → visualized report
-
-3. Available apps (via `LAB_IP`):
+2. Available apps (via `LAB_IP`):
 
    * **Chatbot Demo** → `http://LAB_IP:17860`
    * **RAG Demo** → `17861`
