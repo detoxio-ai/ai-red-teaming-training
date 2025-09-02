@@ -35,7 +35,9 @@ PORT=15000 ./start.sh
 
 Open in browser:
 
-👉 [http://34.133.163.21:15000/login?auth=7d27427c2ae70d33dd487ec620ce5772](http://34.133.163.21:15000/login?auth=7d27427c2ae70d33dd487ec620ce5772)
+Similar to the following link
+
+👉 [http://LAB_IP:15000/login?auth=dummy7d27427c2ae70d33dd487ec620ce5772](http://LAB_IP:15000/login?auth=dummy7d27427c2ae70d33dd487ec620ce5772)
 
 You’ll land on the login page, already authenticated by the token in the URL.
 
