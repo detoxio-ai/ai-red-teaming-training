@@ -1,5 +1,12 @@
 # Data Augmentation with TextAttack (CLI)
 
+## Install uv, if not installed 
+
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+
 ## Create a working folder and a small dataset
 
 ```bash
